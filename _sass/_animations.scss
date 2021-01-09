@@ -1,0 +1,78 @@
+/**
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(1.3);
+              transform: scale(1.3);
+    }
+    
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(1.3);
+              transform: scale(1.3);
+    }
+    
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 2s ease-in-out 0.5s both;
+	        animation: scale-up-center 2s ease-in-out 0.5s both;
+}
+
+/*  lavitate */
+@-webkit-keyframes levitate {
+    from {
+     -webkit-transform:translate(0, 0);
+     transform:translate(0, 0)
+    }
+    50% {
+     -webkit-transform:translate(0, 10px);
+     transform:translate(0, 10px)
+    }
+    to {
+     -webkit-transform:translate(0, 0);
+     transform:translate(0, 0)
+    }
+}
+@keyframes levitate {
+    from {
+     -webkit-transform:translate(0, 0);
+     transform:translate(0, 0)
+    }
+    50% {
+     -webkit-transform:translate(0, 10px);
+     transform:translate(0, 10px)
+    }
+    to {
+     -webkit-transform:translate(0, 0);
+     transform:translate(0, 0)
+    }
+}
+
+.levitate {
+    -webkit-animation-name:levitate;
+    animation-name:levitate;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out
+   }
+
+
+  
+

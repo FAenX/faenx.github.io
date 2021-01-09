@@ -1,0 +1,15 @@
+
+url: emmanueldavidson.com
+title: Emmanuel Davidson
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
