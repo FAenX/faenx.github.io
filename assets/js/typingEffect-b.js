@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var ReactTypingEffectDemo = function ReactTypingEffectDemo() {
   return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_reactTypingEffect["default"], {
-    text: ["Available to work"],
+    text: ["Hiring?", "I am available."],
     speed: "200ms",
     eraseSpeed: "100ms",
     staticText: "$: "

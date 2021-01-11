@@ -6,7 +6,7 @@ const ReactTypingEffectDemo = () => {
   return (
     <>
       <ReactTypingEffect
-        text={["Available to work"]}
+        text={["Hiring?", "I am available."]}
         speed='200ms'
         eraseSpeed='100ms'
         staticText="$: "
