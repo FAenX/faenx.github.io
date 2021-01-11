@@ -1,6 +1,32 @@
 
-url: emmanueldavidson.com
+url: emmanueldavidson.info
 title: Emmanuel Davidson
+tagline: Software Developer profile
+description: Emmanuel Kiprono Davidson Software Developer Profile
+author: Emmanuel Kiprono Davidson
+
+twitter: 
+  card: summary
+  username: DavidsonKiprono
+  creator: DavidsonKiprono
+
+facebook:
+  publisher: Emmanuel Kiprono Davidson
+
+social:
+  name: Emmanuel Davidson
+  links:
+    - https://twitter.com/DavidsonKiprono
+    - https://www.facebook.com/emmanuel.davidson.750331
+    - https://www.linkedin.com/in/emmanuel-davidson-75988991
+    - https://github.com/FAenX
+
+webmaster_verifications:
+  google: 1234
+  bing: 1234
+  alexa: 1234
+  yandex: 1234
+  baidu: 1234
 
 plugins:
   - jekyll-seo-tag

@@ -1,7 +1,8 @@
 --- 
 --- 
 $progress-border-radius: 0; 
-$panel-heading-background-color: #1b1b1b;
+$panel-heading-background-color: #141414;
+$panel-heading-color: #ffffff;
 $panel-block-active-color: #ff6101;
 $panel-item-border: 1px solid #ff6101;
 
@@ -160,7 +161,7 @@ section {
     }
 }
 
-.panel {
+.panel-block {
     opacity: 0.1;
 }
 
