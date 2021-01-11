@@ -1,6 +1,9 @@
 --- 
 --- 
 $progress-border-radius: 0; 
+$panel-heading-background-color: #1b1b1b;
+$panel-block-active-color: #ff6101;
+$panel-item-border: 1px solid #ff6101;
 
 @import 'bulma/bulma';
 
@@ -97,4 +100,58 @@ $progress-border-radius: 0;
     -ms-flex-align: center;
     align-items: center;
 }
+
+.profile-image {
+    
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+}
+
+section {
+    background-color: #1b1b1b;
+}
+
+// footer
+.footer {
+    background: #1b1b1b;
+}
+
+.logo-text {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: .9rem;
+}
+
+.footer-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.logo {
+    height: 45px;
+    margin: 10px auto;
+}
+
+.coderafiki {
+    display: flex;
+    flex-flow: column;
+    padding: 5px 0;
+}
+
+
 

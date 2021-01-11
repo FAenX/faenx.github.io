@@ -3,10 +3,10 @@
 
 		<!-- <img class="animate-on-visibility background" alt="" src="{{ site.baseurl }}/assets/images/cover.jpg"> -->
 		
-		<div class="hero-body pt-6">	
+		<div class="hero-body">	
 			<div class="container" style="min-height: 100vh;">		
 				<div class="columns">
-					<div class="column p-6 m-4" >
+					<div class="column m-4" >
 						<h2 class="is-size-2">
 							<span class="has-text-weight-bold">
 								<div id="auto-text" style="height: 50px;" class="p-2"></div>
@@ -14,9 +14,15 @@
 							<br>
 						</h2>	
 						
-						<div>
-							<div class="p-2 is-orange is-size-4">
-								About me
+						<div class="">
+							<div class="p-2 is-flex is-align-content-center">
+								<div class="profile-image pr-4">
+									<img src="{{ site.baseurl }}/assets/images/profile-image.jpeg"/>
+								</div>
+								<div class="">
+									<span class="is-orange is-size-4">Emmanuel K. Davidson</span><br>
+									<span>About me</span>
+								</div>								
 							</div>
 
 							<div class="p-2 is-white is-size-2">
@@ -32,13 +38,18 @@
 								impedit officia illum praesentium amet, 
 								vero quos natus veritatis totam!
 							</div>
-							
-						</div>
-						
 					</div>
-
-
-					<div class="column p-6 m-4">
+					<div class="column">
+						<div class="p-4">
+							<div>current role : Backend Developer</div>
+							<div> period: 2018-2021 </div>
+						</div>
+						<a class="button animate__animated animate__bounce text-right is-rounded btn-banner mt-6 has-text-white-ter">
+							My projects
+						</a>
+					</div>
+				</div>	
+				<div class="column m-4">
 						{% include skills.html %}
 					</div>
 				</div>
