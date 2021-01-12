@@ -9,4 +9,4 @@ bundle exec jekyll serve
 ```
 
 
-![Home](https://emmanueldavidson.info)
+[emmanueldavidson.info](https://emmanueldavidson.info)
