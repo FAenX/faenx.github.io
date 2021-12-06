@@ -15,11 +15,12 @@
     "react-typing-effect": "^2.0.4"
   },
   "devDependencies": {
-    "babelify": "^10.0.0",
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babelify": "^10.0.0",
+    "gh-pages": "^3.2.3",
     "regenerator": "^0.14.7"
   }
 }
