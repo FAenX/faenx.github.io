@@ -1,7 +1,7 @@
 --- 
 --- 
 $progress-border-radius: 0; 
-$panel-heading-background-color: #141414;
+$panel-heading-background-color: #000000;
 $panel-heading-color: #ffffff;
 $panel-block-active-color: #ff6101;
 $panel-item-border: 1px solid #ff6101;
@@ -9,6 +9,10 @@ $panel-item-border: 1px solid #ff6101;
 @import 'bulma/bulma';
 
 @import 'animations';
+
+body {
+    color: #ffffff;
+}
 
 .background {
     position: fixed;
@@ -32,11 +36,11 @@ $panel-item-border: 1px solid #ff6101;
     background-color: #1a1a1a;
 }
 .hero-body{
-    background-color: #1b1b1b;
+    background-color: #00000044;
 }
 
 .personal-info{
-    background-color: #7c7c7c44;
+    background-color: #00000044;
     margin: 5px;
     // min-height: 300px;
     
@@ -52,7 +56,7 @@ $panel-item-border: 1px solid #ff6101;
 }
 
 .is-muted{
-    color: #ffffff70;
+    color: #ffffffdc;
 }
 
 .c {
@@ -112,12 +116,12 @@ $panel-item-border: 1px solid #ff6101;
 }
 
 section {
-    background-color: #1b1b1b;
+    background-color: #242424;
 }
 
 // footer
 .footer {
-    background: #1b1b1b;
+    background: #000000;
 }
 
 .logo-text {
