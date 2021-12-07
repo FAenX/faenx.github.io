@@ -10,6 +10,9 @@ const animateOnVisibilityTrue = (element) =>{
 };
 
 
+// 
+
+
 
 window.addEventListener('visibilitychange', (e)=> {
     if(e){
@@ -37,3 +40,4 @@ const observer = new IntersectionObserver(callback);
 targets.forEach(function(target) {
     observer.observe(target);
 });
+
