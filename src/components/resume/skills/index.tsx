@@ -1,4 +1,4 @@
-import PersonalInfo from "./component";
+import Skills from "./component";
 
 
-export default PersonalInfo;
+export default Skills;

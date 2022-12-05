@@ -10,28 +10,30 @@ import Skills from "./skills";
 
 export default function Experiences() {
     return (
-        <div className="border border-primary d-flex flex-column justify-content-around m-3" >
+        <div className="border border-primary d-flex flex-row justify-content-around m-3" >
             <div className="border border-primary">
             <PersonalInfo />
-          
+            <Skills />
             </div>
+            <div>
             <div className="border border-primary">
            
             <Interests />
             </div>
            
+           
             {/* <div className="border border-primary d-flex flex-column justify-content-around m-3"> */}
             
-            {/* <div className="">
+            <div className="">
                 <Experience />
-            </div> */}
+            </div>
 
 
-            {/* <Projects />
+            <Projects />
             
-            <Education /> */}
+            <Education />
             {/* </div> */}
-            
+            </div>
             
         </div>
     );
