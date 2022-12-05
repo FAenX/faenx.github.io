@@ -2,7 +2,7 @@ import React from "react";
 import Image from 'react-bootstrap/Image'
 
 
-export default function PersonalInfo() {
+export default function Interests() {
     return (
        
             <div className="d-flex border border-primary m-2 p-2">
