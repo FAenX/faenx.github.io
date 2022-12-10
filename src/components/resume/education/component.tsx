@@ -1,4 +1,4 @@
-import { Box, Paper, Typography, Stepper, Step, StepLabel, StepContent } from "@mui/material";
+import { Box, Paper, Typography, Stepper, Step, StepLabel, StepContent, Divider } from "@mui/material";
 import React from "react";
 import { Button } from "react-bootstrap";
 import Image from 'react-bootstrap/Image'
@@ -12,18 +12,21 @@ interface EducationProps {
 const education = [
     {
         label: "Coursera",
-        description: "This is a project",
-        link: ""
+        description: "Google, Data Analytics",
+        link: "",
+        date: "2021 - Present"
     },
     {
         label: "university of Nairobi",
-        description: "This is a project",
-        link: ""
+        description: "Post Graduate Diploma, Project planning and management",
+        link: "",
+        date: "2021 - Present"
     },
     {
         label: "University of Eldoret",
-        description: "This is a project",
-        link: ""
+        description: "Bachelors of Science in biochemistry",
+        link: "",
+        date: "2021 - Present"
     },
 ]
 
@@ -45,18 +48,19 @@ export default function Education() {
         setActiveStep(0);
     };
     return (
-        <Box className="border">
-            <p className="display-6 p-2">Education.</p>
+        <Box className="m-3" mt={15}>
+             <Typography align="left" variant="h4" className=" lead">Education.</Typography>
+             <hr className="my-4"/>
             
-      <Stepper activeStep={activeStep} orientation="vertical" className="p-5 ">
+      <Stepper activeStep={activeStep} orientation="vertical" className="p-2 m-3 ">
         {education.map((step, index) => (
           <Step key={step.label}>
             <StepLabel  >
-              <p className="display-6">{step.label}</p>
-              {/* <p className="lead">{step.title}</p> */}
+              <Typography variant="h5">{step.label}</Typography>
+              <Typography variant="body1">{step.date}</Typography>
             </StepLabel>
             <StepContent>
-              <p>description</p>
+              <Typography variant="body1">{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
                 <div>
                   <Button

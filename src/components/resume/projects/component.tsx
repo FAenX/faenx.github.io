@@ -112,9 +112,11 @@ function ListItem(props: ListItemProps) {
 
 export default function Projects() {
     return (
-        <div className="d-flex border border-primary m-1 p-1">
+        <div className="d-flex  -primary m-5 p-1">
         <div className="m-1 p-1 d-flex flex-column justify-content-centre" style={{width: "100%"}}>
-             <p className="display-6">Projects</p>
+        <Typography variant="h4" align="center">Projects</Typography>
+        <hr />
+                    
              <Stack direction="row" flexWrap={"wrap"}  className="m-1 p-1">
                     {
                         projects.map((project) => {

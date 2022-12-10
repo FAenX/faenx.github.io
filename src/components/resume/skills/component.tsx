@@ -1,9 +1,33 @@
-import { Icon, Skeleton, Stack, Typography } from "@mui/material";
+import { Icon, Skeleton, Stack, Typography, Button } from "@mui/material";
 import React from "react";
-import { Button } from "react-bootstrap";
-import Image from 'react-bootstrap/Image'
+import Avatar from '@mui/material/Avatar';
+import python from "../../../assets/images/brands/python.png"
+import node from "../../../assets/images/brands/node.svg"
+import react from "../../../assets/images/brands/react.svg"
+import Linux from "../../../assets/images/brands/ubuntu.png"
+import Mongo from "../../../assets/images/brands/mongo.svg"
+import DO from "../../../assets/images/brands/digital_ocean.svg"
+import Docker from "../../../assets/images/brands/docker.svg"
+import Git from "../../../assets/images/brands/git.png"
 
 const skills = [
+    {
+        title: "Operating Systems",
+        items: [
+            {
+                name: "Linux",
+                image: Linux
+            },
+            {
+                name: "Windows",
+                image: ""
+            },
+            {
+                name: "Android",
+                image: ""
+            },
+        ]
+    },
     {
         title: "Languages",
         items: [
@@ -18,16 +42,14 @@ const skills = [
             },
             {
                 name: "Python",
-                image: ""
+                image: python
             },
             {
-                name: "Java",
+                name: "SQL",
                 image: ""
             },
-            {
-                name: "C++",
-                image: ""
-            },
+           
+            
 
         ]
        
@@ -37,7 +59,7 @@ const skills = [
         items: [
             {
                 name: "MongoDB",
-                image: ""
+                image: Mongo
             },
             {
                 name: "PostgreSQL",
@@ -45,6 +67,10 @@ const skills = [
             },
             {
                 name: "MySQL",
+                image: ""
+            },
+            {
+                name: "MSSQL",
                 image: ""
             }
         ]
@@ -64,8 +90,44 @@ const skills = [
                 name: "Azure",
                 image: ""
             },
+            {
+                name: "Digital Ocean",
+                image: DO
+            },
         ]
        
+    },
+
+    {
+        title: "Frameworks",
+        items: [
+            {
+                name: "React",
+                image: react
+            },
+            {
+                name: "Django",
+                image: ""
+            },
+            {
+                name: "Express",
+                image: node
+            },
+        ]
+    },
+    {
+        title: "Technologies",
+        items: [
+            {
+                name: "Git",
+                image: Git
+            },
+            {
+                name: "Docker",
+                image: Docker
+            },
+            
+        ]
     },
 ]
 
@@ -90,17 +152,15 @@ function ListItem(props: {skills: SkillsProps[]}) {
                                 {skill.title}
                             </p>
 
-                            <Stack direction="row" flexWrap={"wrap"} spacing={1} className="p-3 border">
+                            <Stack direction="row" flexWrap={"wrap"} spacing={2} className="p-1 border">
 
                               {
                                 skill.items.map((item) => {
                                     return (
-                                        <Button>
-                                        <Stack direction="row" spacing={1}>
-                                            <Icon>
-                                                <Image src={item.image} roundedCircle />
-                                            </Icon>
-                                            <Typography variant="body1">
+                                        <Button size="small" variant="contained"  className="m-2" >
+                                        <Stack direction="row" justifyContent={"center"} alignItems="center" spacing={1}>                                           
+                                            <Avatar alt={item.name} src={item.image} />                                            
+                                            <Typography variant="body2">
                                                 {item.name}
                                             </Typography>
                                         </Stack>
@@ -127,7 +187,7 @@ function ListItem(props: {skills: SkillsProps[]}) {
 export default function Skills() {
     return (
        
-        <Stack spacing={5} justifyContent={"center"} alignItems={"flex-start"} className="border p-5 m-3">
+        <Stack spacing={5} justifyContent={"center"} alignItems={"flex-start"} className=" p-5 m-3">
             <ListItem skills={skills}/>
         </Stack>
                    

@@ -1,13 +1,13 @@
-import { Box, Stepper, Step, StepLabel, Typography, StepContent, Paper } from "@mui/material";
+import { Box, Stepper, Step, StepLabel, Typography, StepContent, Divider } from "@mui/material";
 import React from "react";
 import { Button } from "react-bootstrap";
-import Image from 'react-bootstrap/Image'
+
 
 const experiences = [
     {
         label: "The Jitu",
         title: "Software Engineer",
-        date: "2020 - Present",
+        date: "2021 - Present",
         description: [
             "Write modern, performant, maintainable code for a diverse array of client and internal projects",
             "Collaborate with internal teams to produce software design and architecture",
@@ -18,9 +18,9 @@ const experiences = [
         ],
     },
     {
-        label: "Company 2",
+        label: "Touch inspiration",
         title: "Software Engineer",
-        date: "2020 - Present",
+        date: "2019 - 2020",
         description: [
             "Write modern, performant, maintainable code for a diverse array of client and internal projects",
             "Collaborate with internal teams to produce software design and architecture",
@@ -30,9 +30,9 @@ const experiences = [
             "Communicate with external web services",
         ],    },
     {
-        label: "Company 3",
+        label: "Ohospital",
         title: "Software Engineer",
-        date: "2020 - Present",
+        date: "2018 - 2020",
         description: [
             "Write modern, performant, maintainable code for a diverse array of client and internal projects",
             "Collaborate with internal teams to produce software design and architecture",
@@ -41,6 +41,14 @@ const experiences = [
             "Follow industry best practices",
             "Communicate with external web services",
         ],    },
+        {
+            label: "Freelance",
+            title: "Web developer",
+            date: "2017 - 2018",
+            description: [
+                "Write modern, performant, maintainable code for a diverse array of client and internal projects",
+                
+            ],    },
 ]
 
 
@@ -61,14 +69,16 @@ export default function Experience() {
     };
 
     return (
-        <Box >
-            <p className="display-6 p-2">Where I've worked.</p>
-      <Stepper activeStep={activeStep} orientation="vertical" className="p-5 ">
+        <Box className="m-3">
+            <Typography align="left" variant="h4" className=" lead">Where I've worked.</Typography>
+            <hr className="my-4"/>
+      <Stepper activeStep={activeStep} orientation="vertical" className="p-2 m-3">
         {experiences.map((step, index) => (
           <Step key={step.label}>
             <StepLabel  >
-              <p className="display-6">{step.label}</p>
-              <p className="lead">{step.title}</p>
+            <Typography variant="h5">{step.label}</Typography>
+            <Typography variant="body1">{step.title}</Typography>
+            <Typography variant="body1">{step.date}</Typography>
             </StepLabel>
             <StepContent>
               {

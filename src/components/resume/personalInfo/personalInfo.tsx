@@ -2,52 +2,57 @@ import { Skeleton, Stack, Typography } from "@mui/material";
 import React from "react";
 import Image from 'react-bootstrap/Image'
 import { styleProps } from "..";
+import profile from "../../../assets/images/profile-image.jpeg"
+import Typing from "../../common/index,";
 
 type Props = {
     image: string,
 }
 
-const Header = (props: Props) => {
-    return (
-        <div className="d-flex justify-content-center p-2">
-            <Image src={props.image
-                ? props.image
-                : "https://www.w3schools.com/howto/img_avatar.png"} roundedCircle  width={120}/>
-        </div>
-    );
-            }
+const info = {
+    name: "Emmanuel Davidson",
+    about: "I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products",
+    location: "Nairobi, Kenya",
+    image: "https://avatars.githubusercontent.com/u/1015040?v=4",
+
+}
+
+
 
 export default function PersonalInfo() {
     return (
-        <div className=" -primary d-flex flex-column justify-content-around m-2 ">            
-            <div className=" -primary d-flex flex-column justify-content-centre text-align-center" style={{lineHeight: "1"}}>                
-                <div className="d-flex flex-row  -primary">
+        <div className=" d-flex flex-column justify-content-around p-3 ">      
+         <Typing />      
+            <div className=" d-flex flex-column justify-content-centre text-align-center" style={{lineHeight: "1"}}>                
+                <div className="d-flex flex-row  flex-wrap">
+                   
                     <div className=" m-3 p-3 ">
-                    {/* {
-                        item ? (
+                    {
+                        info.image ? (
                             <img
                             style={{
                                 width: 210,
-                                height: 118,
+                                height: 210,
                             }}
-                            alt={item.title}
-                            src={item.src}
+                            className="rounded-circle"
+                            alt={info.name}
+                            src={profile}
                             />
                         ) : (
-                            <Skeleton variant="rectangular" width={210} height={118} />
-                        );
-                        } */}
+                            <Skeleton variant="circular" width={210} height={210} />
+                        )
+                        }
 
-                        <Skeleton variant="circular" width={210} height={210} />
+                        
                     </div>
-                    <Stack spacing={0} justifyContent="center" className="p-2 border">
-                        <Typography variant="h4" className="lead"> Emmanuel Davidson </Typography>                    
+                    <Stack spacing={0} justifyContent="center" className="p-2 ">
+                        <Typography variant="h4" > {info.name} </Typography>                    
                         <hr className="my-4"/>
-                        <p className="lead"> Nairobi, kenya</p>
+                        <p className="lead"> {info.location} </p>
                     </Stack>
                 </div>
-                <div className="border p-3 m-3 border">
-                <p className="lead"> I am a software developer with more than 4 years of coding experience in a variety of settings. I currently work as a full stack (NodeJs, React, TSQL and devops) at TheJitu.com in Nyeri kenya. I love writing code and travelling. </p>
+                <div className=" p-3  ">
+                <Typography variant="body1"> {info.about}</Typography>
 
                     </div>
             </div>
