@@ -15,7 +15,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { ExpandMore } from '@mui/icons-material';
-import { Stack } from '@mui/material';
+import { Stack, Skeleton } from '@mui/material';
 
 
 const projects = [
@@ -121,7 +121,8 @@ export default function Projects() {
                     {
                         projects.map((project) => {
                             return (
-                                <ListItem title={project.title} description={project.description} link={project.link} />
+                                // <ListItem title={project.title} description={project.description} link={project.link} />
+                                <Skeleton variant="circular" width={300} height={300} />
                             )
                         })
                     }
