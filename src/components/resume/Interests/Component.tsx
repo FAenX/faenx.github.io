@@ -1,40 +1,45 @@
+import { Skeleton, Stack } from "@mui/material";
 import React from "react";
+
 import Image from 'react-bootstrap/Image'
+
+
+const interests = [
+    {
+        name: "Music",
+    },
+    {
+        name: "Travel",
+    },
+    {
+        name: "Reading",
+    },
+]
+
+interface InterestProps {
+    name: string,
+    image?: string,
+}
 
 
 export default function Interests() {
     return (
        
-            <div className="d-flex border border-primary m-2 p-2">
-               <div className="m-3 p-2">
-                    <p className="lead">Interesets</p>
-                        <div className="m-3 p-2 d-flex">
-                        <div className="card">
-                            <h5 className="card-header">Featured</h5>
-                            <div className="card-body">
-                                <h5 className="card-title">Special title treatment</h5>
-                                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                        {/*  */}
-                        <div className="card">
-                            <h5 className="card-header">Featured</h5>
-                            <div className="card-body">
-                                <h5 className="card-title">Special title treatment</h5>
-                                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <h5 className="card-header">Featured</h5>
-                            <div className="card-body">
-                                <h5 className="card-title">Special title treatment</h5>
-                                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
+            <div className="d-flex border border-primary m-1 p-1">
+                <div className="m-1 p-1 d-flex flex-column justify-content-centre" style={{width: "100%"}}>
+                    <p className="display-6 border">Interests</p>
+                    
+                <Stack direction="row" flexWrap={"wrap"} spacing={2} className="p-3 border">
+
+                <Skeleton variant="circular" width={40} height={40} />
+                <Skeleton variant="circular" width={40} height={40} />
+                <Skeleton variant="circular" width={40} height={40} />
+                <Skeleton variant="circular" width={40} height={40} />
+                <Skeleton variant="circular" width={40} height={40} />
+                
+
+
+                </Stack>
                 </div>
             </div>
       
