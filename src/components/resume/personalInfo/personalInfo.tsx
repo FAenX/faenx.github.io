@@ -1,4 +1,4 @@
-import { Skeleton, Stack } from "@mui/material";
+import { Skeleton, Stack, Typography } from "@mui/material";
 import React from "react";
 import Image from 'react-bootstrap/Image'
 import { styleProps } from "..";
@@ -40,13 +40,13 @@ export default function PersonalInfo() {
 
                         <Skeleton variant="circular" width={210} height={210} />
                     </div>
-                    <Stack spacing={1} className="p-2">
-                        <p className="display-6"> Emmanuel Davidson </p>                    
+                    <Stack spacing={0} justifyContent="center" className="p-2 border">
+                        <Typography variant="h4" className="lead"> Emmanuel Davidson </Typography>                    
                         <hr className="my-4"/>
-                        <p> Nairobi, kenya</p>
+                        <p className="lead"> Nairobi, kenya</p>
                     </Stack>
                 </div>
-                <div className="border p-3 m-3">
+                <div className="border p-3 m-3 border">
                 <p className="lead"> I am a software developer with more than 4 years of coding experience in a variety of settings. I currently work as a full stack (NodeJs, React, TSQL and devops) at TheJitu.com in Nyeri kenya. I love writing code and travelling. </p>
 
                     </div>

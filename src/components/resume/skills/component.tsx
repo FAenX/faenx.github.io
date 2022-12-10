@@ -1,29 +1,80 @@
 import { Icon, Skeleton, Stack, Typography } from "@mui/material";
 import React from "react";
+import { Button } from "react-bootstrap";
 import Image from 'react-bootstrap/Image'
 
 const skills = [
     {
         title: "Languages",
-        description: "This is a project",
-        link: ""
+        items: [
+            {
+                name: "Javascript",
+                image: ""
+            
+            },
+            {
+                name: "Typescript",
+                image: ""
+            },
+            {
+                name: "Python",
+                image: ""
+            },
+            {
+                name: "Java",
+                image: ""
+            },
+            {
+                name: "C++",
+                image: ""
+            },
+
+        ]
+       
     },
     {
         title: "Databases",
-        description: "This is a project",
-        link: ""
+        items: [
+            {
+                name: "MongoDB",
+                image: ""
+            },
+            {
+                name: "PostgreSQL",
+                image: ""
+            },
+            {
+                name: "MySQL",
+                image: ""
+            }
+        ]
     },
     {
-        title: "Project 3",
-        description: "This is a project",
-        link: ""
+        title: "Cloud",
+        items: [
+            {
+                name: "AWS",
+                image: ""
+            },
+            {
+                name: "GCP",
+                image: ""
+            },
+            {
+                name: "Azure",
+                image: ""
+            },
+        ]
+       
     },
 ]
 
 interface SkillsProps {
     title: string;
-    description: string;
-    link: string;
+    items: {
+        name: string,
+        image: string,
+    }[]
 }
 
 
@@ -39,23 +90,24 @@ function ListItem(props: {skills: SkillsProps[]}) {
                                 {skill.title}
                             </p>
 
-                            <Stack direction="row" flexWrap={"wrap"} spacing={2} className="p-3 border">
+                            <Stack direction="row" flexWrap={"wrap"} spacing={1} className="p-3 border">
 
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
-                                <Skeleton variant="circular" width={40} height={40} />
+                              {
+                                skill.items.map((item) => {
+                                    return (
+                                        <Button>
+                                        <Stack direction="row" spacing={1}>
+                                            <Icon>
+                                                <Image src={item.image} roundedCircle />
+                                            </Icon>
+                                            <Typography variant="body1">
+                                                {item.name}
+                                            </Typography>
+                                        </Stack>
+                                        </Button>
+                                    )
+                                })
+                              }
                                 
                                
                             </Stack>
