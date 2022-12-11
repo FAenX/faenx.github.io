@@ -157,17 +157,17 @@ interface SkillsProps {
 
 function ListItem(props: {skills: SkillsProps[]}) {
     return (
-        <Stack spacing={3}>                
+        <Stack spacing={4} sx={{width: "100%"}}  >                
             {
                 props.skills.map((skill) => {
                     return (
-                        <Stack spacing={1} className="border p-2">
+                        <Stack spacing={1} sx={{width: "100%"}}  justifyContent={"center"} className='border p-2' >
                             
-                            <Typography fontWeight={"bold"} >
+                            <Typography fontWeight={"bold"} align="center">
                                 {skill.title}
                             </Typography>
 
-                            <Stack direction="row" flexWrap={"wrap"} spacing={2} className="p-1 ">
+                            <Stack direction="row" flexWrap={"wrap"} spacing={2} className="p-1 "  justifyContent={"center"} >
 
                               {
                                 skill.items.map((item) => {
@@ -202,7 +202,7 @@ function ListItem(props: {skills: SkillsProps[]}) {
 export default function Skills() {
     return (
        
-        <Stack spacing={5} justifyContent={"center"} alignItems={"flex-start"} className=" p-5 m-3">
+        <Stack spacing={5} justifyContent={"center"} alignItems={"center"} className="m-5">
             <ListItem skills={skills}/>
         </Stack>
                    
