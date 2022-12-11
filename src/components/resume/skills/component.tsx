@@ -9,6 +9,21 @@ import Mongo from "../../../assets/images/brands/mongo.svg"
 import DO from "../../../assets/images/brands/digital_ocean.svg"
 import Docker from "../../../assets/images/brands/docker.svg"
 import Git from "../../../assets/images/brands/git.png"
+import Win from "../../../assets/images/brands/windows-svgrepo-com.svg"
+import Android from "../../../assets/images/brands/android-svgrepo-com.svg"
+import JS from "../../../assets/images/brands/js-svgrepo-com.svg"
+import TS from "../../../assets/images/brands/typescript-svgrepo-com.svg"
+import SQL from "../../../assets/images/brands/sql-svgrepo-com.svg"
+import pgsql from "../../../assets/images/brands/pgsql-svgrepo-com.svg"
+import mysql from "../../../assets/images/brands/mysql-svgrepo-com.svg"
+import mssql from "../../../assets/images/brands/database-svgrepo-com.svg"
+import aws from "../../../assets/images/brands/aws-svgrepo-com.svg"
+import gcp from "../../../assets/images/brands/gcp-opened-svgrepo-com.svg"
+import azure from "../../../assets/images/brands/azure-svgrepo-com.svg"
+
+
+
+
 
 const skills = [
     {
@@ -20,11 +35,11 @@ const skills = [
             },
             {
                 name: "Windows",
-                image: ""
+                image: Win
             },
             {
                 name: "Android",
-                image: ""
+                image: Android
             },
         ]
     },
@@ -33,12 +48,12 @@ const skills = [
         items: [
             {
                 name: "Javascript",
-                image: ""
+                image: JS
             
             },
             {
                 name: "Typescript",
-                image: ""
+                image: TS
             },
             {
                 name: "Python",
@@ -46,7 +61,7 @@ const skills = [
             },
             {
                 name: "SQL",
-                image: ""
+                image: SQL
             },
            
             
@@ -63,15 +78,15 @@ const skills = [
             },
             {
                 name: "PostgreSQL",
-                image: ""
+                image: pgsql
             },
             {
                 name: "MySQL",
-                image: ""
+                image: mysql
             },
             {
                 name: "MSSQL",
-                image: ""
+                image: mssql
             }
         ]
     },
@@ -80,15 +95,15 @@ const skills = [
         items: [
             {
                 name: "AWS",
-                image: ""
+                image: aws
             },
             {
                 name: "GCP",
-                image: ""
+                image: gcp
             },
             {
                 name: "Azure",
-                image: ""
+                image: azure
             },
             {
                 name: "Digital Ocean",
@@ -142,29 +157,29 @@ interface SkillsProps {
 
 function ListItem(props: {skills: SkillsProps[]}) {
     return (
-        <Stack spacing={5}>                
+        <Stack spacing={3}>                
             {
                 props.skills.map((skill) => {
                     return (
-                        <Stack spacing={1}>
+                        <Stack spacing={1} className="border p-2">
                             
-                            <p className="lead" >
+                            <Typography fontWeight={"bold"} >
                                 {skill.title}
-                            </p>
+                            </Typography>
 
-                            <Stack direction="row" flexWrap={"wrap"} spacing={2} className="p-1 border">
+                            <Stack direction="row" flexWrap={"wrap"} spacing={2} className="p-1 ">
 
                               {
                                 skill.items.map((item) => {
                                     return (
-                                        <Button size="small" variant="contained"  className="m-2" >
+                                        // <Button variant="outlined"  className="m-2" color="success" >
                                         <Stack direction="row" justifyContent={"center"} alignItems="center" spacing={1}>                                           
-                                            <Avatar alt={item.name} src={item.image} />                                            
-                                            <Typography variant="body2">
+                                            <Avatar alt={item.name} src={item.image} sx={{width: "18px", height:"18px"}}/>                                            
+                                            <Typography variant="body1" sx={{fontSize: "12px", textTransform: "capitalize", fontWeight: "bold"}}>
                                                 {item.name}
                                             </Typography>
                                         </Stack>
-                                        </Button>
+                                        // </Button>
                                     )
                                 })
                               }

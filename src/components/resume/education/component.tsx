@@ -17,7 +17,7 @@ const education = [
         date: "2021 - Present"
     },
     {
-        label: "university of Nairobi",
+        label: "University of Nairobi",
         description: "Post Graduate Diploma, Project planning and management",
         link: "",
         date: "2021 - Present"
