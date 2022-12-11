@@ -21,41 +21,41 @@ const info = {
 
 export default function PersonalInfo() {
     return (
-        <div className=" d-flex flex-column justify-content-around p-3 ">      
+        <Stack className="">      
          <Typing />      
-            <div className=" d-flex flex-column justify-content-centre text-align-center" style={{lineHeight: "1"}}>                
-                <div className="d-flex flex-row  flex-wrap">
+            <Stack className="" style={{lineHeight: "1"}}>                
+                <Stack className="">
                    
-                    <div className=" m-3 p-3 ">
+                    <Stack justifyContent={"center"} alignItems={"center"} className=" m-3 p-3" >
                     {
                         info.image ? (
                             <img
                             style={{
-                                width: 210,
-                                height: 210,
+                                width: 150,
+                                height: 150,
                             }}
                             className="rounded-circle"
                             alt={info.name}
                             src={profile}
                             />
                         ) : (
-                            <Skeleton variant="circular" width={210} height={210} />
+                            <Skeleton variant="circular" width={150} height={150} />
                         )
                         }
 
                         
-                    </div>
-                    <Stack spacing={0} justifyContent="center" className="p-2 ">
-                        <Typography variant="h4" > {info.name} </Typography>                    
-                        <hr className="my-4"/>
+                    </Stack>
+                    <Stack spacing={0} justifyContent="center" alignItems={"center"} className="p-2 ">
+                        <Typography variant="h5" > {info.name} </Typography>                    
+                        <hr className="my-2" style={{width: "40%"}} />
                         <p className="lead"> {info.location} </p>
                     </Stack>
-                </div>
-                <div className=" p-3  ">
-                <Typography variant="body1"> {info.about}</Typography>
+                </Stack>
+                <Stack className=" p-5   m-3">
+                <Typography variant="body1" align="left" > {info.about}</Typography>
 
-                    </div>
-            </div>
-        </div>
+                </Stack>
+            </Stack>
+        </Stack>
     );
 }

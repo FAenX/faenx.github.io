@@ -25,22 +25,18 @@ interface InterestProps {
 export default function Interests() {
     return (
        
-            <div className="d-flex  border m-1 p-1">
-                <div className="m-1 p-1 d-flex flex-column justify-content-centre" style={{width: "100%"}}>
+            <Stack className="m-1 p-1">
+                <Stack className="m-1 p-1" style={{width: "100%"}}>
                     <Typography variant="h3" align="center">My interests.</Typography>
-                    
-                <Stack direction="row" justifyContent={"center"} alignItems="center" flexWrap={"wrap"} spacing={2} className="p-3 ">
-
-                <Skeleton variant="circular" width={300} height={300} />
-                <Skeleton variant="circular" width={300} height={300} />
-                <Skeleton variant="circular" width={300} height={300} />
-                
-                
-
-
                 </Stack>
-                </div>
-            </div>
+                    
+                <Stack direction="row" justifyContent={'center'} alignItems="center" flexWrap={"wrap"} spacing={5} >
+                    <Skeleton variant="rectangular" width={300} height={300} />
+                    
+                    <Skeleton variant="rectangular" width={300} height={300} />
+                    <Skeleton variant="rectangular" width={300} height={300} />
+                </Stack>
+            </Stack>
       
     );
 }

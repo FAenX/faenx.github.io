@@ -70,7 +70,7 @@ export default function Experience() {
 
     return (
         <Box className="m-3">
-            <Typography align="left" variant="h4" className=" lead">Where I've worked.</Typography>
+            <Typography align="left" variant="h4" >Where I've worked.</Typography>
             <hr className="my-4"/>
       <Stepper activeStep={activeStep} orientation="vertical" className="p-2 m-3">
         {experiences.map((step, index) => (

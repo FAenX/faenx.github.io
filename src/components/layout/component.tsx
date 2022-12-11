@@ -1,13 +1,19 @@
+import { Avatar, Typography } from "@mui/material";
+import { Stack } from "@mui/system";
 import React, { ReactNode } from "react";
-import ThemeProvider from "react-bootstrap/ThemeProvider";
+import emoji from "../../assets/images/emoji/happy-emoji.svg"
 
 
 export default function Layout(props: {children: ReactNode}) {
     return (
-        <div className="container-fluid d-flex justify-content-centre flex-column  p-3">
+        <Stack className=" m-3">
             {props.children}
-            <div className="d-flex justify-content-center   p-3"> Footer </div>
-        </div>
+            <Typography variant="body1" align="center" className="m-3">
+            Designed and coded with love by Me! <span>
+                        {/* <Avatar src={emoji} alt="happy emoji" sx={{width: 20, height: 20}} /> */}
+                    </span>
+            </Typography>
+        </Stack>
     );
     }
 
