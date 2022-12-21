@@ -157,25 +157,28 @@ interface SkillsProps {
 
 function ListItem(props: {skills: SkillsProps[]}) {
     return (
-        <Stack spacing={4} sx={{width: "100%"}}  >                
+        <Stack spacing={1} sx={{width: "100%"}} padding={2} > 
+        <Typography  variant="h4" margin={2} align="right">Skills</Typography>   
+        
             {
                 props.skills.map((skill) => {
                     return (
-                        <Stack spacing={1} sx={{width: "100%"}}  justifyContent={"center"} className='border p-2' >
+                        <Stack spacing={1} sx={{width: "100%"}}  alignContent={"flex-end"} justifyContent="flex-end" className="">
                             
-                            <Typography fontWeight={"bold"} align="center">
+                            <Typography variant="h6"  align="right" sx={{textDecoration: "underline"}} margin={2} >
                                 {skill.title}
                             </Typography>
+                            {/* <hr className="my-4"/> */}
 
-                            <Stack direction="row" flexWrap={"wrap"} spacing={2} className="p-1 "  justifyContent={"center"} >
+                            <Stack direction="row" flexWrap={"wrap"} justifyContent="flex-end" spacing={2} className=" "   >
 
                               {
                                 skill.items.map((item) => {
                                     return (
                                         // <Button variant="outlined"  className="m-2" color="success" >
-                                        <Stack direction="row" justifyContent={"center"} alignItems="center" spacing={1}>                                           
-                                            <Avatar alt={item.name} src={item.image} sx={{width: "18px", height:"18px"}}/>                                            
-                                            <Typography variant="body1" sx={{fontSize: "12px", textTransform: "capitalize", fontWeight: "bold"}}>
+                                        <Stack direction="column" justifyContent={"center"} alignItems="center" spacing={1}>                                           
+                                            <Avatar alt={item.name} src={item.image} sx={{width: "30px", height:"30px"}} variant="square"/>                                            
+                                            <Typography  component={"span"} variant="body1" sx={{textTransform: "capitalize"}}>
                                                 {item.name}
                                             </Typography>
                                         </Stack>
@@ -187,7 +190,7 @@ function ListItem(props: {skills: SkillsProps[]}) {
                                
                             </Stack>
                                 
-                        
+                        <hr />            
                         </Stack>
                     )
                 })
