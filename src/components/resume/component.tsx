@@ -65,15 +65,15 @@ function Headline() {
 export default function Resume() {
     return (
 
-        <Stack className="  m-5"  alignItems={"center"} justifyContent={"center"} >
-            <Stack justifyContent={"center"} direction={"row"}>
-                <Stack className="" style={{minWidth: "400px", width: "45%"}}>
+        <Stack className=" "  alignItems={"center"} justifyContent={"center"} >
+            <Stack justifyContent={"center"} direction={"row"} flexWrap={"wrap"} className="">
+                <Stack className="" style={{minWidth: "400px", width: "25%"}}>
                     <Headline />
                     <Main/>
                 </Stack>
                
 
-                <Stack className=" m-3" style={{width: "60%", minWidth: "400px"}}>
+                <Stack className=" " style={{width: "60%", minWidth: "400px"}}>
                     <PersonalInfo />
                     <About />
                     <Experience />

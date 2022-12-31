@@ -18,7 +18,8 @@ function FixedContainer() {
 
 export default function Layout(props: {children: ReactNode}) {
     return (
-        <Stack className="">
+        <Stack alignItems={"center"} className="">
+        <Stack className="" sx={{maxWidth: "1080px"}}>
             {/* <FixedContainer /> */}
             {props.children}
             <Typography variant="body1" align="center" className="m-3">
@@ -26,6 +27,7 @@ export default function Layout(props: {children: ReactNode}) {
                         {/* <Avatar src={emoji} alt="happy emoji" sx={{width: 20, height: 20}} /> */}
                     </span>
             </Typography>
+        </Stack>
         </Stack>
     );
     }

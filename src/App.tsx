@@ -20,6 +20,7 @@ const theme = createTheme({
     secondary: {
       main: "#ffffff",
     },
+    mode: "dark",
   },
   breakpoints: {
     values: {
@@ -45,6 +46,7 @@ const theme = createTheme({
 });
 
 function App() {
+
   return (
     <ThemeProvider theme={theme}>
        <CssBaseline />
