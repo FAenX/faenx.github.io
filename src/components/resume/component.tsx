@@ -51,7 +51,6 @@ function Headline() {
         <Stack  className=""  spacing={0} margin={"50px"} >
             <Typography variant="h4">{info.name} </Typography>
             <Typography > {info.about}</Typography>
-            <hr className="my-1" style={{width: "10%"}}/>
     </Stack>
     );
 }
