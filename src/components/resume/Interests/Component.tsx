@@ -45,7 +45,7 @@ export default function Interests() {
        
             <Stack className="m-1 p-1">
                 <Stack className="m-1 p-1" style={{width: "100%"}}>
-                    <Typography variant="h3" align="center">My interests.</Typography>
+                    <Typography variant="h3" align="center">MY INTERESTS.</Typography>
                 </Stack>
 
                 <Stack className="" sx={{}}  direction="row" justifyContent={'center'} alignItems="center" flexWrap={"wrap"}  >

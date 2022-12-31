@@ -204,8 +204,8 @@ export default function Skills() {
     return (
        
         <Box margin={"20px"}>
-        <Typography align="left" variant="h6"  >Skills.</Typography>
-        <hr className="my-1" style={{width: "10%"}}/>
+        <Typography align="left" variant="h6"  >SKILLS.</Typography>
+        <hr className="my-1" style={{width: "20%"}}/>
             
             <ListItem skills={skills}/>
         </Box>

@@ -20,8 +20,8 @@ function About() {
     return (
         <Stack className="" >
             <Box margin={"20px"}>
-            <Typography align="left" variant="h6"  >About.</Typography>
-            <hr className="my-1" style={{width: "10%"}}/>
+            <Typography align="left" variant="h6"  >ABOUT.</Typography>
+            <hr className="my-1" style={{width: "20%"}}/>
 
             <Typography variant="body1" className="m-3">
                 {info.about_long}
