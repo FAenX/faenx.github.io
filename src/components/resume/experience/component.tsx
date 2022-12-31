@@ -89,14 +89,14 @@ export default function Experience() {
                   <Button
                     variant="contained"
                     onClick={handleNext}
-                    // sx={{ mt: 1, mr: 1 }}
+                    
                   >
                     {index === experiences.length - 1 ? 'Finish' : 'Continue'}
                   </Button>
                   <Button
                     disabled={index === 0}
                     onClick={handleBack}
-                    // sx={{ mt: 1, mr: 1 }}
+                    
                   >
                     Back
                   </Button>

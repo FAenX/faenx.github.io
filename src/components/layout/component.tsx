@@ -10,7 +10,7 @@ import { ReactNode } from "react";
 
 export default function Layout(props: {children: ReactNode}) {
     return (
-        <Stack alignItems={"center"} className="">
+        <Stack alignItems={"center"} className="" margin={"20px"}>
         <Stack className="" sx={{maxWidth: "1080px"}}>
             {/* <FixedContainer /> */}
             {props.children}
