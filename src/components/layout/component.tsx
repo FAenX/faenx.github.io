@@ -15,7 +15,7 @@ export default function Layout(props: {children: ReactNode}) {
             {/* <FixedContainer /> */}
             {props.children}
             <Typography variant="body1" align="center" className="m-3">
-            Designed and coded with love by Me!! <span>
+            Designed and coded with love by Me!!! <span>
                         {/* <Avatar src={emoji} alt="happy emoji" sx={{width: 20, height: 20}} /> */}
                     </span>
             </Typography>
