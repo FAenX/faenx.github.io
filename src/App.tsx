@@ -1,9 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Layout, Resume } from './components';
-import { styleProps } from "./components/resume";
-import { createTheme, CssBaseline, Stack, ThemeProvider } from "@mui/material";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import ChivoMono  from  "./assets/fonts/Chivo_Mono/static/ChivoMono-Regular.ttf"
 
 

@@ -1,11 +1,8 @@
-import { Box, createTheme, Stack, ThemeProvider, Typography } from "@mui/material";
-import React from "react";
-import { styleProps } from ".";
+import { Box, Stack, Typography } from "@mui/material";
 import Education from "./education";
 import Experience from "./experience";
 import Interests from "./Interests";
 import PersonalInfo from "./personalInfo/personalInfo";
-import Projects from "./projects";
 import Skills from "./skills";
 
 const info = {

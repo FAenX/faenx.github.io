@@ -1,12 +1,6 @@
-import { Avatar, Box, List, ListItem, ListItemAvatar, ListItemText, Skeleton, Stack, Typography } from "@mui/material";
-import React from "react";
-import Image from 'react-bootstrap/Image'
-import { styleProps } from "..";
+import { List, ListItem, ListItemAvatar, ListItemText, Skeleton, Stack } from "@mui/material";
 import profile from "../../../assets/images/profile-image.jpeg"
-import Typing from "../../common/index,";
-import ImageIcon from '@mui/icons-material/Image';
 import EmailIcon from '@mui/icons-material/Email';
-import BadgeIcon from '@mui/icons-material/Badge';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import HourglassTopIcon from '@mui/icons-material/HourglassTop';
 

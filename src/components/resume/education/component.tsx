@@ -1,7 +1,6 @@
-import { Box, Paper, Typography, Stepper, Step, StepLabel, StepContent, Divider } from "@mui/material";
+import { Box, Typography, Stepper, Step, StepLabel, StepContent } from "@mui/material";
 import React from "react";
 import { Button } from "react-bootstrap";
-import Image from 'react-bootstrap/Image'
 
 interface EducationProps {
     title: string;

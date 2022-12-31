@@ -1,7 +1,5 @@
-import { Box, Card, CardContent, Skeleton, Stack, Typography } from "@mui/material";
-import React from "react";
+import { Box, Stack, Typography } from "@mui/material";
 
-import Image from 'react-bootstrap/Image'
 
 import Ai from "../../../assets/images/brands/artificial-intelligence.png"
 import OS from "../../../assets/images/brands/Linux-Emblem.png"

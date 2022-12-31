@@ -1,7 +1,6 @@
-import { Avatar, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
-import React, { ReactNode } from "react";
-import emoji from "../../assets/images/emoji/happy-emoji.svg"
+import { ReactNode } from "react";
 
 
 
