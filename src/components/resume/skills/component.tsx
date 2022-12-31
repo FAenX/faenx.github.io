@@ -1,4 +1,4 @@
-import { Icon, Skeleton, Stack, Typography, Button } from "@mui/material";
+import { Icon, Skeleton, Stack, Typography, Button, Box } from "@mui/material";
 import React from "react";
 import Avatar from '@mui/material/Avatar';
 import python from "../../../assets/images/brands/python.png"
@@ -157,32 +157,31 @@ interface SkillsProps {
 
 function ListItem(props: {skills: SkillsProps[]}) {
     return (
-        <Stack spacing={1} sx={{width: "100%"}} padding={2} > 
-        <Typography  variant="h4" margin={2} align="right">Skills</Typography>   
-        
+        <Stack className=""> 
             {
                 props.skills.map((skill) => {
                     return (
                         <Stack spacing={1} sx={{width: "100%"}}  alignContent={"flex-end"} justifyContent="flex-end" className="">
                             
-                            <Typography variant="h6"  align="right" sx={{textDecoration: "underline"}} margin={2} >
+                            <Typography variant="body2" margin={2} >
                                 {skill.title}
                             </Typography>
                             {/* <hr className="my-4"/> */}
 
-                            <Stack direction="row" flexWrap={"wrap"} justifyContent="flex-end" spacing={2} className=" "   >
+                            <Stack direction="row" flexWrap={"wrap"}  className=" "   >
 
                               {
                                 skill.items.map((item) => {
                                     return (
                                         // <Button variant="outlined"  className="m-2" color="success" >
-                                        <Stack direction="column" justifyContent={"center"} alignItems="center" spacing={1}>                                           
-                                            <Avatar alt={item.name} src={item.image} sx={{width: "30px", height:"30px"}} variant="square"/>                                            
-                                            <Typography  component={"span"} variant="body1" sx={{textTransform: "capitalize"}}>
+                                        <Button variant="outlined" sx={{backgroundColor: "#F3F6F4", margin: "1px"}} >
+                                        <Stack direction="row" justifyContent={"center"} alignItems="center" spacing={1}>                                           
+                                            <Avatar alt={item.name} src={item.image} sx={{width: "15px", height:"15px"}} variant="square"/>                                            
+                                            <Typography  component={"span"} variant="body2" sx={{textTransform: "capitalize"}}>
                                                 {item.name}
                                             </Typography>
                                         </Stack>
-                                        // </Button>
+                                        </Button>
                                     )
                                 })
                               }
@@ -190,7 +189,7 @@ function ListItem(props: {skills: SkillsProps[]}) {
                                
                             </Stack>
                                 
-                        <hr />            
+                            
                         </Stack>
                     )
                 })
@@ -205,9 +204,12 @@ function ListItem(props: {skills: SkillsProps[]}) {
 export default function Skills() {
     return (
        
-        <Stack spacing={5} justifyContent={"center"} alignItems={"center"} className="m-5">
+        <Box margin={"20px"}>
+        <Typography align="left" variant="h6"  >Skills.</Typography>
+        <hr className="my-1" style={{width: "10%"}}/>
+            
             <ListItem skills={skills}/>
-        </Stack>
+        </Box>
                    
          
       

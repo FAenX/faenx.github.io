@@ -48,15 +48,15 @@ export default function Education() {
         setActiveStep(0);
     };
     return (
-        <Box className="m-3" mt={15}>
-             <Typography align="left" variant="h4" className=" lead">Education.</Typography>
-             <hr className="my-4"/>
+      <Box margin={"20px"}>
+      <Typography align="left" variant="h6"  >Education.</Typography>
+      <hr className="my-1" style={{width: "10%"}}/>
             
-      <Stepper activeStep={activeStep} orientation="vertical" className="p-2 m-3 ">
+      <Stepper activeStep={activeStep} orientation="vertical" className="">
         {education.map((step, index) => (
           <Step key={step.label}>
             <StepLabel  >
-              <Typography variant="h5">{step.label}</Typography>
+              <Typography variant="h6">{step.label}</Typography>
               <Typography variant="body1">{step.date}</Typography>
             </StepLabel>
             <StepContent>

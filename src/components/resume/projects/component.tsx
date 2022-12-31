@@ -40,7 +40,7 @@ export default function Projects() {
         <Typography padding={5} variant="h4" align="center">Projects I am Currently working on</Typography>
       
                     
-             <Stack  direction="row" justifyContent={'center'} alignItems="center" flexWrap={"wrap"} className="border">
+             <Stack  direction="row" justifyContent={'center'} alignItems="center" flexWrap={"wrap"} className="">
                     {
                         projects.map((project) => {
                             return (

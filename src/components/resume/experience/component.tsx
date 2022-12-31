@@ -69,14 +69,14 @@ export default function Experience() {
     };
 
     return (
-        <Box className="m-3">
-            <Typography align="left" variant="h4" >Where I've worked.</Typography>
-            <hr className="my-4"/>
-      <Stepper activeStep={activeStep} orientation="vertical" className="p-2 m-3">
+        <Box margin={"20px"}>
+            <Typography align="left" variant="h6"  >Experience.</Typography>
+            <hr className="my-1" style={{width: "10%"}}/>
+      <Stepper activeStep={activeStep} orientation="vertical" className="">
         {experiences.map((step, index) => (
           <Step key={step.label}>
             <StepLabel  >
-            <Typography variant="h5">{step.label}</Typography>
+            <Typography variant="h6">{step.label}</Typography>
             <Typography variant="body1">{step.title}</Typography>
             <Typography variant="body1">{step.date}</Typography>
             </StepLabel>
