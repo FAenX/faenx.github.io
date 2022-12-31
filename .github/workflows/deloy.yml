@@ -25,7 +25,7 @@ jobs:
       - name: Deploy
         uses: retypeapp/action-github-pages@latest
         with:
-          branch: gh-pages
+          branch: retype
           update-branch: true
 
     
