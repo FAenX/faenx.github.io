@@ -61,7 +61,7 @@ export default function Experience() {
     };
 
     const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep ==0 ? 0 : prevActiveStep - 1);
+        setActiveStep((prevActiveStep) => prevActiveStep ===0 ? 0 : prevActiveStep - 1);
     };
 
  

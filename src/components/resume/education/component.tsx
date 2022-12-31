@@ -35,7 +35,7 @@ export default function Education() {
     };
 
     const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep ==0 ? 0 : prevActiveStep - 1);
+        setActiveStep((prevActiveStep) => prevActiveStep ===0 ? 0 : prevActiveStep - 1);
     };
 
     
