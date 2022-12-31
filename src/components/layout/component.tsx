@@ -4,13 +4,6 @@ import { ReactNode } from "react";
 
 
 
-function FixedContainer() {
-    return (
-       
-        <span className=" floating-line"></span>
-      
-    );
-}
 
 
 

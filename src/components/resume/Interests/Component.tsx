@@ -7,11 +7,7 @@ import data from "../../../assets/images/brands/data-processing.png"
 import agile from "../../../assets/images/brands/agile.png"
 
 
-const projects = [
-    {
-        name: "Music",
-    },
-]
+
 
 
 const interests = [

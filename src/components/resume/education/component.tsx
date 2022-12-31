@@ -2,11 +2,6 @@ import { Box, Typography, Stepper, Step, StepLabel, StepContent } from "@mui/mat
 import React from "react";
 import { Button } from "react-bootstrap";
 
-interface EducationProps {
-    title: string;
-    description: string;
-    link: string;
-}
 
 const education = [
     {
@@ -43,9 +38,7 @@ export default function Education() {
         setActiveStep((prevActiveStep) => prevActiveStep ==0 ? 0 : prevActiveStep - 1);
     };
 
-    const handleReset = () => {
-        setActiveStep(0);
-    };
+    
     return (
       <Box margin={"20px"}>
       <Typography align="left" variant="h6"  >Education.</Typography>

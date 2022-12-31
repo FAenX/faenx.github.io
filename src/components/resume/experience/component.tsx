@@ -64,9 +64,7 @@ export default function Experience() {
         setActiveStep((prevActiveStep) => prevActiveStep ==0 ? 0 : prevActiveStep - 1);
     };
 
-    const handleReset = () => {
-        setActiveStep(0);
-    };
+ 
 
     return (
         <Box margin={"20px"}>

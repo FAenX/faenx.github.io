@@ -5,9 +5,6 @@ import MyLocationIcon from '@mui/icons-material/MyLocation';
 import HourglassTopIcon from '@mui/icons-material/HourglassTop';
 
 
-type Props = {
-    image: string,
-}
 
 const info = {
     name: "Emmanuel Davidson",
