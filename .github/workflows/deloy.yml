@@ -19,7 +19,10 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v3
 
+      - name: Setup git username
+        run: git config --global user.name "Github Action" && git config --global user.email "auto@githubactions.com" 
+
       - name: Build and deploy
-        run:   git config user.name "Github Action" && git config user.email "auto@githubactions.com" && npm install && npm run deploy
+        run:  npm install && npm run deploy
 
     
