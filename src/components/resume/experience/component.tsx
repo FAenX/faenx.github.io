@@ -68,15 +68,15 @@ export default function Experience() {
 
     return (
         <Box margin={"20px"}>
-            <Typography align="left" variant="h6"  >Experience.</Typography>
-            <hr className="my-1" style={{width: "10%"}}/>
+            <Typography align="left" variant="h6"  >EXPERIENCE.</Typography>
+            <hr className="my-1" style={{width: "20%"}}/>
       <Stepper activeStep={activeStep} orientation="vertical" className="">
         {experiences.map((step, index) => (
           <Step key={step.label}>
             <StepLabel  >
             <Typography variant="h6">{step.label}</Typography>
-            <Typography variant="body1">{step.title}</Typography>
-            <Typography variant="body1">{step.date}</Typography>
+            <Typography variant="h6">{step.title}</Typography>
+            <Typography variant="h6">{step.date}</Typography>
             </StepLabel>
             <StepContent>
               {
@@ -87,18 +87,19 @@ export default function Experience() {
               <Box sx={{ mb: 2 }}>
                 <div>
                   <Button
-                    variant="contained"
+                    variant="outlined"
                     onClick={handleNext}
                     
                   >
-                    {index === experiences.length - 1 ? 'Finish' : 'Continue'}
+                    <Typography color={"red"}>{index === experiences.length - 1 ? 'Finish' : 'Continue'}</Typography>
                   </Button>
                   <Button
                     disabled={index === 0}
                     onClick={handleBack}
+                    variant="outlined"
                     
                   >
-                    Back
+                     <Typography color={"red"}>Back</Typography>
                   </Button>
                 </div>
               </Box>

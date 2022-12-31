@@ -41,15 +41,15 @@ export default function Education() {
     
     return (
       <Box margin={"20px"}>
-      <Typography align="left" variant="h6"  >Education.</Typography>
-      <hr className="my-1" style={{width: "10%"}}/>
+      <Typography align="left" variant="h5"  >EDUCATION.</Typography>
+      <hr className="my-1" style={{width: "20%"}}/>
             
       <Stepper activeStep={activeStep} orientation="vertical" className="">
         {education.map((step, index) => (
           <Step key={step.label}>
             <StepLabel  >
               <Typography variant="h6">{step.label}</Typography>
-              <Typography variant="body1">{step.date}</Typography>
+              <Typography variant="h6">{step.date}</Typography>
             </StepLabel>
             <StepContent>
               <Typography variant="body1">{step.description}</Typography>
@@ -60,14 +60,15 @@ export default function Education() {
                     onClick={handleNext}
                     // sx={{ mt: 1, mr: 1 }}
                   >
-                    {index === education.length - 1 ? 'Finish' : 'Continue'}
+                     <Typography color={"red"}>{index === education.length - 1 ? 'Finish' : 'Continue'}</Typography>
                   </Button>
                   <Button
                     disabled={index === 0}
                     onClick={handleBack}
+                    variant="contained"
                     // sx={{ mt: 1, mr: 1 }}
                   >
-                    Back
+                     <Typography color={"red"}>Back</Typography>
                   </Button>
                 </div>
               </Box>
