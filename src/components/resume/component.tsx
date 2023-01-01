@@ -48,7 +48,7 @@ function Main() {
 
 function Headline() {
     return (
-        <Stack  className=""  spacing={0} margin={"50px"} >
+        <Stack  className=""  spacing={0}  margin={"20px"}>
             <Typography variant="h4">{info.name} </Typography>
             <Typography > {info.about}</Typography>
     </Stack>
@@ -61,15 +61,15 @@ function Headline() {
 export default function Resume() {
     return (
 
-        <Stack className=" "  alignItems={"center"} justifyContent={"center"} >
+        <Stack className=""  alignItems={"center"} justifyContent={"center"} >
             <Stack justifyContent={"center"} direction={"row"} flexWrap={"wrap"} className="">
-                <Stack className="" style={{minWidth: "400px", width: "25%"}}>
+                <Stack className="" style={{minWidth: "400px", width: "35%"}}>
                     <PersonalInfo />
                     <Main/>
                 </Stack>
                
 
-                <Stack className=" " style={{width: "60%", minWidth: "400px"}}>
+                <Stack className=" " style={{width: "55%", minWidth: "400px"}}>
                    
                     <Headline />
                     <About />

@@ -20,35 +20,33 @@ const info = {
 
 export default function PersonalInfo() {
     return (
-        <Stack className="">      
-         {/* <Typing />       */}
-            <Stack className="" style={{lineHeight: "1"}}>                
-                <Stack className="" direction={"row"} flexWrap="wrap" justifyContent={"center"} margin={3} alignItems="flex-center"  spacing={5}>
+            <Stack className="" >                
+                <Stack className="" direction={"row"} flexWrap="wrap" justifyContent={"center"} margin={2} alignItems="flex-center"  spacing={0}>
                      
                     {/*  */}
-                    <Stack  justifyContent={"center"} alignItems={"center"} >
+                    <Stack  justifyContent={"center"} alignItems={"center"} className="">
                     {
                         info.image ? (
                             <img
                             style={{
-                                width: 150,
-                                height: 150,
+                                width: 100,
+                                height: 100,
                             }}
                             className="rounded-circle"
                             alt={info.name}
                             src={profile}
                             />
                         ) : (
-                            <Skeleton variant="circular" width={150} height={150} />
+                            <Skeleton variant="circular" width={100} height={100} />
                         )
                         }
 
                         
                     </Stack>
 
-                    <Stack spacing={0} justifyContent="center" alignItems={"flex-start"} className="">
-                        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} disablePadding={true}>
-                        <ListItem >
+                    <Stack spacing={1} justifyContent="center" alignItems={"flex-start"} className="">
+                        <List sx={{ width: '100%', maxWidth: 300, bgcolor: 'background.paper' }} disablePadding={true}>
+                        <ListItem sx={{padding: 0}}>
                             <ListItemAvatar>
                                
                                     <EmailIcon />
@@ -57,7 +55,7 @@ export default function PersonalInfo() {
                                 <ListItemText primary={info.email} />
                             </ListItem>
                             
-                            <ListItem>
+                            <ListItem sx={{padding: 0}}>
                             <ListItemAvatar>
                                 
                                 <MyLocationIcon />
@@ -67,7 +65,7 @@ export default function PersonalInfo() {
                             
                             </ListItem>
 
-                            <ListItem>
+                            <ListItem sx={{padding: 0}}>
                             <ListItemAvatar>
                                 
                                 <HourglassTopIcon />
@@ -83,6 +81,6 @@ export default function PersonalInfo() {
                 </Stack>
                 
             </Stack>
-        </Stack>
+
     );
 }
