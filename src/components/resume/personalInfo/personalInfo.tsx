@@ -3,6 +3,7 @@ import profile from "../../../assets/images/profile-image.jpeg"
 import EmailIcon from '@mui/icons-material/Email';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import HourglassTopIcon from '@mui/icons-material/HourglassTop';
+import { LinkOff } from "@mui/icons-material";
 
 
 
@@ -13,6 +14,7 @@ const info = {
     image: "https://avatars.githubusercontent.com/u/1015040?v=4",
     email: "kipronofb@outlook.com",
     period: " > 5 years",
+    github: <a href="https://github.com/FAenX"> GitHub </a>,
 
 }
 
@@ -21,7 +23,7 @@ const info = {
 export default function PersonalInfo() {
     return (
             <Stack className="" >                
-                <Stack className="" direction={"row"} flexWrap="wrap" justifyContent={"center"} margin={2} alignItems="flex-center"  spacing={0}>
+                <Stack className="" direction={"row"} flexWrap="wrap" justifyContent={"center"} margin={2} alignItems="flex-center"  spacing={1}>
                      
                     {/*  */}
                     <Stack  justifyContent={"center"} alignItems={"center"} className="">
@@ -72,6 +74,16 @@ export default function PersonalInfo() {
                                 </ListItemAvatar>
                           
                                 <ListItemText primary={info.period} />
+                            
+                            </ListItem>
+
+                            <ListItem sx={{padding: 0}}>
+                            <ListItemAvatar>
+                                
+                                <LinkOff />
+                                </ListItemAvatar>
+                          
+                                <ListItemText primary={info.github} />
                             
                             </ListItem>
                             
