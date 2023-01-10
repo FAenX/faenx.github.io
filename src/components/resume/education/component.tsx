@@ -14,13 +14,13 @@ const education = [
         label: "University of Nairobi",
         description: "Post Graduate Diploma, Project planning and management",
         link: "",
-        date: "2021 - Present"
+        date: "2019 - 2020"
     },
     {
         label: "University of Eldoret",
         description: "Bachelors of Science in biochemistry",
         link: "",
-        date: "2021 - Present"
+        date: "2012 - 2016"
     },
 ]
 
