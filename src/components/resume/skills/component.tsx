@@ -162,7 +162,7 @@ function ListItem(props: {skills: SkillsProps[]}) {
                     return (
                         <Stack spacing={1} sx={{width: "100%"}}  alignContent={"flex-end"} justifyContent="flex-end" className="">
                             
-                            <Typography variant="body2" margin={2} >
+                            <Typography variant="body1" margin={2} >
                                 {skill.title}
                             </Typography>
                             {/* <hr className="my-4"/> */}
@@ -173,14 +173,14 @@ function ListItem(props: {skills: SkillsProps[]}) {
                                 skill.items.map((item) => {
                                     return (
                                         // <Button variant="outlined"  className="m-2" color="success" >
-                                        <Button variant="outlined" sx={{backgroundColor: "#F3F6F4", margin: "1px"}} >
+                                        <Stack sx={{margin: "2px", padding: "2px"}} >
                                         <Stack direction="row" justifyContent={"center"} alignItems="center" spacing={1}>                                           
                                             <Avatar alt={item.name} src={item.image} sx={{width: "15px", height:"15px"}} variant="square"/>                                            
                                             <Typography  component={"span"} variant="body2" sx={{textTransform: "capitalize"}}>
                                                 {item.name}
                                             </Typography>
                                         </Stack>
-                                        </Button>
+                                        </Stack>
                                     )
                                 })
                               }
