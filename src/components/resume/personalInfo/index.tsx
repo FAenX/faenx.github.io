@@ -1,4 +1,5 @@
-import PersonalInfo from "./personalInfo";
+import PersonalInfo from "./components/personalInfo";
+
 
 
 export default PersonalInfo;

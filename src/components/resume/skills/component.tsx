@@ -19,15 +19,14 @@ import mssql from "../../../assets/images/brands/database-svgrepo-com.svg"
 import aws from "../../../assets/images/brands/aws-svgrepo-com.svg"
 import gcp from "../../../assets/images/brands/gcp-opened-svgrepo-com.svg"
 import azure from "../../../assets/images/brands/azure-svgrepo-com.svg"
+import { ListItem } from "./components";
+import { HeadingRightLabel } from "../../common";
 
 
 
 
 
 const skills = [
-    {
-        title: "Operating Systems",
-        items: [
             {
                 name: "Linux",
                 image: Linux
@@ -40,11 +39,6 @@ const skills = [
                 name: "Android",
                 image: Android
             },
-        ]
-    },
-    {
-        title: "Languages",
-        items: [
             {
                 name: "Javascript",
                 image: JS
@@ -63,14 +57,6 @@ const skills = [
                 image: SQL
             },
            
-            
-
-        ]
-       
-    },
-    {
-        title: "Databases",
-        items: [
             {
                 name: "MongoDB",
                 image: Mongo
@@ -86,12 +72,8 @@ const skills = [
             {
                 name: "MSSQL",
                 image: mssql
-            }
-        ]
-    },
-    {
-        title: "Cloud",
-        items: [
+            },
+    
             {
                 name: "AWS",
                 image: aws
@@ -108,13 +90,7 @@ const skills = [
                 name: "Digital Ocean",
                 image: DO
             },
-        ]
-       
-    },
-
-    {
-        title: "Frameworks",
-        items: [
+     
             {
                 name: "React",
                 image: react
@@ -127,11 +103,7 @@ const skills = [
                 name: "Express",
                 image: node
             },
-        ]
-    },
-    {
-        title: "Technologies",
-        items: [
+    
             {
                 name: "Git",
                 image: Git
@@ -140,73 +112,16 @@ const skills = [
                 name: "Docker",
                 image: Docker
             },
-            
         ]
-    },
-]
-
-interface SkillsProps {
-    title: string;
-    items: {
-        name: string,
-        image: string,
-    }[]
-}
-
-
-function ListItem(props: {skills: SkillsProps[]}) {
-    return (
-        <Stack className=""> 
-            {
-                props.skills.map((skill) => {
-                    return (
-                        <Stack spacing={1} sx={{width: "100%"}}  alignContent={"flex-end"} justifyContent="flex-end" className="">
-                            
-                            <Typography variant="body1" margin={2} >
-                                {skill.title}
-                            </Typography>
-                            {/* <hr className="my-4"/> */}
-
-                            <Stack direction="row" flexWrap={"wrap"}  className=" "   >
-
-                              {
-                                skill.items.map((item) => {
-                                    return (
-                                        // <Button variant="outlined"  className="m-2" color="success" >
-                                        <Stack sx={{margin: "2px", padding: "2px"}} >
-                                        <Stack direction="row" justifyContent={"center"} alignItems="center" spacing={1}>                                           
-                                            <Avatar alt={item.name} src={item.image} sx={{width: "15px", height:"15px"}} variant="square"/>                                            
-                                            <Typography  component={"span"} variant="body2" sx={{textTransform: "capitalize"}}>
-                                                {item.name}
-                                            </Typography>
-                                        </Stack>
-                                        </Stack>
-                                    )
-                                })
-                              }
-                                
-                               
-                            </Stack>
-                                
-                            
-                        </Stack>
-                    )
-                })
-            }
-                
-           
-        </Stack>
-    )
-}
 
 
 export default function Skills() {
     return (
        
         <Box margin={"20px"}>
-        <Typography align="left" variant="h6"  >SKILLS.</Typography>
-        <hr className="my-1" style={{width: "20%"}}/>
-            
+            <HeadingRightLabel children={
+                <Typography variant="h5"> Skills </Typography>
+            } />
             <ListItem skills={skills}/>
         </Box>
                    

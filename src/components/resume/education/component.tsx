@@ -1,15 +1,10 @@
 import { Box, Typography, Stepper, Step, StepLabel, StepContent } from "@mui/material";
 import React from "react";
 import { Button } from "react-bootstrap";
+import { HeadingLeftLabel } from "../../common";
 
 
 const education = [
-    {
-        label: "Coursera",
-        description: "Google, Data Analytics",
-        link: "",
-        date: "2021 - Present"
-    },
     {
         label: "University of Nairobi",
         description: "Post Graduate Diploma, Project planning and management",
@@ -40,11 +35,12 @@ export default function Education() {
 
     
     return (
-      <Box margin={"20px"}>
-      <Typography align="left" variant="h5"  >EDUCATION.</Typography>
-      <hr className="my-1" style={{width: "20%"}}/>
+      <Box margin={"20px"} sx={{border: "1px solid white"}}>
+        <HeadingLeftLabel children={
+          <Typography align="left" variant="h6"  >Education </Typography>
+        } />
             
-      <Stepper activeStep={activeStep} orientation="vertical" className="">
+      <Stepper activeStep={activeStep} orientation="vertical" >
         {education.map((step, index) => (
           <Step key={step.label}>
             <StepLabel  >

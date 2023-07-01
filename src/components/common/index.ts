@@ -1,3 +1,7 @@
-import Typing from './typingEffect';
+import HeadingRightLabel from './headingRight';
+import HeadingLeftLabel from './headingLeft';
 
-export default Typing;
+export {
+    HeadingRightLabel,
+    HeadingLeftLabel
+};

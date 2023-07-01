@@ -12,12 +12,12 @@ const theme = createTheme({
   
   palette: {
     primary: {
-      main: "#000000",
+      main: "#868889",
     },
     secondary: {
       main: "#ffffff",
     },
-    mode: "dark",
+    mode: "light",
   },
   breakpoints: {
     values: {
