@@ -1,5 +1,4 @@
-import { Stack, Typography, Box } from "@mui/material";
-import Avatar from '@mui/material/Avatar';
+import { Typography, Box } from "@mui/material";
 import python from "../../../assets/images/brands/python.png"
 import node from "../../../assets/images/brands/node.svg"
 import react from "../../../assets/images/brands/react.svg"

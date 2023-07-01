@@ -1,27 +1,27 @@
-import { Avatar, Box, List, ListItem, ListItemAvatar, ListItemText, Skeleton, Stack } from "@mui/material";
-import profile from "../../../assets/images/profile-image.jpeg"
+import { Box, List, ListItem, ListItemAvatar, ListItemText, Typography } from "@mui/material";
 import EmailIcon from '@mui/icons-material/Email';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import HourglassTopIcon from '@mui/icons-material/HourglassTop';
 import { LinkOff } from "@mui/icons-material";
 import {info} from "../../../../data"
+import { HeadingRightLabel } from "../../../common";
 
 
 
 export default function Info(){
     return (
         <Box
-            // justifyContent="center" 
-            // alignItems={"flex-start"} 
-            // width={"100px"}
             sx={{border: "1px solid white"}}
         >
+            <HeadingRightLabel children={
+                <Typography variant="h5"> Contacts </Typography>
+            } />
 
-        <List sx={{ bgcolor: 'background.paper' }} disablePadding={true}>
-        <ListItem sx={{padding: 0}}>
-            <ListItemAvatar>
-               
-                    <EmailIcon />
+        <List sx={{ bgcolor: 'background.paper', margin: "5px" }}>
+            <ListItem sx={{padding: 0}}>
+                <ListItemAvatar>
+                
+                        <EmailIcon />
                 
                 </ListItemAvatar>
                 <ListItemText primary={info.email} />
@@ -53,6 +53,15 @@ export default function Info(){
                 </ListItemAvatar>
           
                 <ListItemText primary={info.github} />
+            
+            </ListItem>
+
+            <ListItem sx={{padding: 0}}>
+                <ListItemAvatar>
+                    <LinkOff />
+                </ListItemAvatar>
+          
+                <ListItemText primary={info.linkedin} />
             
             </ListItem>
             

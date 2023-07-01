@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import {Info, Image, About, Headline} from "./index"
+import {Info, Image, Headline} from "./index"
 
 
 export default function PersonalInfo() {
@@ -16,7 +16,7 @@ export default function PersonalInfo() {
                      
                     <Image/>
                     <Headline/>
-                    {/* <Info/> */}
+                    <Info/>
                     {/* <About/> */}
                 </Stack>
             </Stack>
