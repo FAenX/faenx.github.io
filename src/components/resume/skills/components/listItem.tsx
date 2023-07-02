@@ -13,7 +13,7 @@ export default function ListItem(props: {skills: SkillsProps[]}) {
             direction="row" 
             justifyContent={"flex-start"} 
             alignItems="center" 
-            margin={2}
+            margin={3}
             flexWrap={'wrap'}
             
         > 
@@ -25,7 +25,7 @@ export default function ListItem(props: {skills: SkillsProps[]}) {
                         direction="row"
                         justifyContent={"center"}
                         alignItems="center"
-                        margin={1}
+                        margin={0}
                         
                     >                               
                         <Avatar 

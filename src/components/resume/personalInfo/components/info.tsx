@@ -5,6 +5,7 @@ import HourglassTopIcon from '@mui/icons-material/HourglassTop';
 import { LinkOff } from "@mui/icons-material";
 import {info} from "../../../../data"
 import { HeadingRightLabel } from "../../../common";
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 
 
 
@@ -13,9 +14,7 @@ export default function Info(){
         <Box
             
         >
-            <HeadingRightLabel children={
-                <Typography variant="h5"> Contacts </Typography>
-            } />
+            <HeadingRightLabel title="Contacts" icon={<ContactPhoneIcon sx={{color: "black"}}/>}/>
 
         <Stack
             
@@ -29,7 +28,7 @@ export default function Info(){
                             <EmailIcon />
                     
                     </ListItemAvatar>
-                    <ListItemText primary={info.email} />
+                    <ListItemText primary={info.email}  />
                 </ListItem>
                 
                 <ListItem sx={{padding: 0}}>

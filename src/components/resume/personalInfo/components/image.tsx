@@ -6,10 +6,7 @@ import {info} from "../../../../data"
 
 export default  function Image(){
     return (
-        <Box
-            margin={2}
-            
-        >
+        <Box >
             <Stack
                 flexDirection={"row"}
                 justifyContent={"center"} 
@@ -17,8 +14,8 @@ export default  function Image(){
             >
                 <Avatar
                     style={{
-                        width: "400px",
-                        height: "400px",
+                        width: "350px",
+                        height: "350px",
                     }}
                     variant="square"
                     alt={info.name}

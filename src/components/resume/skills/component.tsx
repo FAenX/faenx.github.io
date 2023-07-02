@@ -20,6 +20,7 @@ import gcp from "../../../assets/images/brands/gcp-opened-svgrepo-com.svg"
 import azure from "../../../assets/images/brands/azure-svgrepo-com.svg"
 import { ListItem } from "./components";
 import { HeadingRightLabel } from "../../common";
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 
 
 
@@ -117,16 +118,11 @@ const skills = [
 export default function Skills() {
     return (
        
-        <Box 
-            margin={"20px"}
-            
-           
+        <Box
+            margin={2}
             
         >
-            
-            <HeadingRightLabel children={
-                <Typography variant="h5"> Skills </Typography>
-            } />
+            <HeadingRightLabel title= "Skills" icon={<SettingsSuggestIcon sx={{color: "black"}}/>}/>
             <ListItem skills={skills}/>
         </Box>
                    

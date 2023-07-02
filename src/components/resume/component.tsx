@@ -13,7 +13,7 @@ function EdWork(){
             flexWrap={'wrap'}
             justifyContent={"flex-end"}
             
-            minWidth={"400px"}
+            minWidth={"350px"}
             maxWidth={'700px'}
         >
             <Education />
@@ -27,9 +27,9 @@ function PISkills(){
         <Stack
             flexDirection={"row"}
             flexWrap={'wrap'}
-            justifyContent={"center"}
+            alignContent={"flex-start"}
             
-            minWidth={"400px"}
+            minWidth={"350px"}
             maxWidth={'700px'}
         >
             <PersonalInfo />

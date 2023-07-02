@@ -2,22 +2,10 @@ import { Box, Typography, Stepper, Step, StepLabel, StepContent, Stack } from "@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { HeadingLeftLabel } from "../../common";
+import { education } from "../../../data/data";
+import SchoolIcon from '@mui/icons-material/School';
 
 
-const education = [
-    {
-        label: "University of Nairobi",
-        description: "Post Graduate Diploma, Project planning and management",
-        link: "",
-        date: "2019 - 2020"
-    },
-    {
-        label: "University of Eldoret",
-        description: "Bachelors of Science in biochemistry",
-        link: "",
-        date: "2012 - 2016"
-    },
-]
 
 
 
@@ -41,9 +29,7 @@ export default function Education() {
         width={"100%"}
        
       >
-        <HeadingLeftLabel children={
-          <Typography align="left" variant="h6"  >Education </Typography>
-        } />
+        <HeadingLeftLabel title="Education" icon={<SchoolIcon sx={{color: "black"}}/>}/>
 
            <Stack
               
@@ -53,19 +39,19 @@ export default function Education() {
               {education.map((step, index) => (
                 <Step key={step.label}>
                   <StepLabel  >
-                    <Typography variant="h6">{step.label}</Typography>
-                    <Typography variant="h6">{step.date}</Typography>
+                    <Typography margin={2} variant="h3">{step.label}</Typography>
+                    <Typography margin={2} variant="h5">{step.date}</Typography>
                   </StepLabel>
                   <StepContent>
-                    <Typography variant="body1">{step.description}</Typography>
-                    <Box sx={{ mb: 2 }}>
+                    <Typography margin={2} variant="body1">{step.description}</Typography>
+                    <Box margin={1}>
                       <div>
                         <Button
                           variant="contained"
                           onClick={handleNext}
                           // sx={{ mt: 1, mr: 1 }}
                         >
-                          <Typography color={"red"}>{index === education.length - 1 ? 'Finish' : 'Continue'}</Typography>
+                          <Typography color={"red"}>{index === education.length - 1 ? 'Start' : 'Continue'}</Typography>
                         </Button>
                         <Button
                           disabled={index === 0}

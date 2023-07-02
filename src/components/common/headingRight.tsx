@@ -1,21 +1,25 @@
-import { Stack, Typography } from "@mui/material";
+import { Avatar, Stack, Typography } from "@mui/material";
+import { ReactElement } from "react";
 
 
 
 
 
 
-export default function HeadingRightLabel(props: {children: React.ReactNode}){
+export default function HeadingRightLabel(props: {title: string, icon: ReactElement}){
     return (
         <Stack
-            sx={{height: "50px", backgroundColor: "black", borderRadius: "0 50px 50px 0"}} 
+            sx={{minHeight: "50px", maxHeight: "70px", backgroundColor: "black", borderRadius: "0 50px 50px 0"}} 
             flexDirection={"row"}
             justifyContent={"flex-start"}
             alignItems={"center"}
             margin={2}  
             padding={2} 
-        >
-            <Typography align="left" variant="h6" color={"white"} >{props.children}</Typography>
+        >   
+            <Avatar>
+                {props.icon}
+            </Avatar>
+            <Typography align="left" variant="h4" color={"white"} margin={2}>{props.title}</Typography>
         </Stack>
     )
 }
