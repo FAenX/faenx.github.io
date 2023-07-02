@@ -13,7 +13,7 @@ export default function ListItem(props: {skills: SkillsProps[]}) {
             direction="row" 
             justifyContent={"flex-start"} 
             alignItems="center" 
-            margin={1}
+            margin={2}
             flexWrap={'wrap'}
             
         > 

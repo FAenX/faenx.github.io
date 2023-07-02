@@ -117,7 +117,13 @@ const skills = [
 export default function Skills() {
     return (
        
-        <Box margin={"20px"}>
+        <Box 
+            margin={"20px"}
+            
+           
+            
+        >
+            
             <HeadingRightLabel children={
                 <Typography variant="h5"> Skills </Typography>
             } />

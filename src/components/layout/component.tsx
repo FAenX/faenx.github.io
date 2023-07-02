@@ -10,7 +10,9 @@ import { ReactNode } from "react";
 
 export default function Layout(props: {children: ReactNode}) {
     return (
-        <Stack alignItems={"center"} margin={5}>
+        <Stack 
+            alignItems={"center"}
+        >
             {props.children}
             <Stack
                 sx={{height: "50px", backgroundColor: "#1f1f1f", borderRadius: "50px 50px 0 0"}}

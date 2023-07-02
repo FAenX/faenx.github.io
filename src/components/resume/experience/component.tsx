@@ -1,4 +1,4 @@
-import { Box, Stepper, Step, StepLabel, Typography, StepContent } from "@mui/material";
+import { Box, Stepper, Step, StepLabel, Typography, StepContent, Stack } from "@mui/material";
 import React from "react";
 import { Button } from "react-bootstrap";
 import { HeadingLeftLabel } from "../../common";
@@ -69,48 +69,56 @@ export default function Experience() {
  
 
     return (
-        <Box margin={"20px"} sx={{border: "1px solid white"}}>
+        <Box 
+          margin={"20px"} 
+          
+          width={"100%"}
+        >
             <HeadingLeftLabel children={
             <Typography align="left" variant="h6"  >Work Experience</Typography>
             } />
-            {/* <hr className="my-1" style={{width: "20%"}}/> */}
-          <Stepper activeStep={activeStep} orientation="vertical" >
-          {experiences.map((step, index) => (
-            <Step key={step.label}>
-              <StepLabel  >
-              <Typography variant="h6">{step.label}</Typography>
-              <Typography variant="h6">{step.title}</Typography>
-              <Typography variant="h6">{step.date}</Typography>
-              </StepLabel>
-              <StepContent>
-                {
-                      step.description.map((item, index) => {
-                          return <li key={index}>{item}</li>
-                      })
-                }
-              <Box sx={{ mb: 2 }}>
-                <div>
-                  <Button
-                    variant="outlined"
-                    onClick={handleNext}
-                    
-                  >
-                    <Typography color={"red"}>{index === experiences.length - 1 ? 'Finish' : 'Continue'}</Typography>
-                  </Button>
-                  <Button
-                    disabled={false}
-                    onClick={handleBack}
-                    variant="outlined"
-                    
-                  >
-                     <Typography color={"red"}>Back</Typography>
-                  </Button>
-                </div>
-              </Box>
-            </StepContent>
-          </Step>
-        ))}
-      </Stepper>
+          <Stack
+            margin={"20px"}
+          >
+            <Stepper activeStep={activeStep} orientation="vertical" >
+            {experiences.map((step, index) => (
+              <Step key={step.label}>
+                <StepLabel  >
+                <Typography variant="h6">{step.label}</Typography>
+                <Typography variant="h6">{step.title}</Typography>
+                <Typography variant="h6">{step.date}</Typography>
+                </StepLabel>
+                <StepContent>
+                  {
+                        step.description.map((item, index) => {
+                            return <li key={index}>{item}</li>
+                        })
+                  }
+                <Box sx={{ mb: 2 }}>
+                  <div>
+                    <Button
+                      variant="outlined"
+                      onClick={handleNext}
+                      
+                    >
+                      <Typography color={"red"}>{index === experiences.length - 1 ? 'Finish' : 'Continue'}</Typography>
+                    </Button>
+                    <Button
+                      disabled={false}
+                      onClick={handleBack}
+                      variant="outlined"
+                      
+                    >
+                      <Typography color={"red"}>Back</Typography>
+                    </Button>
+                  </div>
+                </Box>
+              </StepContent>
+            </Step>
+          ))}
+        </Stepper>
+
+      </Stack>
       
     </Box>
     );
