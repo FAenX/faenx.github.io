@@ -52,7 +52,7 @@ export const experiences = [
         ],
     },
     {
-        label: "Touch inspiration",
+        label: "Touch Inspiration",
         title: "Software Engineer",
         date: "2019 - 2020",
         description: [
