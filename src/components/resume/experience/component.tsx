@@ -65,7 +65,7 @@ export default function Experience() {
                       onClick={handleNext}
                       
                     >
-                      <Typography color={"red"}>{index === experiences.length - 1 ? 'Start' : 'Continue'}</Typography>
+                      <Typography color={"red"}>{index === experiences.length - 1 ? 'Start' : 'Next'}</Typography>
                     </Button>
                     <Button
                       disabled={false}

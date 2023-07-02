@@ -51,7 +51,7 @@ export default function Education() {
                           onClick={handleNext}
                           // sx={{ mt: 1, mr: 1 }}
                         >
-                          <Typography color={"red"}>{index === education.length - 1 ? 'Start' : 'Continue'}</Typography>
+                          <Typography color={"red"}>{index === education.length - 1 ? 'Start' : 'Next'}</Typography>
                         </Button>
                         <Button
                           disabled={index === 0}
