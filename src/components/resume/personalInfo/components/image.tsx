@@ -1,4 +1,4 @@
-import { Avatar, Box, Stack } from "@mui/material";
+import { Avatar, Box, Stack, Skeleton } from "@mui/material";
 import profileImage from "../../../../assets/images/profile-image.png"
 import {info} from "../../../../data"
 
@@ -7,10 +7,11 @@ import {info} from "../../../../data"
 export default  function Image(){
     return (
         <Box >
-            <Stack
+            {profileImage?<Stack
                 flexDirection={"row"}
                 justifyContent={"center"} 
                 alignItems={"center"} 
+                className="animate__animated animate__fadeIn"
             >
                 <Avatar
                     style={{
@@ -21,7 +22,7 @@ export default  function Image(){
                     alt={info.name}
                     src={profileImage}
                 />
-            </Stack>
+            </Stack>: <Skeleton width={"350px"} height={"350px"}/>}
                 
         </Box>
     )

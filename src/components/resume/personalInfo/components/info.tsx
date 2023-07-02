@@ -12,7 +12,7 @@ import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 export default function Info(){
     return (
         <Box
-            
+        className="animate__animated animate__fadeIn animate__fadeInUp"
         >
             <HeadingRightLabel title="Contacts" icon={<ContactPhoneIcon sx={{color: "black"}}/>}/>
 

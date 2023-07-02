@@ -9,11 +9,7 @@ export default function PersonalInfo() {
                     flexWrap="wrap" 
                     justifyContent={"center"} 
                     margin={1} 
-                    alignItems="flex-center"  
-                    
-                    
-                    
-                    
+                    alignItems="flex-center"   
                 >
                      
                     <Image/>

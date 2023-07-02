@@ -35,7 +35,7 @@ export default function Education() {
               
               margin={"20px"}
            >
-            <Stepper activeStep={activeStep} orientation="vertical" >
+            <Stepper activeStep={activeStep} orientation="vertical" className="animate__animated animate__fadeIn animate__fadeInUp">
               {education.map((step, index) => (
                 <Step key={step.label}>
                   <StepLabel  >

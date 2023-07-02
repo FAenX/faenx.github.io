@@ -15,6 +15,8 @@ export default function HeadingLeftLabel(props: {title: string, icon: ReactEleme
             alignItems={"center"}
             margin={2}  
             padding={2} 
+            className="animate__animated animate__zoomInLeft"
+            
         >
             <Avatar>
                 {props.icon}

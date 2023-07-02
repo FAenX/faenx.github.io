@@ -31,7 +31,7 @@ export default function Experience() {
           <Stack
             margin={2}
           >
-            <Stepper activeStep={activeStep} orientation="vertical" >
+            <Stepper activeStep={activeStep} orientation="vertical" className="animate__animated animate__fadeIn animate__fadeInUp">
             {experiences.map((step, index) => (
               <Step key={step.label}>
                 <StepLabel  >
