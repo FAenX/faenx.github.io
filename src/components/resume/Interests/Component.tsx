@@ -46,6 +46,7 @@ export default function Interests() {
             <Stack 
                 justifyContent={"center"}
                 alignItems={"center"}
+                className="animate__animated animate__fadeIn animate__fadeInUp"
                 
             >
                 <Stack  
