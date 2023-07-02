@@ -1,4 +1,4 @@
-import { Box, Stepper, Step, StepLabel, Typography, StepContent, Stack, List, ListItem, ListItemText, ListItemAvatar, Avatar } from "@mui/material";
+import { Box, Stepper, Step, StepLabel, Typography, StepContent, Stack, List, ListItem, ListItemText, ListItemAvatar } from "@mui/material";
 import React from "react";
 import { Button } from "react-bootstrap";
 import { HeadingLeftLabel } from "../../common";

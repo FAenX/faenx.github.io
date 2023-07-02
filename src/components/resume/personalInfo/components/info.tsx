@@ -1,4 +1,4 @@
-import { Box, List, ListItem, ListItemAvatar, ListItemText, Typography, Stack } from "@mui/material";
+import { Box, List, ListItem, ListItemAvatar, ListItemText, Stack } from "@mui/material";
 import EmailIcon from '@mui/icons-material/Email';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import HourglassTopIcon from '@mui/icons-material/HourglassTop';

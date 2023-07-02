@@ -1,4 +1,4 @@
-import { Typography, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import python from "../../../assets/images/brands/python.png"
 import node from "../../../assets/images/brands/node.svg"
 import react from "../../../assets/images/brands/react.svg"
