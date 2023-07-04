@@ -15,7 +15,9 @@ export default function Skills() {
        
         <Box
             margin={2}
+            padding={1}
             className="animate__animated animate__fadeIn animate__fadeInUp"
+            
             
         >
             <HeadingRightLabel title= "Skills" icon={<SettingsSuggestIcon sx={{color: "black"}}/>}/>

@@ -8,8 +8,8 @@ export default function PersonalInfo() {
                 <Stack  
                     flexWrap="wrap" 
                     justifyContent={"center"} 
-                    margin={1} 
-                    alignItems="flex-center"   
+                    alignItems="flex-center"  
+                    
                 >
                      
                     <Image/>
