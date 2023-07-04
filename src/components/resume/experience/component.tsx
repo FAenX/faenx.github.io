@@ -35,9 +35,9 @@ export default function Experience() {
             {experiences.map((step, index) => (
               <Step key={step.label}>
                 <StepLabel  >
-                <Typography margin={2} variant="h3">{step.label}</Typography>
-                <Typography margin={2} variant="h5">{step.title}</Typography>
-                <Typography margin={2} variant="h5">{step.date}</Typography>
+                  <Typography margin={2} variant="h3">{step.label}</Typography>
+                  <Typography margin={2} variant="h5">{step.title}</Typography>
+                  <Typography margin={2} variant="h5">{step.date}</Typography>
                 </StepLabel>
                 <StepContent>
                  
