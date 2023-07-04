@@ -26,6 +26,7 @@ export default function Experience() {
         <Box 
           margin={2} 
           width={"100%"}
+          id="experience"
         >
             <HeadingLeftLabel title="Work Experience" icon={<BusinessCenterIcon sx={{color: "black"}}/>}/>
           <Stack

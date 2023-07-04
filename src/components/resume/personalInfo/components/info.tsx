@@ -13,6 +13,7 @@ export default function Info(){
     return (
         <Box
         className="animate__animated animate__fadeIn animate__fadeInUp"
+        id="contact"
         >
             <HeadingRightLabel title="Contacts" icon={<ContactPhoneIcon sx={{color: "black"}}/>}/>
 
