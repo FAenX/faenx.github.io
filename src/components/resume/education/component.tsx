@@ -53,14 +53,14 @@ export default function Education() {
                         >
                           <Typography color={"red"}>{index === education.length - 1 ? 'Start' : 'Next'}</Typography>
                         </Button>
-                        <Button
+                        {activeStep !==0 && <Button
                           disabled={index === 0}
                           onClick={handleBack}
                           variant="contained"
                           // sx={{ mt: 1, mr: 1 }}
                         >
                           <Typography color={"red"}>Back</Typography>
-                        </Button>
+                        </Button>}
                       </div>
                     </Box>
                   </StepContent>
