@@ -1,4 +1,8 @@
-import { Box, Stepper, Step, StepLabel, Typography, StepContent, Stack, List, ListItem, ListItemText, ListItemAvatar } from "@mui/material";
+import { 
+  Box, 
+  Stepper, Step, StepLabel, Typography, StepContent, 
+  Stack, List, ListItem, ListItemText, ListItemAvatar 
+} from "@mui/material";
 import React from "react";
 import { Button } from "react-bootstrap";
 import { HeadingLeftLabel } from "../../common";
@@ -11,13 +15,34 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 
 export default function Experience() {
     const [activeStep, setActiveStep] = React.useState(0);
+    
 
     const handleNext = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep < experiences.length -1  ? prevActiveStep + 1 : 0);
+        const nextStep = activeStep < experiences.length -1  ? activeStep + 1 : 0;
+        
+        const nextStepId = experiences.find((item, index) => index === nextStep)?.id || "";
+        
+        // move to next step
+        setActiveStep(nextStep);
+
+        // set active step after 1 seconds
+        setTimeout(() => {
+          document.getElementById(nextStepId)?.scrollIntoView({behavior: "smooth"});
+        }, 1000);
+        
     };
 
     const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep ===0 ? 0 : prevActiveStep - 1);
+        const prevStep = activeStep === 0 ? experiences.length - 1 : activeStep - 1;
+        const prevStepId = experiences.find((item, index) => index === prevStep)?.id || "";
+        // move to previous step
+        setActiveStep(prevStep);
+
+        // set active step after 1 seconds
+        setTimeout(() => {
+          document.getElementById(prevStepId)?.scrollIntoView({behavior: "smooth"});
+        }, 1000);
+        
     };
 
  
@@ -36,7 +61,7 @@ export default function Experience() {
             {experiences.map((step, index) => (
               <Step key={step.label}>
                 <StepLabel  >
-                  <Typography margin={2} variant="h3">{step.label}</Typography>
+                  <Typography id={step.id} margin={2} variant="h3">{step.label}</Typography>
                   <Typography margin={2} variant="h5">{step.title}</Typography>
                   <Typography margin={2} variant="h5">{step.date}</Typography>
                 </StepLabel>
@@ -66,16 +91,16 @@ export default function Experience() {
                       onClick={handleNext}
                       
                     >
-                      <Typography color={"red"}>{index === experiences.length - 1 ? 'Start' : 'Next'}</Typography>
+                      <Typography color={"red"} variant="h5">{index === experiences.length - 1 ? 'Start' : 'Next'}</Typography>
                     </Button>
-                    <Button
+                    {activeStep !=0 && <Button
                       disabled={false}
                       onClick={handleBack}
                       variant="outlined"
                       
                     >
-                      <Typography color={"red"}>Back</Typography>
-                    </Button>
+                      <Typography color={"red"} variant="h5">Back</Typography>
+                    </Button>}
                   </div>
                 </Box>
               </StepContent>

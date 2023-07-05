@@ -38,6 +38,7 @@ export const experiences = [
         label: "The Jitu",
         title: "Software Engineer",
         date: "2021 - Present",
+        id: "the-jitu",
         description: [
             "Designed and build Award winning SMS based customer feedback tool for an multinational company.",
             "Designed, implemented, and maintained cloud-based enterprise wide systems using Python and other cloud technologies, achieving seamless functionality and performance.",
@@ -55,6 +56,7 @@ export const experiences = [
         label: "Touch Inspiration",
         title: "Software Engineer",
         date: "2019 - 2020",
+        id: "touch-inspiration",
         description: [
             "Led backend development and served as a cloud engineer, managing Digital Ocean cloud infrastructure and utilizing technologies such as MongoDB, MySQL, TypeScript, and Python for DevOps.",
             "Designed and developed Several backend applications both for the web and mobile in fintech and tele-medicine applications.",
@@ -69,6 +71,7 @@ export const experiences = [
         label: "Ohospital",
         title: "Chief Technology Officer, Lead Software Engineer and co-founder",
         date: "2018 - 2020",
+        id: "ohospital",
         description: [
             "Contributed to the development and maintenance of cloud architectures and designs for multi-cloud environments, facilitating seamless operations.",
             "Played a key role in building and maintaining cloud infrastructure automation frameworks and tools, leveraging infrastructure as code principles to drive efficiency.",
