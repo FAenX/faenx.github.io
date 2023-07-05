@@ -20,6 +20,8 @@ import azure from "../assets/images/brands/azure-svgrepo-com.svg"
 import spark from "../assets/images/brands/apache-spark-logo.png"
 import flask from "../assets/images/brands/flask-logo.png"
 import django from "../assets/images/brands/django-logo.png"
+import k8s from "../assets/images/brands/k8s1.webp"
+
 
 
 
@@ -197,6 +199,10 @@ export const skills = [
     {
         name: "Apache Spark",
         image: spark
+    },
+    {
+        name: "Kubernetes",
+        image: k8s
     }
 ]
 
