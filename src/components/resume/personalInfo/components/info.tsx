@@ -1,4 +1,4 @@
-import { Box, List, ListItem, ListItemAvatar, ListItemText, Stack } from "@mui/material";
+import { Box, List, ListItem, ListItemAvatar, ListItemText, Stack, Typography } from "@mui/material";
 import EmailIcon from '@mui/icons-material/Email';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import HourglassTopIcon from '@mui/icons-material/HourglassTop';
@@ -29,7 +29,10 @@ export default function Info(){
                             <EmailIcon />
                     
                     </ListItemAvatar>
-                    <ListItemText primary={info.email}  />
+                    <Typography variant="h5" component="div">
+                        {info.email}
+                    </Typography>
+
                 </ListItem>
                 
                 <ListItem sx={{padding: 0}}>
@@ -38,7 +41,7 @@ export default function Info(){
                     <MyLocationIcon />
                     </ListItemAvatar>
             
-                    <ListItemText primary={info.location} />
+                    <Typography variant="h5" component="div">{info.location}</Typography>
                 
                 </ListItem>
 
@@ -47,8 +50,12 @@ export default function Info(){
                     
                     <HourglassTopIcon />
                     </ListItemAvatar>
+
+                    <Typography variant="h5" component="div">
+                        {info.period}
+                    </Typography>
             
-                    <ListItemText primary={info.period} />
+                   
                 
                 </ListItem>
 
@@ -56,8 +63,12 @@ export default function Info(){
                     <ListItemAvatar>
                         <LinkOff />
                     </ListItemAvatar>
+
+                    <Typography variant="h5" component="div">
+                        {info.github}
+                    </Typography>
             
-                    <ListItemText primary={info.github} />
+                   
                 
                 </ListItem>
 
@@ -65,8 +76,12 @@ export default function Info(){
                     <ListItemAvatar>
                         <LinkOff />
                     </ListItemAvatar>
+
+                    <Typography variant="h5" component="div">
+                        {info.linkedin}
+                    </Typography>
             
-                    <ListItemText primary={info.linkedin} />
+                   
                 
                 </ListItem>
             
