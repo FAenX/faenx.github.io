@@ -1,5 +1,5 @@
 import { Avatar, Box, Stack, Skeleton } from "@mui/material";
-import profileImage from "../../../../assets/images/profile-image.png"
+import profileImage from "../../../../assets/images/profile.png"
 import {info} from "../../../../data"
 
 
