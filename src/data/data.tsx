@@ -18,6 +18,8 @@ import aws from "../assets/images/brands/aws-svgrepo-com.svg"
 import gcp from "../assets/images/brands/gcp-opened-svgrepo-com.svg"
 import azure from "../assets/images/brands/azure-svgrepo-com.svg"
 import spark from "../assets/images/brands/apache-spark-logo.png"
+import flask from "../assets/images/brands/flask-logo.png"
+import django from "../assets/images/brands/django-logo.png"
 
 
 
@@ -173,7 +175,11 @@ export const skills = [
     },
     {
         name: "Django",
-        image: ""
+        image: django
+    },
+    {
+        name: "Flask",
+        image: flask
     },
     {
         name: "NodeJs",

@@ -31,7 +31,7 @@ export default function ListItem(props: {skills: SkillsProps[]}) {
                         <Avatar 
                             alt={skill.name} 
                             src={skill.image} 
-                            sx={{width: "40px", height:"40px"}} 
+                            sx={{width: "50px", height:"50px", margin: "5px"}} 
                             variant="square"
                         />                                            
                         <Typography  
