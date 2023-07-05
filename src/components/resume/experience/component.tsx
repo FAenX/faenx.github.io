@@ -93,7 +93,7 @@ export default function Experience() {
                     >
                       <Typography color={"red"} variant="h5">{index === experiences.length - 1 ? 'Start' : 'Next'}</Typography>
                     </Button>
-                    {activeStep !=0 && <Button
+                    {activeStep !==0 && <Button
                       disabled={false}
                       onClick={handleBack}
                       variant="outlined"
