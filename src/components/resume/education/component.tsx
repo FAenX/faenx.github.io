@@ -32,12 +32,11 @@ export default function Education() {
         <HeadingLeftLabel title="Education" icon={<SchoolIcon sx={{color: "black"}}/>}/>
 
            <Stack
-              
-              margin={"20px"}
+              marginLeft={4}
            >
             <Stepper activeStep={activeStep} orientation="vertical" className="animate__animated animate__fadeIn animate__fadeInUp">
               {education.map((step, index) => (
-                <Step key={step.label}>
+                <Step key={step.label} >
                   <StepLabel  >
                     <Typography margin={2} variant="h3">{step.label}</Typography>
                     <Typography margin={2} variant="h5">{step.date}</Typography>

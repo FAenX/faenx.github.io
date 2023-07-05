@@ -2,7 +2,7 @@ import { Box, List, ListItem, ListItemAvatar, Stack, Typography } from "@mui/mat
 import EmailIcon from '@mui/icons-material/Email';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import HourglassTopIcon from '@mui/icons-material/HourglassTop';
-import { LinkOff } from "@mui/icons-material";
+import LaunchIcon from '@mui/icons-material/Launch';
 import {info} from "../../../../data"
 import { HeadingRightLabel } from "../../../common";
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
@@ -12,79 +12,50 @@ import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 export default function Info(){
     return (
         <Box
-        className="animate__animated animate__fadeIn animate__fadeInUp"
-        id="contact"
+            className="animate__animated animate__fadeIn animate__fadeInUp"
+            id="contact"
         >
             <HeadingRightLabel title="Contacts" icon={<ContactPhoneIcon sx={{color: "black"}}/>}/>
-
-        <Stack
-            
-            margin={2}
-        
-        >
-            <List sx={{ bgcolor: 'background.paper', margin: "5px" }}>
+        <Stack margin={2} >
+            <List sx={{ bgcolor: 'background.paper', margin: "2px", padding:"20px"}}>
                 <ListItem sx={{padding: 0}}>
-                    <ListItemAvatar>
-                    
+                    <ListItemAvatar>                 
                             <EmailIcon />
-                    
                     </ListItemAvatar>
                     <Typography variant="h5" component="div">
                         {info.email}
                     </Typography>
-
                 </ListItem>
-                
                 <ListItem sx={{padding: 0}}>
                 <ListItemAvatar>
-                    
                     <MyLocationIcon />
                     </ListItemAvatar>
-            
                     <Typography variant="h5" component="div">{info.location}</Typography>
-                
                 </ListItem>
-
                 <ListItem sx={{padding: 0}}>
                 <ListItemAvatar>
-                    
                     <HourglassTopIcon />
                     </ListItemAvatar>
-
                     <Typography variant="h5" component="div">
                         {info.period}
                     </Typography>
-            
-                   
-                
                 </ListItem>
-
                 <ListItem sx={{padding: 0}}>
                     <ListItemAvatar>
-                        <LinkOff />
+                        <LaunchIcon />
                     </ListItemAvatar>
-
                     <Typography variant="h5" component="div">
                         {info.github}
                     </Typography>
-            
-                   
-                
                 </ListItem>
-
                 <ListItem sx={{padding: 0}}>
                     <ListItemAvatar>
-                        <LinkOff />
+                        <LaunchIcon />
                     </ListItemAvatar>
-
                     <Typography variant="h5" component="div">
                         {info.linkedin}
                     </Typography>
-            
-                   
-                
                 </ListItem>
-            
             </List>
         </Stack>
     </Box> 

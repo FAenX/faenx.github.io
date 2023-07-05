@@ -55,7 +55,7 @@ export default function Experience() {
         >
             <HeadingLeftLabel title="Work Experience" icon={<BusinessCenterIcon sx={{color: "black"}}/>}/>
           <Stack
-            margin={2}
+            marginLeft={4}
           >
             <Stepper activeStep={activeStep} orientation="vertical" className="animate__animated animate__fadeIn animate__fadeInUp">
             {experiences.map((step, index) => (
