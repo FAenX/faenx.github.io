@@ -51,7 +51,7 @@ export default function Education() {
                           onClick={handleNext}
                           // sx={{ mt: 1, mr: 1 }}
                         >
-                          <Typography color={"red"}>{index === education.length - 1 ? 'Start' : 'Next'}</Typography>
+                          <Typography variant="h5" color={"red"}>{index === education.length - 1 ? 'Start' : 'Next'}</Typography>
                         </Button>
                         {activeStep !==0 && <Button
                           disabled={index === 0}
@@ -59,7 +59,7 @@ export default function Education() {
                           variant="contained"
                           // sx={{ mt: 1, mr: 1 }}
                         >
-                          <Typography color={"red"}>Back</Typography>
+                          <Typography variant="h5" color={"red"}>Back</Typography>
                         </Button>}
                       </div>
                     </Box>
