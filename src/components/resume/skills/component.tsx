@@ -17,6 +17,7 @@ export default function Skills() {
             margin={2}
             padding={1}
             className="animate__animated animate__fadeIn animate__fadeInUp"
+            id="skills"
             
             
         >
