@@ -69,7 +69,7 @@ export default function Interests() {
                     
                     {
                         interests.map((interest: InterestProps) => (
-                            <Box >
+                            <Box key={interest.name}>
                                 <Stack justifyContent="flex-start" alignItems={"center"} className="m-1 p-1 " sx={{ width: 300, minHeight: 300 }}>
                                     <Box sx={{ width: 150, height: 150 }} margin={3} >
                                         <img src={interest.image} alt="OpenAI" style={{width: "150px", height: "150px"}}/>

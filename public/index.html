@@ -166,7 +166,9 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQQYDWM3F5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(){
+        !window.location.href.includes('localhost') && dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', 'G-VQQYDWM3F5');
