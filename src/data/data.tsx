@@ -17,6 +17,7 @@ import mssql from "../assets/images/brands/database-svgrepo-com.svg"
 import aws from "../assets/images/brands/aws-svgrepo-com.svg"
 import gcp from "../assets/images/brands/gcp-opened-svgrepo-com.svg"
 import azure from "../assets/images/brands/azure-svgrepo-com.svg"
+import spark from "../assets/images/brands/apache-spark-logo.png"
 
 
 
@@ -175,7 +176,7 @@ export const skills = [
         image: ""
     },
     {
-        name: "Express",
+        name: "NodeJs",
         image: node
     },
 
@@ -187,6 +188,10 @@ export const skills = [
         name: "Docker",
         image: Docker
     },
+    {
+        name: "Apache Spark",
+        image: spark
+    }
 ]
 
 
