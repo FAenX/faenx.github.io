@@ -13,10 +13,10 @@ const theme =(color: PaletteMode)=> createTheme({
   
   palette: {
     primary: {
-      main: "#868889",
+      main: "#969c9c",
     },
     secondary: {
-      main: "#ffffff",
+      main: "#00000",
     },
     mode: color,
   },
@@ -35,7 +35,7 @@ const theme =(color: PaletteMode)=> createTheme({
         @font-face {
           font-family: 'ChivoMono';
           src: url(${ChivoMono}) format('truetype');
-          font-weight: 400;
+          font-weight: 300;
           font-style: normal;
         }
       `,

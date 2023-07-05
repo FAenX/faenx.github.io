@@ -7,7 +7,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { HeadingLeftLabel } from "../../common";
 import { experiences } from "../../../data/data";
-import CircleIcon from '@mui/icons-material/Circle';
+import HdrStrongIcon from '@mui/icons-material/HdrStrong';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 
 
@@ -73,7 +73,7 @@ export default function Experience() {
                               <List key={index}>
                                   <ListItem >
                                     <ListItemAvatar>
-                                      <CircleIcon/>
+                                      <HdrStrongIcon/>
                                     </ListItemAvatar>
                                     <ListItemText>
                                       {item}
