@@ -25,7 +25,9 @@ export default function ListItem(props: {skills: SkillsProps[]}) {
                         direction="row"
                         justifyContent={"center"}
                         alignItems="center"
-                        margin={0}
+                        margin={1}
+                        border={"1px solid #eaeaea"}
+                        borderRadius={5}
                         
                     >                               
                         <Avatar 
