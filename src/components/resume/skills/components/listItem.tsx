@@ -28,12 +28,13 @@ export default function ListItem(props: {skills: SkillsProps[]}) {
                         margin={1}
                         border={"1px solid #eaeaea"}
                         borderRadius={5}
+                        padding={1}
                         
                     >                               
                         <Avatar 
                             alt={skill.name} 
                             src={skill.image} 
-                            sx={{width: "50px", height:"50px", margin: "5px"}} 
+                            sx={{width: "40px", height:"40px", margin: "5px"}} 
                             variant="square"
                         />                                            
                         <Typography  
