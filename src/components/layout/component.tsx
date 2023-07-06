@@ -15,12 +15,13 @@ export default function Layout(props: {children: ReactNode}) {
         >
             {props.children}
             <Stack
-                sx={{height: "50px", backgroundColor: "#1f1f1f", borderRadius: "50px 50px 0 0"}}
+                sx={{backgroundColor: "#1f1f1f", borderRadius: "0px 50px 0px 50px"}}
                 justifyContent={"center"}
                 alignItems={"center"}
+                margin={2}
             
             >
-                <Typography variant="h6" align="center" padding={4} color={"white"}>
+                <Typography variant="h4" align="center" padding={2} color={"white"}>
                     Emmanuel Davidson
                 </Typography>
             </Stack>

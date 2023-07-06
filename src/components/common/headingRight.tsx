@@ -9,7 +9,7 @@ import { ReactElement } from "react";
 export default function HeadingRightLabel(props: {title: string, icon: ReactElement}){
     return (
         <Stack
-            sx={{minHeight: "50px", maxHeight: "70px", backgroundColor: "black", borderRadius: "0 50px 50px 0"}} 
+            sx={{minHeight: "50px", maxHeight: "80px", backgroundColor: "#1f1f1f", borderRadius: "0 50px 50px 0"}} 
             flexDirection={"row"}
             justifyContent={"flex-start"}
             alignItems={"center"}

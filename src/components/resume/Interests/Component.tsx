@@ -51,8 +51,10 @@ export default function Interests() {
             >
                 <Stack  
                     style={{width: "80%"}}
+                    padding={1}
+                    borderRadius={"50px 0px 50px 0px"}
                     justifyContent={"center"}
-                    sx={{backgroundColor: "#000"}}
+                    sx={{backgroundColor: "#1f1f1f"}}
                 >
                     <Typography variant="h3" align="center" color={'white'}>My Interests</Typography>
                 </Stack>
@@ -70,7 +72,7 @@ export default function Interests() {
                     {
                         interests.map((interest: InterestProps) => (
                             <Box key={interest.name}>
-                                <Stack justifyContent="flex-start" alignItems={"center"} className="m-1 p-1 " sx={{ width: 300, minHeight: 300 }}>
+                                <Stack justifyContent="flex-start" alignItems={"center"} sx={{ width: 300, minHeight: 300 }}>
                                     <Box sx={{ width: 150, height: 150 }} margin={3} >
                                         <img src={interest.image} alt="OpenAI" style={{width: "150px", height: "150px"}}/>
                                     </Box>
