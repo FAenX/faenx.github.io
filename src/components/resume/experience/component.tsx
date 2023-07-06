@@ -28,7 +28,7 @@ export default function Experience() {
         // set active step after 1 seconds
         setTimeout(() => {
           document.getElementById(nextStepId)?.scrollIntoView({behavior: "smooth"});
-        }, 1000);
+        }, 500);
         
     };
 
@@ -41,7 +41,7 @@ export default function Experience() {
         // set active step after 1 seconds
         setTimeout(() => {
           document.getElementById(prevStepId)?.scrollIntoView({behavior: "smooth"});
-        }, 100);
+        }, 500);
         
     };
 

@@ -20,42 +20,43 @@ export default function Info(){
             <List sx={{ bgcolor: 'background.paper', margin: "2px", padding:"20px"}}>
                 <ListItem sx={{padding: 0}}>
                     <ListItemAvatar>                 
-                            <EmailIcon />
+                            <EmailIcon sx={{fontSize: "40px"}}/>
                     </ListItemAvatar>
-                    <Typography variant="h5" component="div">
+                    <Typography variant="h4" component="div">
                         {info.email}
                     </Typography>
                 </ListItem>
                 <ListItem sx={{padding: 0}}>
                 <ListItemAvatar>
-                    <MyLocationIcon />
-                    </ListItemAvatar>
-                    <Typography variant="h5" component="div">{info.location}</Typography>
+                    <MyLocationIcon sx={{fontSize: "40px"}}/>
+                </ListItemAvatar>
+                    <Typography variant="h4" component="div">{info.location}</Typography>
                 </ListItem>
                 <ListItem sx={{padding: 0}}>
-                <ListItemAvatar>
-                    <HourglassTopIcon />
+                    <ListItemAvatar>
+                        <HourglassTopIcon sx={{fontSize: "40px"}}/>
                     </ListItemAvatar>
-                    <Typography variant="h5" component="div">
+                    <Typography variant="h4" component="div">
                         {info.period}
                     </Typography>
                 </ListItem>
-                <ListItem sx={{padding: 0}}>
-                    <ListItemAvatar>
-                        <LaunchIcon />
-                    </ListItemAvatar>
-                    <Typography variant="h5" component="div">
-                        {info.github}
-                    </Typography>
-                </ListItem>
-                <ListItem sx={{padding: 0}}>
-                    <ListItemAvatar>
-                        <LaunchIcon />
-                    </ListItemAvatar>
-                    <Typography variant="h5" component="div">
-                        {info.linkedin}
-                    </Typography>
-                </ListItem>
+
+                {info.links.map(link=>
+                     <>
+                        <ListItem sx={{padding: 0}}>
+                            <ListItemAvatar>
+                                <a href={link.href} target="_blank" rel="noreferrer">
+                                    <LaunchIcon sx={{fontSize: "40px"}}/>
+                                </a>
+                            </ListItemAvatar>
+                            <a href={link.href} target="_blank" rel="noreferrer">
+                                <Typography variant="h4" component="div">
+                                    {link.name}
+                                </Typography>
+                            </a>
+                        </ListItem>
+                    </>)
+                }
             </List>
         </Stack>
     </Box> 
