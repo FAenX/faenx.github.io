@@ -12,7 +12,7 @@ function EdWork(){
             flexDirection={"row"}
             flexWrap={'wrap'}
             justifyContent={"flex-end"}
-            
+            margin={1}
             minWidth={"350px"}
             maxWidth={'700px'}
         >
@@ -28,7 +28,7 @@ function PISkills(){
             flexDirection={"row"}
             flexWrap={'wrap'}
             alignContent={"flex-start"}
-            
+            margin={1}
             minWidth={"350px"}
             maxWidth={'700px'}
         >
