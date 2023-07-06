@@ -49,19 +49,24 @@ export default function Experience() {
 
     return (
         <Box 
-          margin={2} 
+          // margin={2} 
           width={"100%"}
           id="experience"
+          // sx={{border: "1px solid #1f1f1f"}}
         >
             <HeadingLeftLabel title="Work Experience" icon={<BusinessCenterIcon sx={{color: "black"}}/>}/>
           <Stack
             marginLeft={4}
           >
-            <Stepper activeStep={activeStep} orientation="vertical" className="animate__animated animate__fadeIn animate__fadeInUp">
+            <Stepper 
+              activeStep={activeStep} 
+              orientation="vertical" 
+              className="animate__animated animate__fadeIn animate__fadeInUp"
+            >
             {experiences.map((step, index) => (
               <Step key={step.label}>
                 <StepLabel  >
-                  <Typography id={step.id} margin={2} variant="h3">{step.label}</Typography>
+                  <Typography id={step.id} padding={2} variant="h3">{step.label}</Typography>
                   <Typography margin={2} variant="h5">{step.title}</Typography>
                   <Typography margin={2} variant="h5">{step.date}</Typography>
                 </StepLabel>

@@ -6,15 +6,8 @@ import { info } from "../../../../data";
 
 export function Headline() {
     return (
-        <Box
-            
-        >
-        <Stack 
-            spacing={0}  
-            margin={"20px"} 
-            
-
-        >
+        <Box>
+        <Stack  >
             <Typography variant="h3" margin={2} className="animate__animated animate__fadeIn animate__fadeInUp">
                 {info.name} 
             </Typography>

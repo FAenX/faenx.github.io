@@ -47,6 +47,11 @@ export default function Resume() {
                 flexDirection={"row"} 
                 flexWrap={'wrap'}
                 justifyContent={"center"}
+                alignContent={"center"}
+                // padding={3}
+                // margin={1}
+                width={"100vw"}
+                // sx={{border: "1px solid #1f1f1f"}}
                 
                 
             >

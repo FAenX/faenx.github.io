@@ -11,7 +11,7 @@ import SchoolIcon from '@mui/icons-material/School';
 export default function Education() {
     return (
       <Box  
-        margin={"20px"} 
+        // margin={"20px"} 
         width={"100%"}
       >
         <HeadingLeftLabel title="Education" icon={<SchoolIcon sx={{color: "black"}}/>}/>

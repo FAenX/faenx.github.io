@@ -4,11 +4,12 @@ import {Info, Image, Headline} from "./index"
 
 export default function PersonalInfo() {
     return (
-            <Stack margin={2} >                
+            <Stack>                
                 <Stack  
                     flexWrap="wrap" 
                     justifyContent={"center"} 
                     alignItems="flex-center"  
+                    alignContent={"center"}
                     
                 >
                      

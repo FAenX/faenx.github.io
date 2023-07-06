@@ -16,27 +16,27 @@ export default function Info(){
             id="contact"
         >
             <HeadingRightLabel title="Contacts" icon={<ContactPhoneIcon sx={{color: "black"}}/>}/>
-        <Stack margin={2} >
+        <Stack padding={1} >
             <List sx={{ bgcolor: 'background.paper', margin: "2px", padding:"20px"}}>
                 <ListItem sx={{padding: 0}}>
                     <ListItemAvatar>                 
-                            <EmailIcon sx={{fontSize: "40px"}}/>
+                            <EmailIcon sx={{fontSize: "30px"}}/>
                     </ListItemAvatar>
-                    <Typography variant="h4" component="div">
+                    <Typography variant="h5" component="div">
                         {info.email}
                     </Typography>
                 </ListItem>
                 <ListItem sx={{padding: 0}}>
                 <ListItemAvatar>
-                    <MyLocationIcon sx={{fontSize: "40px"}}/>
+                    <MyLocationIcon sx={{fontSize: "30px"}}/>
                 </ListItemAvatar>
-                    <Typography variant="h4" component="div">{info.location}</Typography>
+                    <Typography variant="h5" component="div">{info.location}</Typography>
                 </ListItem>
                 <ListItem sx={{padding: 0}}>
                     <ListItemAvatar>
-                        <HourglassTopIcon sx={{fontSize: "40px"}}/>
+                        <HourglassTopIcon sx={{fontSize: "30px"}}/>
                     </ListItemAvatar>
-                    <Typography variant="h4" component="div">
+                    <Typography variant="h5" component="div">
                         {info.period}
                     </Typography>
                 </ListItem>
@@ -46,14 +46,14 @@ export default function Info(){
                         <ListItem sx={{padding: 0}}>
                             <ListItemAvatar>
                                 <a href={link.href} target="_blank" rel="noreferrer">
-                                    <LaunchIcon sx={{fontSize: "40px"}}/>
+                                    <LaunchIcon sx={{fontSize: "30px"}}/>
                                 </a>
                             </ListItemAvatar>
-                            <a href={link.href} target="_blank" rel="noreferrer">
-                                <Typography variant="h4" component="div">
-                                    {link.name}
+                            
+                                <Typography variant="h5" component="div">
+                                    <a href={link.href} target="_blank" rel="noreferrer">{link.name} </a>
                                 </Typography>
-                            </a>
+                           
                         </ListItem>
                     </>)
                 }

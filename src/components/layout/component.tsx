@@ -12,13 +12,16 @@ export default function Layout(props: {children: ReactNode}) {
     return (
         <Stack 
             alignItems={"center"}
+            justifyContent={"center"}
         >
             {props.children}
             <Stack
-                sx={{backgroundColor: "#1f1f1f", borderRadius: "0px 50px 0px 50px"}}
+                sx={{
+                    backgroundColor: "#1f1f1f", 
+                    borderRadius: "0px 50px 0px 50px",
+                    border: "1px solid #1f1f1f",
+                }}
                 justifyContent={"center"}
-                alignItems={"center"}
-                margin={2}
             
             >
                 <Typography variant="h4" align="center" padding={2} color={"white"}>
