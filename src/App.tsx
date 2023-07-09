@@ -45,13 +45,18 @@ const theme =(color: PaletteMode)=> createTheme({
 
 function App() {
 
-  const [mode, setMode] = React.useState<PaletteMode>("light");
+  const [mode, setMode] = React.useState<PaletteMode>("dark");
 
   React.useEffect(() => {
     const localMode = localStorage.getItem('mode');
-    if (localMode) {
+    const preferedMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    if (!localMode) {
+      setMode(preferedMode);
+    }
+    else {
       setMode(localMode as PaletteMode);
     }
+    
   }, []);
 
   const handleChangeMode = (event: React.ChangeEvent<HTMLInputElement>) => {
