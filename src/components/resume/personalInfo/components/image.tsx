@@ -14,7 +14,7 @@ export default  function Image(){
                 flexDirection={"row"}
                 justifyContent={"center"} 
                 alignItems={"center"} 
-                // className="animate__animated animate__fadeIn"
+                className="animate__animated animate__fadeIn"
             >
                 <LazyLoadImage
                     src={profileImage}
