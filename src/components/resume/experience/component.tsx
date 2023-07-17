@@ -1,10 +1,9 @@
 import { 
   Box, 
   Stepper, Step, StepLabel, Typography, StepContent, 
-  Stack, List, ListItem, ListItemText, ListItemAvatar 
+  Stack, List, ListItem, ListItemText, ListItemAvatar, Button 
 } from "@mui/material";
 import React from "react";
-import { Button } from "react-bootstrap";
 import { HeadingLeftLabel } from "../../common";
 import { experiences } from "../../../data/data";
 import HdrStrongIcon from '@mui/icons-material/HdrStrong';
@@ -94,7 +93,7 @@ export default function Experience() {
                     <Button
                       variant="outlined"
                       onClick={handleNext}
-                      
+                      sx={{ margin: 2}}
                     >
                       <Typography color={"red"} variant="h5">{index === experiences.length - 1 ? 'Start' : 'Next'}</Typography>
                     </Button>

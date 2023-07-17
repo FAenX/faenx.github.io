@@ -42,7 +42,7 @@ export default function Info(){
                 </ListItem>
 
                 {info.links.map(link=>
-                     <>
+                     <div key={link.href}>
                         <ListItem sx={{padding: 0}}>
                             <ListItemAvatar>
                                 <a href={link.href} target="_blank" rel="noreferrer">
@@ -55,7 +55,7 @@ export default function Info(){
                                 </Typography>
                            
                         </ListItem>
-                    </>)
+                    </div>)
                 }
             </List>
         </Stack>
