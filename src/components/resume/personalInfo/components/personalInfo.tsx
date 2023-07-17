@@ -1,9 +1,6 @@
 import { Stack } from "@mui/material";
-import {Info,Headline} from "./index"
+import {Info,Headline, Image} from "./index"
 import React from "react";
-
-
-const Image = React.lazy(()=>import("./image"))
 
 
 

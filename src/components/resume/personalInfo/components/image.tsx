@@ -1,6 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import profileImage from "../../../../assets/images/profileImage.png"
-import lq from "../../../../assets/images/ai.jpg"
+import lq from "../../../../assets/images/lq.png"
 import {info} from "../../../../data"
 import {LazyLoadImage} from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
