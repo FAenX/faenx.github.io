@@ -1,0 +1,5 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="50" height="50" rx="10" fill="#0A192F"/>
+  <path d="M25 12L37 32H13L25 12Z" fill="#64FFDA"/>
+  <text x="25" y="40" font-family="monospace" font-size="14" fill="#64FFDA" text-anchor="middle">ED</text>
+</svg> 
