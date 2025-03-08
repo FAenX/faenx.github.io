@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Typography, Paper, Grid, List, ListItem, ListItemText, ListItemAvatar, Divider, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { experiences } from "../../../data/data";
-import { HeadingLeftLabel } from "../../common";
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import HdrStrongIcon from '@mui/icons-material/HdrStrong';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
@@ -13,7 +12,41 @@ export default function Experience() {
   
   return (
     <Box width={"100%"} id="experience">
-      <HeadingLeftLabel title="Work Experience" icon={<BusinessCenterIcon sx={{color: isDarkMode ? "white" : "black"}}/>}/>
+      {/* Custom Section Header */}
+      <Box sx={{ 
+        mb: 4, 
+        display: 'flex',
+        alignItems: 'center',
+        position: 'relative',
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          bottom: '-8px',
+          left: 0,
+          width: '60px',
+          height: '3px',
+          background: isDarkMode ? '#64ffda' : theme.palette.primary.main,
+          borderRadius: '4px'
+        }
+      }}>
+        <BusinessCenterIcon 
+          sx={{
+            color: isDarkMode ? "#64ffda" : theme.palette.primary.main,
+            fontSize: '2rem',
+            mr: 2
+          }}
+        />
+        <Typography 
+          variant="h4" 
+          component="h2" 
+          sx={{ 
+            fontWeight: 700,
+            color: isDarkMode ? 'white' : 'text.primary'
+          }}
+        >
+          Work Experience
+        </Typography>
+      </Box>
       
       <Grid container spacing={4}>
         {experiences.map((experience, index) => (

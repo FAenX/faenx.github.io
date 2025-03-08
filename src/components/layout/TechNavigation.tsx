@@ -5,7 +5,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-import DownloadButton from "../resume/personalInfo/components/downloadButton";
+import DownloadButton from "../common/downloadButton";
+import { AnimatedLogo } from './AnimatedLogo';
 
 interface NavItem {
   label: string;
@@ -129,19 +130,27 @@ export default function TechNavigation({ themeMode, toggleTheme }: TechNavigatio
                   marginRight: { xs: 1, sm: 2, md: 3 },
                   marginLeft: { xs: 0.5, sm: 1 },
                   display: 'flex',
-                  alignItems: 'center',
-                  '& img': {
-                    height: { xs: '32px', sm: '36px', md: '40px' },
-                    width: 'auto'
-                  },
-                  '& .MuiTypography-root': {
-                    fontSize: { xs: '1.1rem', sm: '1.3rem', md: '1.5rem' },
-                    fontWeight: 600,
-                    letterSpacing: '-0.02em'
-                  }
+                  alignItems: 'center'
                 }}
               >
-                <Typography variant="h6" className="text-gradient">Your Logo</Typography>
+                <AnimatedLogo 
+                  size={isMobile ? "small" : "medium"} 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                />
+                <Typography 
+                  variant="h6" 
+                  component="span"
+                  sx={{ 
+                    ml: 1.5, 
+                    fontWeight: 600,
+                    fontSize: { xs: '1.1rem', sm: '1.3rem', md: '1.5rem' },
+                    display: { xs: 'none', sm: 'block' },
+                    fontFamily: 'ChivoMono, monospace',
+                  }}
+                  className="text-gradient"
+                >
+                  Emmanuel
+                </Typography>
               </Box>
             </motion.div>
             

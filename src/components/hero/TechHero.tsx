@@ -4,7 +4,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { Engine } from "tsparticles-engine";
 import { info } from "../../data";
-import DownloadButton from "../resume/personalInfo/components/downloadButton";
+import DownloadButton from "../common/downloadButton";
 
 export default function TechHero() {
   const particlesInit = async (engine: Engine) => {

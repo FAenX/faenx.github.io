@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Box, Grid, Tab, Tabs, Typography, Container } from "@mui/material";
+import { Box, Grid, Tab, Tabs, Typography, Container, useTheme, Divider } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import CodeIcon from '@mui/icons-material/Code';
-import { HeadingLeftLabel } from "../../common";
 
 interface Project {
   id: string;
@@ -46,25 +45,6 @@ const projects: Project[] = [
     category: ["DevOps", "Backend"],
     githubUrl: "https://github.com",
   },
-  {
-    id: "project4",
-    title: "Mobile Health App",
-    description: "Cross-platform health tracking and monitoring application.",
-    image: "https://via.placeholder.com/300x160",
-    technologies: ["React Native", "TypeScript", "GraphQL", "MongoDB"],
-    category: ["Mobile", "Full Stack"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-  },
-  {
-    id: "project5",
-    title: "Content Management System",
-    description: "Custom CMS with role-based access control and advanced editing tools.",
-    image: "https://via.placeholder.com/300x160",
-    technologies: ["Next.js", "PostgreSQL", "AWS S3", "TailwindCSS"],
-    category: ["Frontend", "Backend", "Full Stack"],
-    githubUrl: "https://github.com",
-  },
 ];
 
 // Get unique categories from projects
@@ -72,7 +52,8 @@ const categories = ["All", ...new Set(projects.flatMap(project => project.catego
 
 export default function ProjectShowcase() {
   const [activeTab, setActiveTab] = useState(0);
-  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === 'dark';
   
   const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setActiveTab(newValue);
@@ -84,13 +65,72 @@ export default function ProjectShowcase() {
 
   return (
     <Container maxWidth="lg" id="projects">
-      <HeadingLeftLabel title="Projects" icon={<CodeIcon sx={{color: "black"}}/>}/>
+      {/* Enhanced Section Header */}
+      <Box 
+        sx={{ 
+          textAlign: 'center',
+          mb: 6
+        }}
+      >
+        {/* Icon and Title */}
+        <Box sx={{ 
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          mb: 2
+        }}>
+          <CodeIcon 
+            sx={{
+              color: isDarkMode ? "#64ffda" : theme.palette.primary.main,
+              fontSize: '2.5rem',
+              mr: 2
+            }}
+          />
+          <Typography 
+            variant="h3" 
+            component="h2" 
+            sx={{ 
+              fontWeight: 700,
+              color: isDarkMode ? 'white' : 'text.primary'
+            }}
+          >
+            Projects
+          </Typography>
+        </Box>
+        
+        {/* Decorative Underline */}
+        <Box 
+          sx={{ 
+            width: '80px', 
+            height: '3px', 
+            bgcolor: isDarkMode ? '#64ffda' : theme.palette.primary.main,
+            mx: 'auto',
+            mb: 3,
+            borderRadius: '4px'
+          }} 
+        />
+        
+        {/* Subtitle */}
+        <Typography 
+          variant="subtitle1" 
+          sx={{ 
+            maxWidth: '700px', 
+            mx: 'auto',
+            color: 'text.secondary',
+            mb: 4
+          }}
+        >
+          A showcase of my recent development work, featuring cloud solutions, data engineering, 
+          and software architecture projects.
+        </Typography>
+      </Box>
       
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
+        style={{ textAlign: 'center' }}
       >
         <Tabs 
           value={activeTab} 
@@ -98,11 +138,16 @@ export default function ProjectShowcase() {
           variant="scrollable"
           scrollButtons="auto"
           allowScrollButtonsMobile
+          centered
           sx={{ 
-            mb: 4,
+            mb: 5,
+            display: 'inline-flex',
             '& .MuiTabs-indicator': {
-              background: 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)',
+              background: isDarkMode ? '#64ffda' : 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)',
             },
+            '& .MuiTabs-flexContainer': {
+              justifyContent: 'center'
+            }
           }}
         >
           {categories.map((category, index) => (
@@ -111,9 +156,11 @@ export default function ProjectShowcase() {
               label={category} 
               sx={{ 
                 fontWeight: 500,
-                color: activeTab === index ? '#2196F3' : 'text.primary',
+                color: activeTab === index 
+                  ? (isDarkMode ? '#64ffda' : '#2196F3') 
+                  : 'text.primary',
                 '&.Mui-selected': {
-                  color: '#2196F3',
+                  color: isDarkMode ? '#64ffda' : '#2196F3',
                 }
               }}
             />
@@ -129,7 +176,11 @@ export default function ProjectShowcase() {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
         >
-          <Grid container spacing={{ xs: 2, sm: 3, md: 4 }}>
+          <Grid 
+            container 
+            spacing={{ xs: 3, sm: 4, md: 5 }}
+            justifyContent="center"
+          >
             {filteredProjects.map((project, index) => (
               <Grid 
                 item 
@@ -141,15 +192,15 @@ export default function ProjectShowcase() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                sx={{ display: 'flex' }}
+                sx={{ display: 'flex', justifyContent: 'center' }}
               >
                 <ProjectCard 
                   title={project.title}
                   description={project.description}
-                  image={project.image}
                   technologies={project.technologies}
                   githubUrl={project.githubUrl}
                   liveUrl={project.liveUrl}
+                  category={project.category}
                 />
               </Grid>
             ))}

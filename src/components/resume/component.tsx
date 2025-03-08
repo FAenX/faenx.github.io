@@ -1,6 +1,5 @@
 import { Box, Container, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
-import TechHero from "../hero/TechHero";
 import TechTerminal from "./about/TechTerminal";
 import SkillsRadarChart from "./skills/SkillsRadarChart";
 import ProjectShowcase from "./projects/ProjectShowcase";
@@ -12,7 +11,6 @@ import Skills from "./skills";
 import Hero from '../hero/component';
 import About from '../about/component';
 import Projects from './projects/component';
-import Testimonials from '../testimonials/component';
 
 export default function Resume() {
   const theme = useTheme();
@@ -33,7 +31,6 @@ export default function Resume() {
       <Container maxWidth="lg">
         <About />
         <Projects />
-        <Testimonials />
       </Container>
       
       {/* About Section */}

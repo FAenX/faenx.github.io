@@ -95,18 +95,32 @@ export const experiences = [
     
 ]
 
-export const education = [
+interface Education {
+  label: string;
+  description: string;
+  link: string;
+  date: string;
+  highlights?: string[];
+}
+
+export const education: Education[] = [
     {
         label: "University of Nairobi",
         description: "Post Graduate Diploma, Project planning and management",
         link: "",
-        date: "2019 - 2020"
+        date: "2019 - 2020",
+        highlights: [
+            "Specialized in agile project management methodologies",
+        ]
     },
     {
         label: "University of Eldoret",
         description: "Bachelors of Science in biochemistry",
         link: "",
-        date: "2012 - 2016"
+        date: "2012 - 2016",
+        highlights: [
+            "Graduated with honors",
+        ]
     },
 ]
 
@@ -223,47 +237,9 @@ export const certifications = [
     date: "2022",
     description: "Professional certification for designing distributed systems on AWS"
   },
-  {
-    title: "Build web apps with ReactJS",
-    issuer: "OpenClassrooms",
-    date: "2019",
-    description: "Comprehensive training in React application development",
-    credentialId: "5450352437"
-  },
-  {
-    title: "Build Your Web Projects With REST APIs",
-    issuer: "OpenClassrooms",
-    date: "2019",
-    description: "Designing and implementing RESTful APIs",
-    credentialId: "9863444414"
-  },
-  {
-    title: "Go Full-Stack With Node.js, Express, and MongoDB",
-    issuer: "OpenClassrooms",
-    date: "2019",
-    description: "Full-stack development using JavaScript technologies",
-    credentialId: "7000036735"
-  },
-  {
-    title: "Implement a Relational Database with SQL",
-    issuer: "OpenClassrooms",
-    date: "2019",
-    description: "Database design and SQL implementation",
-    credentialId: "4934565963"
-  }
 ];
 
 export const projects = [
-  {
-    id: "project1",
-    title: "Rusha Airflow",
-    category: "Data Engineering",
-    description: "Custom Airflow setup for orchestrating complex data workflows and ETL processes",
-    image: "/images/projects/data-pipeline.jpg",
-    technologies: ["Apache Airflow", "Python", "Docker", "AWS"],
-    githubUrl: "https://github.com/Rusha-Corp/rusha_airflow",
-    liveUrl: ""
-  },
   {
     id: "project2",
     title: "Rusha Spark",
@@ -284,45 +260,8 @@ export const projects = [
     githubUrl: "https://github.com/Rusha-Corp/rusha_hive_metastore",
     liveUrl: ""
   },
-  {
-    id: "project4",
-    title: "Expert Recommendation System",
-    category: "AI & Data",
-    description: "AI-powered system for recommending experts using graph database",
-    image: "/images/projects/ai-recommendation.jpg",
-    technologies: ["Neo4j", "Python", "Machine Learning", "Graph Algorithms"],
-    githubUrl: "",
-    liveUrl: "https://medium.com/@emmanueldavidson/how-we-built-an-adaptive-expert-recommendation-system-using-ai-and-neo4j-9fe58d17aef3"
-  }
+  
 ];
-
-export const articles = [
-  {
-    title: "How to Become a Big Data Engineer: Lessons from Managing Billions of Rows of Data",
-    url: "https://medium.com/@emmanueldavidson/how-to-become-a-big-data-engineer-lessons-from-managing-billions-of-rows-of-data",
-    date: "Feb 2023",
-    description: "Insights into the skills and approaches needed for effective big data engineering"
-  },
-  {
-    title: "What Kafka Is and What It Is Not",
-    url: "https://medium.com/@emmanueldavidson/what-kafka-is-and-what-it-is-not",
-    date: "Dec 2022",
-    description: "Clarifying common misconceptions about Apache Kafka as a distributed event streaming platform"
-  },
-  {
-    title: "How We Built an Adaptive Expert Recommendation System Using AI and Neo4j",
-    url: "https://medium.com/@emmanueldavidson/how-we-built-an-adaptive-expert-recommendation-system-using-ai-and-neo4j-9fe58d17aef3",
-    date: "Nov 2022",
-    description: "Case study on building recommendation systems with graph databases and AI"
-  },
-  {
-    title: "Debunking the Myth of 'If It Works, Don't Touch It' in Software Engineering",
-    url: "https://medium.com/@emmanueldavidson/debunking-the-myth-of-if-it-works-dont-touch-it-in-software-engineering-embracing-first-principles-and-brutal-refactoring",
-    date: "Jan 2022",
-    description: "Exploring the importance of refactoring and continuous improvement in code quality"
-  }
-];
-
 
 
 

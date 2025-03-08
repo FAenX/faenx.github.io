@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import { Box, Typography, Avatar, Card, CardContent, IconButton, Stack, Container } from "@mui/material";
+import { useEffect, useState, } from "react";
+import { Box, Typography, Avatar, Card, CardContent, IconButton, Stack, Container, useTheme } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import { HeadingLeftLabel } from "../../common";
 import PeopleIcon from '@mui/icons-material/People';
 
 interface Testimonial {
@@ -19,24 +18,19 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Jane Doe",
-    role: "Engineering Manager",
-    company: "Tech Company",
-    text: "An exceptional developer who consistently delivers high-quality code. Their attention to detail and problem-solving skills are outstanding."
+    name: "Kelvin Macharia",
+    role: "Scrum Master | Quality Assurance Engineer | Tech Enthusiast | ISTQB Certified",
+    company: "GRIFFIN Global Technologies, LLC",
+    text: "Emmanuel embodies the epitome of a Solutions Architect, leveraging his extensive technical prowess, and proactive mindset to conceptualize and implement innovative solutions, translating complex business needs into comprehensive strategies that not only meet but exceed objectives."
   },
-  {
-    id: 2,
-    name: "John Smith",
-    role: "Project Lead",
-    company: "Software Inc.",
-    text: "Working with this developer has been a pleasure. They're proactive, collaborative, and always focused on finding the best solutions."
-  },
+  
   // Add more testimonials as needed
 ];
 
 export default function TestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const theme = useTheme();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -77,7 +71,42 @@ export default function TestimonialCarousel() {
 
   return (
     <Container sx={{ my: 6 }}>
-      <HeadingLeftLabel title="Testimonials" icon={<FormatQuoteIcon sx={{color: "black"}}/>}/>
+      {/* Custom Section Header */}
+      <Box sx={{ 
+        mb: 4, 
+        display: 'flex',
+        alignItems: 'center',
+        position: 'relative',
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          bottom: '-8px',
+          left: 0,
+          width: '60px',
+          height: '3px',
+          background: theme.palette.mode === 'dark' ? '#64ffda' : theme.palette.primary.main,
+          borderRadius: '4px'
+        }
+      }}>
+        <FormatQuoteIcon 
+          sx={{
+            color: theme.palette.mode === 'dark' ? "#64ffda" : theme.palette.primary.main,
+            fontSize: '2rem',
+            mr: 2
+          }}
+        />
+        <Typography 
+          variant="h4" 
+          component="h2" 
+          sx={{ 
+            fontWeight: 700,
+            color: theme.palette.mode === 'dark' ? 'white' : 'text.primary'
+          }}
+        >
+          Testimonials
+        </Typography>
+      </Box>
+      
       <Box sx={{ mt: 4, mb: 8 }}>
         <Box sx={{ 
           display: "flex", 
