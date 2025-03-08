@@ -1,6 +1,7 @@
 {
   "short_name": "Emmanuel Davidson",
-  "name": "Emmanuel Davidson | Software Engineer",
+  "name": "Emmanuel Davidson | Cloud Architect & AWS Expert",
+  "description": "Emmanuel Davidson is an AWS Certified Solutions Architect, Cloud Expert, and Software Engineer specializing in Kubernetes, Docker, and big data solutions.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +11,60 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/?source=pwa",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0a192f",
+  "background_color": "#0a192f",
+  "orientation": "portrait",
+  "categories": ["business", "portfolio", "productivity", "technology", "cloud computing", "software development"],
+  "lang": "en-US",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://faenx.github.io/"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact Emmanuel",
+      "short_name": "Contact",
+      "description": "Contact Emmanuel Davidson for consulting and remote work opportunities",
+      "url": "/#contact",
+      "icons": [{ "src": "contact-icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "See Emmanuel Davidson's featured software engineering and cloud projects",
+      "url": "/#projects",
+      "icons": [{ "src": "projects-icon.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.png", 
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Emmanuel Davidson's portfolio homepage"
+    },
+    {
+      "src": "screenshot2.png", 
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Cloud architecture and software engineering projects"
+    }
+  ]
 }
