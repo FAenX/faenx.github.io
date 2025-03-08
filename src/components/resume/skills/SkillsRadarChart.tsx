@@ -3,13 +3,6 @@ import { Box, Typography, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 import Chart from 'chart.js/auto';
 
-interface SkillCategory {
-  category: string;
-  skills: {
-    name: string;
-    level: number;
-  }[];
-}
 
 const skillCategories = [
   {

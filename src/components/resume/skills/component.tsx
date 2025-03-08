@@ -1,5 +1,4 @@
 import { Box, useTheme, Typography, Grid, Chip } from "@mui/material";
-import { ListItem } from "./components";
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import { skills } from "../../../data/data";
 import { motion } from "framer-motion";

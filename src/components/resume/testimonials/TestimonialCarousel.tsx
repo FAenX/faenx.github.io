@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import PeopleIcon from '@mui/icons-material/People';
 
 interface Testimonial {
   id: number;

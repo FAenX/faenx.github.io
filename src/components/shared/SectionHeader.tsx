@@ -7,7 +7,6 @@ interface SectionHeaderProps {
 }
 
 export const SectionHeader = ({ title, subtitle }: SectionHeaderProps) => {
-  const theme = useTheme();
   
   return (
     <Box sx={{ mb: 4, textAlign: 'center' }}>

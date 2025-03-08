@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Grid, Tab, Tabs, Typography, Container, useTheme, Divider } from "@mui/material";
+import { Box, Grid, Tab, Tabs, Typography, Container, useTheme } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import CodeIcon from '@mui/icons-material/Code';
