@@ -1,6 +1,6 @@
 import { useTheme } from '@mui/material/styles';
 import { Box, Typography, Container, Button, Chip, Grid } from '@mui/material';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react";
 import DownloadIcon from '@mui/icons-material/Download';
 import CloudIcon from '@mui/icons-material/Cloud';
 import StorageIcon from '@mui/icons-material/Storage';
@@ -158,7 +158,7 @@ const HeroComponent = () => {
         >
           <Grid container spacing={3} sx={{ mt: 2 }}>
             {skills.map((skill, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -166,11 +166,10 @@ const HeroComponent = () => {
                 >
                   <Box sx={{ mb: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
                     {skill.icon}
-                    <Typography 
-                      variant="subtitle1" 
-                      fontWeight="medium" 
+                    <Typography
+                      variant="subtitle1"
                       color="primary"
-                      sx={{ fontFamily: 'ChivoMono, monospace' }}
+                      sx={{ fontFamily: 'ChivoMono, monospace', fontWeight: 500 }}
                     >
                       {skill.category}
                     </Typography>

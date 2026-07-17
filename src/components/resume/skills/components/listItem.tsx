@@ -1,5 +1,5 @@
 import { Stack, Typography, Avatar } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface SkillsProps {
     name: string;
@@ -22,7 +22,7 @@ const item = {
         opacity: 1, 
         y: 0,
         transition: {
-            type: "spring",
+            type: "spring" as const,
             stiffness: 300
         }
     }
@@ -36,11 +36,13 @@ export default function ListItem(props: {skills: SkillsProps[]}) {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            direction="row" 
-            justifyContent={"flex-start"} 
-            alignItems="center" 
-            margin={3}
-            flexWrap={'wrap'}
+            direction="row"
+            sx={{
+                justifyContent: "flex-start",
+                alignItems: "center",
+                margin: 3,
+                flexWrap: 'wrap',
+            }}
         > 
             {props.skills.map((skill) => (
                 <Stack
@@ -49,17 +51,19 @@ export default function ListItem(props: {skills: SkillsProps[]}) {
                     whileHover={{ 
                         scale: 1.05,
                         boxShadow: "0px 5px 15px rgba(0,0,0,0.1)",
-                        transition: { type: "spring", stiffness: 400 }
+                        transition: { type: "spring" as const, stiffness: 400 }
                     }}
                     key={skill.name}
                     direction="row"
-                    justifyContent={"center"}
-                    alignItems="center"
-                    margin={1}
-                    border={"1px solid #eaeaea"}
-                    borderRadius={5}
-                    padding={1}
-                    sx={{ cursor: 'pointer' }}
+                    sx={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        margin: 1,
+                        border: "1px solid #eaeaea",
+                        borderRadius: 5,
+                        padding: 1,
+                        cursor: 'pointer',
+                    }}
                 >                               
                     <Avatar 
                         alt={skill.name} 

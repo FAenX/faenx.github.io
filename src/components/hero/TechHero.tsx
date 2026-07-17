@@ -1,14 +1,14 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { motion } from "framer-motion";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import { Engine } from "tsparticles-engine";
+import { motion } from "motion/react";
+import { Particles, ParticlesProvider } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import type { Engine } from "@tsparticles/engine";
 import { info } from "../../data";
 import DownloadButton from "../common/downloadButton";
 
 export default function TechHero() {
   const particlesInit = async (engine: Engine) => {
-    await loadFull(engine);
+    await loadSlim(engine);
   };
 
   return (
@@ -24,10 +24,10 @@ export default function TechHero() {
         color: "#ffffff",
       }}
     >
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        options={{
+      <ParticlesProvider init={particlesInit}>
+        <Particles
+          id="tsparticles"
+          options={{
           background: {
             color: {
               value: "transparent",
@@ -57,7 +57,8 @@ export default function TechHero() {
             number: {
               density: {
                 enable: true,
-                area: 800,
+                width: 800,
+                height: 800,
               },
               value: 80,
             },
@@ -74,7 +75,8 @@ export default function TechHero() {
           detectRetina: true,
         }}
       />
-      
+      </ParticlesProvider>
+
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
         <Stack spacing={4}>
           <motion.div

@@ -1,7 +1,7 @@
 import { Box, useTheme, Typography, Grid, Chip } from "@mui/material";
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import { skills } from "../../../data/data";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 // Group skills by category for more organized display
 const skillCategories = [
@@ -81,7 +81,7 @@ export default function Skills() {
             {/* Categorized Skills Display */}
             <Grid container spacing={4} sx={{ mt: 2 }}>
                 {skillCategories.map((category, catIndex) => (
-                    <Grid item xs={12} md={6} key={category.name}>
+                    <Grid size={{ xs: 12, md: 6 }} key={category.name}>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}

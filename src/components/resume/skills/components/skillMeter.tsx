@@ -1,5 +1,5 @@
 import { Box, Typography, LinearProgress, Stack } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface SkillLevel {
   name: string;
@@ -18,11 +18,14 @@ export default function SkillMeter({ skills }: { skills: SkillLevel[] }) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
-          <Stack 
-            direction="row" 
-            justifyContent="space-between" 
-            alignItems="center" 
-            sx={{ mb: 0.5, mt: index === 0 ? 0 : 2 }}
+          <Stack
+            direction="row"
+            sx={{
+              justifyContent: "space-between",
+              alignItems: "center",
+              mb: 0.5,
+              mt: index === 0 ? 0 : 2,
+            }}
           >
             <Typography 
               variant="body1" 

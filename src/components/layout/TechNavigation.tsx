@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { AppBar, Toolbar, Button, Box, IconButton, Drawer, List, ListItem, useMediaQuery, useTheme, styled, Typography } from "@mui/material";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "motion/react";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
@@ -211,12 +211,14 @@ export default function TechNavigation({ themeMode, toggleTheme }: TechNavigatio
         anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        PaperProps={{
-          sx: {
-            width: '75%',
-            maxWidth: '300px',
-            background: theme.palette.mode === 'dark' ? '#0a192f' : '#ffffff',
-            padding: 2,
+        slotProps={{
+          paper: {
+            sx: {
+              width: '75%',
+              maxWidth: '300px',
+              background: theme.palette.mode === 'dark' ? '#0a192f' : '#ffffff',
+              padding: 2,
+            }
           }
         }}
       >

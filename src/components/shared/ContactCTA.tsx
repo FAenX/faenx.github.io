@@ -1,6 +1,6 @@
 import { Box, Typography, Button, Paper } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react";
 import EmailIcon from '@mui/icons-material/Email';
 
 export const ContactCTA = () => {

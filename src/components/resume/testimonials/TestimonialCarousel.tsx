@@ -1,6 +1,6 @@
 import { useEffect, useState, } from "react";
 import { Box, Typography, Avatar, Card, CardContent, IconButton, Stack, Container, useTheme } from "@mui/material";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
@@ -146,7 +146,7 @@ export default function TestimonialCarousel() {
                   <Typography variant="body1" sx={{ fontSize: "1.1rem", mb: 3, mt: 1, fontStyle: "italic" }}>
                     "{testimonials[currentIndex].text}"
                   </Typography>
-                  <Stack direction="row" spacing={2} alignItems="center">
+                  <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
                     <Avatar
                       src={testimonials[currentIndex].avatar}
                       sx={{ width: 56, height: 56 }}

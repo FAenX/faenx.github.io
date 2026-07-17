@@ -1,5 +1,5 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import React from "react";
 
 interface AnimatedLogoProps {
@@ -56,15 +56,16 @@ export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({
       pathLength: 1,
       transition: { 
         duration: 1.2,
-        ease: "easeInOut"
+        ease: "easeInOut" as const
       }
     },
     hover: {
       scale: 1.05,
       transition: {
         duration: 0.3,
-        yoyo: Infinity,
-        ease: "easeInOut"
+        repeat: Infinity,
+        repeatType: "reverse" as const,
+        ease: "easeInOut" as const
       }
     }
   };

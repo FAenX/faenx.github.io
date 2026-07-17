@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Container, Button, useTheme } from '@mui/material';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react";
 
 export default function Hero() {
   const theme = useTheme();

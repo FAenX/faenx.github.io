@@ -1,5 +1,5 @@
 import { Card, CardContent, Typography, Box, Chip, Stack, IconButton, useTheme } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 import AnimatedProjectGraphic from "./AnimatedProjectGraphic";
@@ -86,11 +86,10 @@ export default function ProjectCard({
         </Typography>
         
         <Box sx={{ mt: 'auto' }}>
-          <Stack 
-            direction="row" 
-            spacing={1} 
-            flexWrap="wrap" 
-            sx={{ mb: 2 }}
+          <Stack
+            direction="row"
+            spacing={1}
+            sx={{ mb: 2, flexWrap: "wrap" }}
           >
             {technologies.slice(0, 3).map((tech, i) => (
               <Chip 
@@ -125,7 +124,7 @@ export default function ProjectCard({
             )}
           </Stack>
           
-          <Stack direction="row" spacing={1} justifyContent="flex-end">
+          <Stack direction="row" spacing={1} sx={{ justifyContent: "flex-end" }}>
             {githubUrl && (
               <IconButton 
                 href={githubUrl}

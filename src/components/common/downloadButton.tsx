@@ -1,6 +1,6 @@
 import { Button, Typography } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function DownloadButton({ pdfUrl }: { pdfUrl: string }) {
   return (

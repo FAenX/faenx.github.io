@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Paper, Grid, List, ListItem, ListItemText, ListItemAvatar, Divider, useTheme } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { experiences } from "../../../data/data";
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import HdrStrongIcon from '@mui/icons-material/HdrStrong';
@@ -11,7 +11,7 @@ export default function Experience() {
   const isDarkMode = theme.palette.mode === 'dark';
   
   return (
-    <Box width={"100%"} id="experience">
+    <Box sx={{ width: "100%" }} id="experience">
       {/* Custom Section Header */}
       <Box sx={{ 
         mb: 4, 
@@ -50,7 +50,7 @@ export default function Experience() {
       
       <Grid container spacing={4}>
         {experiences.map((experience, index) => (
-          <Grid item xs={12} key={experience.id || index}>
+          <Grid size={{ xs: 12 }} key={experience.id || index}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -86,13 +86,13 @@ export default function Experience() {
                 </Typography>
                 
                 <Grid container spacing={1} sx={{ mb: 2 }}>
-                  <Grid item xs={12} sm={6}>
+                  <Grid size={{ xs: 12, sm: 6 }}>
                     <Typography variant="h6" component="h4" sx={{ display: 'flex', alignItems: 'center' }}>
                       <BusinessCenterIcon sx={{ mr: 1, fontSize: '1rem', color: isDarkMode ? '#8892b0' : '#718096', opacity: 0.9 }} />
                       {experience.title}
                     </Typography>
                   </Grid>
-                  <Grid item xs={12} sm={6}>
+                  <Grid size={{ xs: 12, sm: 6 }}>
                     <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', color: 'text.secondary' }}>
                       <CalendarTodayIcon sx={{ mr: 1, fontSize: '1rem', opacity: 0.7 }} />
                       {experience.date}
@@ -112,18 +112,20 @@ export default function Experience() {
                             sx={{ color: isDarkMode ? '#64ffda' : theme.palette.primary.main }}
                           />
                         </ListItemAvatar>
-                        <ListItemText 
-                          primary={item} 
-                          primaryTypographyProps={{ 
-                            color: 'text.primary',
-                            sx: { fontSize: '0.95rem' }
-                          }} 
+                        <ListItemText
+                          primary={item}
+                          slotProps={{
+                            primary: {
+                              color: 'text.primary',
+                              sx: { fontSize: '0.95rem' }
+                            }
+                          }}
                         />
                       </ListItem>
                     </List>
                   ))
                 ) : (
-                  <Typography paragraph color="text.primary">{experience.description}</Typography>
+                  <Typography sx={{ mb: 2 }} color="text.primary">{experience.description}</Typography>
                 )}
               </Paper>
             </motion.div>

@@ -1,6 +1,6 @@
 import { Box, Chip, Typography, Grid, Paper } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react";
 import CodeIcon from '@mui/icons-material/Code';
 import StorageIcon from '@mui/icons-material/Storage';
 import CloudIcon from '@mui/icons-material/Cloud';
@@ -63,7 +63,7 @@ export const Competencies = () => {
       
       <Grid container spacing={3}>
         {competencies.map((item, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}

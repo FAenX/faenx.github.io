@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Box, Typography, useTheme } from '@mui/material';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react";
 import Chart from 'chart.js/auto';
 
 

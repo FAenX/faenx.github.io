@@ -1,6 +1,6 @@
 import { Box, Typography, Grid, Container, Link } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react";
 import { SectionHeader } from '../shared/SectionHeader';
 import { Competencies } from '../shared/Competencies';
 import { AnimatedAvatar } from './AnimatedAvatar';
@@ -58,7 +58,7 @@ const About = () => {
         />
         
         <Grid container spacing={6} sx={{ mb: 6 }}>
-          <Grid item xs={12} md={5}>
+          <Grid size={{ xs: 12, md: 5 }}> 
             <AnimatedAvatar />
             
             <Box sx={{ 
@@ -100,7 +100,7 @@ const About = () => {
             </Box>
           </Grid>
           
-          <Grid item xs={12} md={7}>
+          <Grid size={{ xs: 12, md: 7 }}> 
             <Box>
               {[
                 "I'm a seasoned Software Engineer, Cloud Architect, and Data Engineer with over 8 years in the tech industry. I'm passionate about designing scalable, efficient, and cost-effective software and infrastructure solutions that drive real business impact. My journey spans working with startups and enterprises across East Africa and beyond.",

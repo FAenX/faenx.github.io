@@ -1,5 +1,5 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { info } from "../../../data";
@@ -32,10 +32,10 @@ export default function ContactCTA() {
       <Typography variant="body1" sx={{ maxWidth: "700px", mb: 4 }}>
         I'm currently available for new opportunities and would love to discuss how my skills and experience could benefit your organization.
       </Typography>
-      <Stack 
-        direction={{ xs: "column", sm: "row" }} 
+      <Stack
+        direction={{ xs: "column", sm: "row" }}
         spacing={{ xs: 2, sm: 3 }}
-        justifyContent={{ xs: 'center', md: 'flex-start' }}
+        sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}
       >
         <Button
           component={motion.a}

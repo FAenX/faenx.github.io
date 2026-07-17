@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "motion/react";
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
@@ -14,7 +14,7 @@ export const LogoMotion = ({ size = 40, text = "YourName" }: LogoMotionProps) =>
     hidden: { scale: 0 },
     visible: { 
       scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: "easeOut" as const }
     }
   };
   

@@ -1,5 +1,5 @@
 import { Box, Container, useTheme } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import TechTerminal from "./about/TechTerminal";
 import SkillsRadarChart from "./skills/SkillsRadarChart";
 import ProjectShowcase from "./projects/ProjectShowcase";

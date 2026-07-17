@@ -3,7 +3,7 @@ import { Box, Card, CardContent, CardActions, Typography, Stack, Chip, Button } 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { projects } from '../../../data/data';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react";
 
 // Define the Project interface
 interface Project {
@@ -51,7 +51,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
             {project.description}
           </Typography>
-          <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mt: 'auto' }}>
+          <Stack direction="row" spacing={1} sx={{ mt: 'auto', flexWrap: "wrap" }}>
             {project.technologies.map((tech, i) => (
               <Chip 
                 key={i} 

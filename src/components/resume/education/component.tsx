@@ -1,6 +1,6 @@
 import { Box, Typography, Card, useTheme, Divider } from "@mui/material";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { education } from "../../../data/data";
 import SchoolIcon from '@mui/icons-material/School';
 import EventIcon from '@mui/icons-material/Event';
@@ -10,7 +10,7 @@ export default function Education() {
     const isDarkMode = theme.palette.mode === 'dark';
     
     return (
-      <Box width={"100%"} id="education">
+      <Box sx={{ width: "100%" }} id="education">
         {/* Custom Section Header */}
         <Box sx={{ 
           mb: 5, 

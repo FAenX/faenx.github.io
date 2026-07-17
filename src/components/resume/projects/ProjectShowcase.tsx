@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box, Grid, Tab, Tabs, Typography, Container, useTheme } from "@mui/material";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import ProjectCard from "./ProjectCard";
 import CodeIcon from '@mui/icons-material/Code';
 
@@ -176,17 +176,14 @@ export default function ProjectShowcase() {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
         >
-          <Grid 
-            container 
+          <Grid
+            container
             spacing={{ xs: 3, sm: 4, md: 5 }}
-            justifyContent="center"
+            sx={{ justifyContent: "center" }}
           >
             {filteredProjects.map((project, index) => (
               <Grid 
-                item 
-                xs={12} 
-                sm={6} 
-                md={4} 
+                size={{ xs: 12, sm: 6, md: 4 }}
                 key={project.id}
                 component={motion.div}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, KeyboardEvent } from "react";
 import { Box, Typography, Paper, useTheme } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 // Resume data for the terminal
 const resumeData = {
