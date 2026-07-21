@@ -20,7 +20,7 @@ function App() {
     <>
       <PageMeta
         title="Emmanuel K. Davidson | Platform Systems, Data Platforms, and Agent Systems"
-        description="Emmanuel K. Davidson builds platform infrastructure, biodiversity intelligence platforms, agent systems, and applied analytics products across Kubernetes, AWS, GitOps, Spark, Dremio, and model-gateway operations."
+        description="Emmanuel K. Davidson builds platform infrastructure, biodiversity intelligence platforms, agent systems, and applied analytics products across Kubernetes, cloud platforms, GitOps, analytics systems, and model-gateway operations."
         path="/"
         keywords={[
           "Emmanuel Davidson",

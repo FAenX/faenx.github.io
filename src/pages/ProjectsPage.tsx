@@ -36,9 +36,9 @@ export default function ProjectsPage() {
           <p className={styles.eyebrow}>Projects</p>
           <h1 className={styles.title}>Work that shows how the systems actually operate</h1>
           <p className={styles.intro}>
-            These projects show how architecture, engineering, DevOps, DevSecOps, FinOps, and
-            AIOps show up in real systems across platform infrastructure, biodiversity
-            intelligence, multi-agent operations, and analytical product delivery.
+            These projects show how complex systems are designed, built, deployed, observed, and
+            scaled in practice across platform infrastructure, biodiversity intelligence,
+            multi-agent operations, and analytical product delivery.
           </p>
         </section>
 

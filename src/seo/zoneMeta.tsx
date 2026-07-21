@@ -40,7 +40,7 @@ const zoneMetas: Record<ZoneId, ZoneMetaConfig> = {
   projects: {
     title: `Projects — ${NAME}`,
     description:
-      "Selected projects span platform systems, biodiversity intelligence, applied analytics, and agent-enabled operations, including Rusha, TierraViva AI, AI agents on Hermes, and this portfolio system.",
+      "Selected projects span platform systems, biodiversity intelligence, applied analytics, and agent-enabled operations, including Rusha, TierraViva AI, agentic systems, and this portfolio system.",
     path: "/#projects",
   },
   skills: {

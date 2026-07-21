@@ -9,7 +9,7 @@
  *   - /home/node/.factory/resume.pdf.json (resume)
  *   - real repos on dev@194.163.182.114 and GitHub orgs including Rusha,
  *     Humming Mind, TierraViva platform and data-engineering repos, and
- *     Hermes-based agent systems
+ *     agentic systems and runtime-backed operations
  *
  * The technology graph itself (nodes/edges/proficiency) lives in
  * `./techDna.ts` and is the source of truth for the 3D hero network
@@ -80,7 +80,7 @@ export const experiences: ExperienceEntry[] = [
       "Multi-Tenant Kubernetes Infrastructure — Implemented multi-tenant namespace isolation with project-level shared stateful services, Sealed Secrets for secret management, Cognito auth with automatic token refresh, and HMAC-verified webhook pipelines for GitHub App integration.",
       "TierraViva AI Platform — Built a biodiversity intelligence platform that ingests and mines policy, biodiversity, patent, and research data, processes it on cloud-native analytics infrastructure, and serves the results through reporting interfaces and agent-ready workflows.",
       "Dremio Elastic Auto-Scaling — Designed and implemented two-tier executor auto-scaling (small/large) using KEDA, Kubernetes StatefulSets, and a custom metrics exporter with graceful scale-down, reducing infrastructure costs while maintaining query performance.",
-      "LLM Automation Platform (Hermes) — Built production agent systems on the Hermes runtime, combining LLM reasoning with live data pipelines, Kubernetes-native scheduling, Slack approval flows, and RBAC-gated operations.",
+      "LLM Automation Platform — Built production agent systems using agent runtimes and orchestration frameworks, combining LLM reasoning with live data pipelines, Kubernetes-native scheduling, Slack approval flows, and RBAC-gated operations.",
       "MLOps Enablement — Partnered with data scientists to productionize ML models, supporting training, deployment, monitoring, and lifecycle management on Databricks and custom AI platforms.",
       "Full DevOps Ownership — Implemented CI/CD pipelines (GitHub Actions), infrastructure automation (Terraform, Ansible), container registry management (GHCR), production observability (Grafana, Prometheus, Jaeger, OpenTelemetry), and zero-downtime GitOps deployments.",
       "Business Intelligence & Stakeholder Reporting — Delivered executive dashboards and data visualizations supporting strategic decision-making across engineering and business leadership.",
@@ -276,16 +276,15 @@ export const projects: Project[] = [
   },
   {
     id: "hermes",
-    title: "AI Agents on Hermes",
+    title: "Agentic Systems",
     category: "AI",
     description:
-      "Production agent systems spanning multi-agent orchestration, domain-specific research agents, secure Hermes deployments, branded agent interfaces, profile distributions, and model-gateway infrastructure. The work includes Hermes-based agents on K3s, NATS-backed specialist routing, Ollama and OpenAI-compatible gateway layers, approval paths, observability, and domain workflows for biodiversity, policy, and analytical operations.",
+      "Production agent systems spanning multi-agent orchestration, domain-specific research agents, runtime-backed workflows, profile distributions, and model-gateway infrastructure. The work includes Kubernetes-based deployments, NATS-backed specialist routing, OpenAI-compatible and Ollama-facing gateway layers, approval paths, observability, and domain workflows for biodiversity, policy, and analytical operations, with Hermes used as one runtime within that stack.",
     technologies: [
       "Python",
       "LLM (OpenAI, Ollama)",
       "NATS JetStream",
       "Kubernetes",
-      "K3s",
       "KEDA",
       "Docker",
       "Slack API",
@@ -313,7 +312,7 @@ export const projects: Project[] = [
       "React",
       "TypeScript",
       "WebSocket",
-      "Hermes",
+      "Hermes Runtime",
       "KEDA",
       "StatefulSets",
       "Grafana",

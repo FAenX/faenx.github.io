@@ -25,23 +25,23 @@ export const expertisePages: SearchPage[] = [
       "Platform systems work by Emmanuel K. Davidson across GitOps, Kubernetes delivery, multi-tenant deployment platforms, contracts, integrations, and production operations.",
     headline: "Infrastructure that makes delivery repeatable",
     intro:
-      "I build platform systems that make software easier to ship and safer to run. The work spans GitOps delivery, deployment templates, namespace isolation, event-driven boundaries, infrastructure guardrails, and integrations that support production operations.",
+      "I build platform systems that make software easier to ship and safer to run. The work covers service boundaries, release workflows, deployment standards, environment controls, and the operational guardrails that keep production change manageable.",
     sections: [
       {
-        title: "What this includes",
+        title: "What the work covers",
         body:
-          "The platform layer turns delivery discipline into a reusable capability. It covers deployment architecture, environment isolation, build pipelines, integration boundaries, and operating standards that teams can inherit instead of rebuilding.",
+          "The platform layer turns delivery discipline into a reusable capability. It covers architecture, build pipelines, deployment controls, integration boundaries, and operating standards that teams can inherit instead of rebuilding from scratch.",
         bullets: [
           "GitOps-driven deployment workflows and release controls",
           "Kubernetes multi-tenancy, namespace boundaries, and secret handling",
-          "Build and deploy systems with reusable templates and guardrails",
-          "Operational interfaces for logs, events, and rollout visibility",
+          "Reusable templates and guardrails for build and deploy paths",
+          "Operational visibility into logs, events, and rollout health",
         ],
       },
       {
-        title: "Current evidence",
+        title: "Where I’ve built this",
         body:
-          "Rusha shows this approach clearly: a platform for building, validating, deploying, and operating software on Kubernetes, not just another app surface.",
+          "Rusha shows this approach clearly: a platform for designing, validating, deploying, and operating software on Kubernetes, with reusable delivery paths, environment isolation, and shared visibility into change.",
       },
     ],
     relatedProjectIds: ["rusha"],
@@ -62,12 +62,12 @@ export const expertisePages: SearchPage[] = [
       "Big data platform work by Emmanuel K. Davidson across AWS, EKS, Spark, Dremio, Airflow, metadata services, analytics infrastructure, and reporting systems.",
     headline: "Data platforms that turn raw inputs into usable intelligence",
     intro:
-      "I work on data platforms as the operating layer behind analytics. That means orchestration, compute, metadata, warehouse layers, cost controls, observability, and delivery paths working together as one production system.",
+      "I work on data platforms as the layer that carries analytics from ingestion to delivery. That means orchestration, compute, metadata, warehouse layers, observability, and scaling controls working together as one production system.",
     sections: [
       {
-        title: "What this includes",
+        title: "What the work covers",
         body:
-          "The focus is not a single tool such as Airflow. It is the full platform needed to ingest, transform, model, serve, and observe analytical workloads in production.",
+          "The work spans ingest, transform, model, serve, observe, and scale. It connects orchestration, compute, metadata, and serving into one operating layer for analytical workloads.",
         bullets: [
           "Spark on Kubernetes and EKS-based compute orchestration",
           "Dremio, dbt, Delta Lake, metadata, and warehouse layers",
@@ -76,7 +76,7 @@ export const expertisePages: SearchPage[] = [
         ],
       },
       {
-        title: "Current evidence",
+        title: "Where I’ve built this",
         body:
           "TierraViva AI spans ingestion and mining pipelines, GitOps-managed AWS and Kubernetes infrastructure, analytical processing systems, serving layers such as APIs and web interfaces, and agent-ready biodiversity workflows.",
       },
@@ -96,34 +96,34 @@ export const expertisePages: SearchPage[] = [
     title: `Agent Systems | ${info.name}`,
     navLabel: "Agent Systems",
     description:
-      "Agent systems work by Emmanuel K. Davidson across Hermes-based agents, K3s, approval workflows, observability, operational automation, and AI-assisted execution.",
+      "Agent systems work by Emmanuel K. Davidson across agentic frameworks, Kubernetes-based delivery, approval workflows, observability, operational automation, and AI-assisted execution.",
     headline: "Agent systems built for real operations",
     intro:
-      "I build agent systems as production infrastructure, not demos. The work spans multi-agent orchestration, model gateways, runtime packaging, control surfaces, approval paths, observability, and domain-specific workflows.",
+      "I build agent systems as production infrastructure that can be deployed, observed, governed, and improved over time. The work spans multi-agent orchestration, model gateways, runtime packaging, control surfaces, approval paths, observability, and domain-specific workflows.",
     sections: [
       {
-        title: "What this includes",
+        title: "What the work covers",
         body:
-          "Agent systems need infrastructure, safety, and measurable outcomes. That means orchestrators, specialist routing, model gateways, RBAC, human approval loops, runtime packaging, tool surfaces, and monitoring around model behavior.",
+          "Agent systems need orchestration, runtime control, approvals, tool access, and observability around behavior in production. The work covers the stack needed to make automation safe, visible, portable, and useful in real operations.",
         bullets: [
-          "Hermes-powered agent workflows on Kubernetes, K3s, and VPS deployments",
+          "Agent workflows deployed on Kubernetes and other production infrastructure environments",
           "Multi-agent orchestration, specialist routing, and domain-specific research agents",
-          "OpenAI-compatible and Ollama-facing gateway layers, plus branded web interfaces",
+          "OpenAI-compatible and Ollama-facing gateway layers, plus runtime control surfaces",
           "Observability, approval loops, health checks, and outcome tracking",
         ],
       },
       {
-        title: "Current evidence",
+        title: "Where I’ve built this",
         body:
-          "Rusha-Corp and TierraViva work includes self-registering multi-agent systems, GitOps-backed agent config repositories, Ollama proxy infrastructure, biodiversity navigation profiles, deep research agents, branded Hermes deployments, and analytical assistants grounded in live data products.",
+          "Rusha-Corp and TierraViva work includes self-registering multi-agent systems, GitOps-backed agent configuration, proxy and gateway infrastructure, biodiversity navigation profiles, deep research agents, and analytical assistants grounded in live data products.",
       },
     ],
     relatedProjectIds: ["hermes"],
     keywords: [
       "agent systems",
       "ai agents",
-      "hermes runtime",
-      "k3s",
+      "agentic frameworks",
+      "kubernetes",
       "operational ai",
       "llm workflows",
     ],
@@ -134,14 +134,14 @@ export const expertisePages: SearchPage[] = [
     navLabel: "Applied Analytics",
     description:
       "Applied analytics work by Emmanuel K. Davidson across dashboards, text-to-SQL assistants, reporting systems, biodiversity data products, and decision support surfaces.",
-    headline: "Analytics surfaces built for decisions, not demos",
+    headline: "Analytics surfaces built for real decisions",
     intro:
-      "The last mile matters. I build interfaces and product surfaces that turn infrastructure and data capability into reporting, exploration, charting, and decision support for real users.",
+      "The last mile matters. I build interfaces and product surfaces that turn reliable infrastructure, data, and AI capability into reporting, exploration, charting, and decision support for real users.",
     sections: [
       {
-        title: "What this includes",
+        title: "What the work covers",
         body:
-          "Applied analytics sits where product delivery meets data systems. It covers dashboards, APIs, AI-assisted analytical interfaces, and domain-specific products that make data operational.",
+          "Applied analytics sits where product delivery meets operational data. It covers dashboards, APIs, AI-assisted analytical interfaces, and domain-specific products that make complex systems usable.",
         bullets: [
           "Dashboard and reporting systems for operational use",
           "Text-to-SQL and chart-generation assistants",
@@ -150,7 +150,7 @@ export const expertisePages: SearchPage[] = [
         ],
       },
       {
-        title: "Current evidence",
+        title: "Where I’ve built this",
         body:
           "TierraViva AI and AMBAND work includes analytics dashboards, biodiversity interfaces, reporting surfaces, and assistant-driven exploratory workflows tied to actual research and decision-support needs.",
       },
@@ -183,26 +183,26 @@ export const personPage = {
         "My current work spans Rusha platform systems, TierraViva AI as a biodiversity intelligence platform, agent systems with orchestration and gateway infrastructure, and applied analytics products that put live data in front of operators and decision-makers.",
     },
     {
-      title: "What teams hire me for",
+      title: "What I bring to a team",
       body:
-        "The portfolio maps cleanly to the capabilities employers screen for when they hire senior technical leaders.",
+        "I bring platform thinking, delivery discipline, operational visibility, and cost-aware AI experience to teams building complex systems.",
       bullets: [
-        "Architecture: platform, data, and agent system design",
-        "Engineering: shipping APIs, services, UIs, pipelines, and operational tooling",
-        "DevOps: GitOps, CI/CD, Kubernetes, and observability",
-        "DevSecOps: RBAC, secret handling, identity boundaries, and verified operations",
-        "FinOps: cost reduction, scaling policy, and infrastructure efficiency",
-        "AIOps: production agents, model gateways, approval loops, and controlled execution",
+        "System design, platform boundaries, and operating models",
+        "Build and release workflows for services, pipelines, UIs, and tooling",
+        "Deployment controls, GitOps delivery, and environment safety",
+        "Observability for runtime health, change visibility, and faster response",
+        "Reliability guardrails, approval paths, and secure execution",
+        "Scaling policy, infrastructure efficiency, and cost-aware growth",
       ],
     },
     {
       title: "What the work delivers",
       body:
-        "The work delivers lower infrastructure cost, elastic analytics capacity, production-grade delivery systems, and AI-assisted workflows backed by approval and observability layers.",
+        "The work delivers lower operating cost, elastic analytics capacity, safer delivery systems, and AI-assisted workflows with approval and observability built in.",
         bullets: [
           "60–80% networking cost reduction on OWA infrastructure",
           "Elastic Dremio executor scaling with query performance preserved",
-          "Production agent systems running on K3s with approval controls",
+          "Production agent systems running on Kubernetes with approval controls",
           `${info.period} experience across platform, data, and software systems`,
         ],
     },

@@ -69,7 +69,7 @@ export default function ExpertisePage({ slug: slugProp }: ExpertisePageProps) {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Related project evidence</h2>
+          <h2 className={styles.sectionTitle}>Related projects</h2>
           <div className={styles.chipRow}>
             {page.keywords.map((keyword) => (
               <span key={keyword} className={styles.chip}>
