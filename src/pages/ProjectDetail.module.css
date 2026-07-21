@@ -1,0 +1,129 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--bg);
+  padding: var(--space-12) var(--space-6);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  padding: var(--space-2) 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.backButton:hover {
+  color: var(--text);
+}
+
+.card {
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border-subtle);
+}
+
+.category {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-6);
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: var(--text-md);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+.sectionTitle {
+  font-size: var(--text-lg);
+  margin: var(--space-8) 0 var(--space-4);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+.chip {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  background-color: var(--accent-glow);
+  color: var(--accent);
+  border: 1px solid var(--border-subtle);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.buttonOutline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: none;
+}
+
+.buttonOutline:hover {
+  background-color: var(--accent-glow);
+}
+
+.buttonPrimary {
+  background-color: var(--accent);
+  color: var(--bg);
+  border: none;
+}
+
+.buttonPrimary:hover {
+  background-color: var(--accent-dark);
+}
+
+.notFound {
+  text-align: center;
+  padding: var(--space-20) 0;
+}
+
+.notFoundTitle {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-6);
+}

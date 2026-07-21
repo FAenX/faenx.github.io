@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'ChivoMono';
+  src: url('../assets/fonts/Chivo_Mono/static/ChivoMono-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChivoMono';
+  src: url('../assets/fonts/Chivo_Mono/static/ChivoMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChivoMono';
+  src: url('../assets/fonts/Chivo_Mono/static/ChivoMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChivoMono';
+  src: url('../assets/fonts/Chivo_Mono/static/ChivoMono-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChivoMono';
+  src: url('../assets/fonts/Chivo_Mono/static/ChivoMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter is not self-hosted yet; falling back to system sans stack. */
+/* Add @font-face declarations here if Inter files are added to src/assets/fonts/Inter/. */

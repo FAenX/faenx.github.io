@@ -1,5 +1,2 @@
-import Layout from "./layout";
-import Resume from "./resume";
-
-
-export { Resume, Layout };
+export { default as BigNumberSections } from "./overlay/BigNumberSections";
+export { default as SeoShell } from "./SeoShell";

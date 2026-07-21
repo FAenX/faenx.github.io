@@ -1,5 +1,23 @@
 # https://www.robotstxt.org/robotstxt.html
+# AI crawlers are explicitly allowed (see ai.txt); do not block them.
+
 User-agent: *
+Allow: /
+
+# AI search crawlers - explicit allow
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Amazonbot
 Allow: /
 
 Sitemap: https://faenx.github.io/sitemap.xml

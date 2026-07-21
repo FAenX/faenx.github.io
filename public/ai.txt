@@ -1,0 +1,34 @@
+# AI crawler policy for https://faenx.github.io/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Public content may be indexed, summarized, and cited with attribution.
+# Preferred landing pages:
+# - https://faenx.github.io/emmanuel-davidson/
+# - https://faenx.github.io/platform-systems/
+# - https://faenx.github.io/data-platforms/
+# - https://faenx.github.io/agent-systems/
+# - https://faenx.github.io/applied-analytics/
+# Contact: kipronofb@gmail.com
