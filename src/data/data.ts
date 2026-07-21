@@ -38,7 +38,7 @@ export const info = {
   name: "Emmanuel K. Davidson",
   about:
     "Platform Engineering Leader and Cloud Architect focused on production systems across platform infrastructure, data platforms, and agent operations. I build cloud-native systems that connect delivery, analytics, observability, and operational AI, with a focus on reliability, cost control, and business outcomes.",
-  title: "Platform Engineering Leader · Cloud Architect",
+  title: "Platform Engineering Leader · Cloud & Data Architect",
   location: "Global",
   image: "https://avatars.githubusercontent.com/u/1015040?v=4",
   email: "kipronofb@gmail.com",
@@ -174,13 +174,177 @@ export const skills: Skill[] = [
   { name: "Linux", image: Linux },
 ];
 
+/**
+ * Canonical competency model: 4 domains of expertise, each with a curated
+ * inventory of tools and the role each tool plays in that domain. This is
+ * the single source of truth for domain labels and tool→role mapping,
+ * consumed by the expertise pages, the Person page "Domains & Tools" card,
+ * and the SeoShell grouped skills section.
+ *
+ * Fullstack delivery tools (React, NestJS, FastAPI, TypeScript, WebSocket)
+ * are marked `fullstack: true` and listed inside every domain where they are
+ * used to build that domain's UIs, dashboards, or APIs. This keeps fullstack
+ * application engineering visible as a cross-cutting capability rather than
+ * hiding it inside a single domain.
+ *
+ * Domain order is canonical and matches the front-page hero, the SiteNav
+ * expertise links, and the SeoShell grouping order.
+ */
+export type DomainId =
+  | "platform-engineering"
+  | "data-platform-engineering"
+  | "agent-systems"
+  | "applied-analytics";
+
+export interface Tool {
+  /** Tool or product name, e.g. "Apache Airflow". */
+  name: string;
+  /** Short role this tool plays in the parent domain, e.g. "pipeline orchestration". */
+  role: string;
+  /** Marks tools that are the fullstack delivery vehicle (UIs, APIs, dashboards). */
+  fullstack?: boolean;
+}
+
+export interface Domain {
+  id: DomainId;
+  /** Canonical label used everywhere, e.g. "Data Platform Engineering". */
+  label: string;
+  /** Matches the existing expertise page route slug for deep-linking. */
+  slug: string;
+  /** One or two sentence domain definition. */
+  summary: string;
+  tools: Tool[];
+}
+
+export const domains: Domain[] = [
+  {
+    id: "platform-engineering",
+    label: "Platform Engineering",
+    slug: "platform-systems",
+    summary:
+      "Platform systems that make software easier to ship and safer to run — service boundaries, release workflows, deployment controls, environment isolation, and operational guardrails, with fullstack delivery as the vehicle for the platform's own APIs, UIs, and log-streaming surfaces.",
+    tools: [
+      { name: "Kubernetes", role: "container orchestration & multi-tenant workload isolation" },
+      { name: "ArgoCD", role: "GitOps-driven delivery and release rollouts" },
+      { name: "KEDA", role: "event-driven autoscaling for stateful and event-driven workloads" },
+      { name: "Docker", role: "containerization for portable builds" },
+      { name: "Sealed Secrets", role: "encrypted secret management in Git" },
+      { name: "Amazon Cognito", role: "auth and token refresh for platform APIs" },
+      { name: "Traefik + cert-manager", role: "ingress and TLS automation" },
+      { name: "Kaniko", role: "in-cluster image builds" },
+      { name: "GitHub Actions", role: "CI/CD pipelines" },
+      { name: "Terraform", role: "infrastructure as code" },
+      { name: "Ansible", role: "configuration automation" },
+      { name: "GitHub Container Registry (GHCR)", role: "container registry" },
+      {
+        name: "NestJS · React · TypeScript · gRPC · WebSocket",
+        role: "fullstack delivery (APIs, UIs, log streaming)",
+        fullstack: true,
+      },
+    ],
+  },
+  {
+    id: "data-platform-engineering",
+    label: "Data Platform Engineering",
+    slug: "data-platforms",
+    summary:
+      "The layer that carries analytics from ingestion to delivery — orchestration, compute, metadata, warehouse layers, observability, and scaling controls working together as one production system, with fullstack delivery for the analytics APIs, dashboards, and serving surfaces.",
+    tools: [
+      { name: "Apache Airflow", role: "pipeline orchestration" },
+      { name: "dbt", role: "data modeling and transformation" },
+      { name: "Apache Spark", role: "distributed compute and processing" },
+      { name: "Delta Lake", role: "transactional storage and warehouse layer" },
+      { name: "Dremio", role: "serving/query engine (with KEDA-driven elastic autoscaling)" },
+      { name: "Databricks", role: "ML and analytics compute" },
+      { name: "Great Expectations", role: "data quality validation" },
+      { name: "PostgreSQL", role: "relational store" },
+      { name: "KEDA", role: "event-driven executor autoscaling" },
+      { name: "Amazon EKS", role: "Kubernetes-managed analytics infrastructure" },
+      { name: "ArgoCD (GitOps)", role: "infrastructure-as-code delivery for the data stack" },
+      {
+        name: "FastAPI · React · TypeScript · WebSocket",
+        role: "fullstack delivery (analytics APIs, dashboards, serving surfaces)",
+        fullstack: true,
+      },
+    ],
+  },
+  {
+    id: "agent-systems",
+    label: "Agent Systems",
+    slug: "agent-systems",
+    summary:
+      "Agent systems as production infrastructure that can be deployed, observed, governed, and improved — multi-agent orchestration, model gateways, runtime packaging, control surfaces, approval paths, observability, and domain-specific workflows, with fullstack delivery for the agent control surfaces and dashboards.",
+    tools: [
+      { name: "Hermes", role: "agentic runtime framework" },
+      { name: "NATS JetStream", role: "agent state and specialist routing" },
+      { name: "LLM (OpenAI, Ollama)", role: "model gateway and reasoning core" },
+      { name: "Slack API", role: "human-in-the-loop approval workflows" },
+      { name: "Kubernetes", role: "agent deployment and scheduling" },
+      { name: "KEDA", role: "event-driven agent autoscaling" },
+      { name: "Python", role: "agent and runtime implementation" },
+      {
+        name: "FastAPI · React · TypeScript",
+        role: "fullstack delivery (agent control surfaces, profiles, dashboards)",
+        fullstack: true,
+      },
+    ],
+  },
+  {
+    id: "applied-analytics",
+    label: "Applied Analytics",
+    slug: "applied-analytics",
+    summary:
+      "Where the underlying platform becomes usable — dashboards for operators, APIs for products, assistants for exploration, and reporting surfaces that turn reliable data and AI systems into decisions people can act on, built with fullstack delivery.",
+    tools: [
+      { name: "React", role: "dashboard and reporting UIs" },
+      { name: "FastAPI", role: "analytical APIs and serving surfaces" },
+      { name: "WebSocket", role: "live data streaming surfaces" },
+      { name: "Power BI", role: "executive BI reporting" },
+      { name: "Grafana", role: "operational dashboards" },
+      { name: "dbt", role: "modeled analytics layers" },
+      { name: "Dremio", role: "query layer for analytical surfaces" },
+      {
+        name: "TypeScript · Python",
+        role: "fullstack delivery (analytical product surfaces)",
+        fullstack: true,
+      },
+    ],
+  },
+];
+
+/**
+ * Grouped skills derived from `domains[]` for any UI that renders the
+ * competency model grouped by domain. Replaces the flat `skills[]` array
+ * as the authoritative competency source for the SeoShell and future
+ * skills surfaces; `skills[]` is retained only for brand-image chips.
+ */
+export const skillsByDomain: { domainId: DomainId; domainLabel: string; tools: Tool[] }[] =
+  domains.map((domain) => ({
+    domainId: domain.id,
+    domainLabel: domain.label,
+    tools: domain.tools,
+  }));
+
 export const professionalSummary = {
   title: "Professional Summary",
   description:
-    "Platform Engineering Leader and Cloud Architect focused on platform systems, big data infrastructure, and agent-enabled operations. I build and run production systems across Kubernetes, AWS, analytics stacks, GitOps delivery, observability, and applied AI, turning infrastructure and data capability into reliable products and measurable outcomes.",
+    "Platform Engineering Leader and Cloud & Data Architect working across four domains: Platform Engineering, Data Platform Engineering, Agent Systems, and Applied Analytics. I build and run production systems that connect Kubernetes and GitOps delivery, analytics stacks, agent operations, and applied AI, turning infrastructure and data capability into reliable products and measurable outcomes.",
 };
 
-export const certifications = [
+export interface Certification {
+  title: string;
+  issuer: string;
+  date: string;
+  description: string;
+  /** Credly badge id, when the cert has a verifiable Credly badge. */
+  credlyBadgeId?: string;
+  /** Issuer certificate id, when available. */
+  certificateId?: string;
+  /** Expiry date as a human string, when the cert expires. */
+  expires?: string;
+}
+
+export const certifications: Certification[] = [
   {
     title: "AWS Certified Solutions Architect (Associate)",
     issuer: "Amazon Web Services",
@@ -194,6 +358,16 @@ export const certifications = [
     date: "2022",
     description:
       "Professional certificate covering the full data analysis lifecycle — from data cleaning and visualization to stakeholder reporting.",
+  },
+  {
+    title: "KCNA: Kubernetes and Cloud Native Associate",
+    issuer: "The Linux Foundation",
+    date: "May 2026",
+    description:
+      "Foundational certification covering Kubernetes architecture, the cloud-native landscape (storage, networking, GitOps, service mesh), and cloud-native security principles.",
+    credlyBadgeId: "8c88fa2d-8bb9-4a6b-861e-0851f62cf0d7",
+    certificateId: "LF-urra1y7iek",
+    expires: "May 2028",
   },
 ];
 
@@ -258,7 +432,7 @@ export const projects: Project[] = [
     title: "Rusha",
     category: "Platform",
     description:
-      "Production platform system for building, validating, deploying, and operating software on Kubernetes. Combines GitOps-driven delivery, event-driven application architecture, multi-tenant namespace isolation, in-cluster builds, deployment templates, shared operational guardrails, and VCS integration across API, UI, and service layers.",
+      "Production platform system for building, validating, deploying, and operating software on Kubernetes. Combines GitOps-driven delivery, event-driven application architecture, multi-tenant namespace isolation, in-cluster builds, deployment templates, shared operational guardrails, and VCS integration across API, UI, and service layers. Serves the Platform Engineering domain.",
     technologies: [
       "NestJS",
       "React",
@@ -279,7 +453,7 @@ export const projects: Project[] = [
     title: "Agentic Systems",
     category: "AI",
     description:
-      "Production agent systems spanning multi-agent orchestration, domain-specific research agents, runtime-backed workflows, profile distributions, and model-gateway infrastructure. The work includes Kubernetes-based deployments, NATS-backed specialist routing, OpenAI-compatible and Ollama-facing gateway layers, approval paths, observability, and domain workflows for biodiversity, policy, and analytical operations, with Hermes used as one runtime within that stack.",
+      "Production agent systems spanning multi-agent orchestration, domain-specific research agents, runtime-backed workflows, profile distributions, and model-gateway infrastructure. The work includes Kubernetes-based deployments, NATS-backed specialist routing, OpenAI-compatible and Ollama-facing gateway layers, approval paths, observability, and domain workflows for biodiversity, policy, and analytical operations, with Hermes used as one runtime within that stack. Serves the Agent Systems domain.",
     technologies: [
       "Python",
       "LLM (OpenAI, Ollama)",
@@ -300,7 +474,7 @@ export const projects: Project[] = [
     title: "TierraViva AI",
     category: "Data",
     description:
-      "Biodiversity intelligence platform that ingests and mines policy, biodiversity, patent, and research data, processes it through GitOps-managed cloud data infrastructure, serves it through APIs and web interfaces, and makes it available to agents for analysis, navigation, reporting, and decision support. Its implementation spans document and research corpora, ETL and orchestration systems, Spark and analytics infrastructure, serving layers, and agent-consumable knowledge workflows.",
+      "Biodiversity intelligence platform that ingests and mines policy, biodiversity, patent, and research data, processes it through GitOps-managed cloud data infrastructure, serves it through APIs and web interfaces, and makes it available to agents for analysis, navigation, reporting, and decision support. Its implementation spans document and research corpora, ETL and orchestration systems, Spark and analytics infrastructure, serving layers, and agent-consumable knowledge workflows. Serves the Data Platform Engineering and Applied Analytics domains.",
     technologies: [
       "Apache Airflow",
       "Apache Spark",

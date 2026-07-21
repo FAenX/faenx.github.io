@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import SiteNav from "../components/SiteNav";
-import { crawlProjects, personPage } from "../data/searchPages";
+import { crawlProjects, personPage, domainsAndToolsCard } from "../data/searchPages";
 import { info } from "../data/data";
 import JsonLd from "../seo/JsonLd";
 import PageMeta from "../seo/PageMeta";
@@ -69,6 +69,34 @@ export default function PersonPage() {
               ) : null}
             </article>
           ))}
+        </section>
+
+        <section className={`${styles.section} ${styles.grid}`}>
+          <article className={`${styles.card} ${styles.domainsToolsCard}`}>
+            <h2 className={styles.sectionTitle}>{domainsAndToolsCard.title}</h2>
+            <p className={styles.body}>{domainsAndToolsCard.intro}</p>
+            {domainsAndToolsCard.entries.map((entry) => (
+              <div key={entry.domainId} className={styles.domainEntry}>
+                <h3 className={styles.domainEntryTitle}>
+                  {entry.domainLabel}
+                  <Link className={styles.domainEntryLink} to={`/${entry.expertiseSlug}/`}>
+                    Explore →
+                  </Link>
+                </h3>
+                <p className={styles.domainEntrySummary}>{entry.domainSummary}</p>
+                <div className={styles.toolsChipRow}>
+                  {entry.tools.map((tool) => (
+                    <span
+                      key={tool.name}
+                      className={`${styles.chip} ${styles.chipTool}`}
+                    >
+                      {tool.name} <span className={styles.chipRole}>— {tool.role}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </article>
         </section>
 
         <section className={styles.section}>

@@ -19,16 +19,20 @@ function App() {
   return (
     <>
       <PageMeta
-        title="Emmanuel K. Davidson | Platform Systems, Data Platforms, and Agent Systems"
-        description="Emmanuel K. Davidson builds platform infrastructure, biodiversity intelligence platforms, agent systems, and applied analytics products across Kubernetes, cloud platforms, GitOps, analytics systems, and model-gateway operations."
+        title="Emmanuel K. Davidson | Platform Engineering, Data Platform Engineering, Agent Systems, Applied Analytics"
+        description="Emmanuel K. Davidson is a Platform Engineering Leader and Cloud & Data Architect working across four domains: Platform Engineering, Data Platform Engineering, Agent Systems, and Applied Analytics. KCNA-certified, AWS Solutions Architect Associate, building production systems on Kubernetes, GitOps, analytics stacks, and agent operations."
         path="/"
         keywords={[
           "Emmanuel Davidson",
           "Emmanuel K. Davidson",
-          "platform systems",
-          "data platforms",
-          "agent systems",
-          "cloud architect",
+          "Platform Engineering",
+          "Data Platform Engineering",
+          "Agent Systems",
+          "Applied Analytics",
+          "Cloud & Data Architect",
+          "KCNA",
+          "Kubernetes and Cloud Native Associate",
+          "AWS Certified Solutions Architect Associate",
           "kubernetes",
           "gitops",
           "spark",
@@ -42,7 +46,7 @@ function App() {
           name: "Emmanuel K. Davidson",
           url: "https://faenx.github.io/",
           description:
-            "Portfolio of Emmanuel K. Davidson spanning platform infrastructure, biodiversity intelligence platforms, agent systems, and applied analytics.",
+            "Portfolio of Emmanuel K. Davidson spanning four domains of expertise: Platform Engineering, Data Platform Engineering, Agent Systems, and Applied Analytics.",
         }}
       />
       <SiteNav />

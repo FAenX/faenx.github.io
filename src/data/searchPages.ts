@@ -1,4 +1,4 @@
-import { experiences, info, projects } from "./data";
+import { experiences, info, projects, domains, type DomainId } from "./data";
 
 export type SearchPage = {
   slug: string;
@@ -14,11 +14,14 @@ export type SearchPage = {
   }>;
   relatedProjectIds: string[];
   keywords: string[];
+  /** Canonical domain this expertise page documents. Drives the page title, headline, and the Tools subsection. */
+  domainId: DomainId;
 };
 
 export const expertisePages: SearchPage[] = [
   {
     slug: "platform-systems",
+    domainId: "platform-engineering",
     title: `Platform Systems | ${info.name}`,
     navLabel: "Platform Systems",
     description:
@@ -56,6 +59,7 @@ export const expertisePages: SearchPage[] = [
   },
   {
     slug: "data-platforms",
+    domainId: "data-platform-engineering",
     title: `Data Platforms | ${info.name}`,
     navLabel: "Data Platforms",
     description:
@@ -93,6 +97,7 @@ export const expertisePages: SearchPage[] = [
   },
   {
     slug: "agent-systems",
+    domainId: "agent-systems",
     title: `Agent Systems | ${info.name}`,
     navLabel: "Agent Systems",
     description:
@@ -130,6 +135,7 @@ export const expertisePages: SearchPage[] = [
   },
   {
     slug: "applied-analytics",
+    domainId: "applied-analytics",
     title: `Applied Analytics | ${info.name}`,
     navLabel: "Applied Analytics",
     description:
@@ -169,13 +175,13 @@ export const expertisePages: SearchPage[] = [
 
 export const personPage = {
   slug: "emmanuel-davidson",
-  title: `${info.name} | Platform Systems, Data Platforms, Agent Systems`,
+  title: `${info.name} | Platform Engineering, Data Platform Engineering, Agent Systems, Applied Analytics`,
   navLabel: "Emmanuel",
   description:
     "Emmanuel K. Davidson builds platform infrastructure, biodiversity intelligence platforms, agent systems, and applied analytics products across architecture, engineering, DevOps, DevSecOps, FinOps, and AIOps.",
   headline: `${info.name}`,
   intro:
-      "Platform Engineering Leader and Cloud Architect focused on production systems across platform infrastructure, biodiversity and research data platforms, analytics delivery, and agent operations.",
+      "Platform Engineering Leader and Cloud & Data Architect working across four domains: Platform Engineering, Data Platform Engineering, Agent Systems, and Applied Analytics. Fullstack application engineering is the delivery vehicle across all four — the UIs, dashboards, and APIs each domain depends on.",
   sections: [
     {
       title: "What I build now",
@@ -215,10 +221,18 @@ export const personPage = {
   keywords: [
     "Emmanuel Davidson",
     "Emmanuel K. Davidson",
-    "architecture",
-    "engineering",
+    "Platform Engineering",
+    "Data Platform Engineering",
+    "Agent Systems",
+    "Applied Analytics",
+    "Cloud & Data Architect",
     "platform engineer",
     "cloud architect",
+    "KCNA",
+    "Kubernetes and Cloud Native Associate",
+    "AWS Certified Solutions Architect Associate",
+    "architecture",
+    "engineering",
     "devops",
     "devsecops",
     "finops",
@@ -239,6 +253,26 @@ export const crawlProjects = projects.map((project) => ({
   githubUrl: project.githubUrl,
   liveUrl: project.liveUrl,
 }));
+
+/**
+ * Consolidated "Domains & Tools" card data for the Person page. Lists all 4
+ * canonical domains with a one-line summary and the enriched tool chips
+ * ("Tool — role"), and links out to each expertise page. Built from the
+ * canonical `domains[]` source of truth so it never drifts from the
+ * expertise pages or SeoShell.
+ */
+export const domainsAndToolsCard = {
+  title: "Domains & Tools",
+  intro:
+    "My work breaks down into four domains of expertise. Each domain has a curated set of tools, and each tool has a specific role inside that domain. Fullstack application engineering shows up inside every domain as the delivery vehicle for the UIs, dashboards, and APIs that domain depends on.",
+  entries: domains.map((domain) => ({
+    domainId: domain.id,
+    domainLabel: domain.label,
+    domainSummary: domain.summary,
+    expertiseSlug: domain.slug,
+    tools: domain.tools,
+  })),
+};
 
 export const staticRoutePaths = [
   "/",

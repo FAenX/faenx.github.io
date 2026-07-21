@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router";
 import SiteNav from "../components/SiteNav";
 import { crawlProjects, expertisePages } from "../data/searchPages";
+import { domains } from "../data/data";
 import JsonLd from "../seo/JsonLd";
 import PageMeta from "../seo/PageMeta";
 import styles from "./SearchPages.module.css";
@@ -16,6 +17,8 @@ export default function ExpertisePage({ slug: slugProp }: ExpertisePageProps) {
   if (!page) {
     return null;
   }
+
+  const domain = domains.find((d) => d.id === page.domainId);
 
   const schema = {
     "@context": "https://schema.org",
@@ -67,6 +70,32 @@ export default function ExpertisePage({ slug: slugProp }: ExpertisePageProps) {
             </article>
           ))}
         </section>
+
+        {domain ? (
+          <section className={`${styles.section} ${styles.grid}`}>
+            <article className={styles.card}>
+              <h2 className={styles.sectionTitle}>Tools I use here</h2>
+              <p className={styles.body}>
+                Each tool below has a specific role inside {domain.label.toLowerCase()}. Fullstack
+                delivery tools (marked) are how this domain&rsquo;s own UIs, dashboards, and APIs get
+                built.
+              </p>
+              <div className={styles.toolsSection}>
+                <p className={styles.toolsEyebrow}>Tools</p>
+                <div className={styles.toolsChipRow}>
+                  {domain.tools.map((tool) => (
+                    <span
+                      key={tool.name}
+                      className={`${styles.chip} ${styles.chipTool}`}
+                    >
+                      {tool.name} <span className={styles.chipRole}>— {tool.role}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          </section>
+        ) : null}
 
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Related projects</h2>

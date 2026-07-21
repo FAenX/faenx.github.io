@@ -10,7 +10,7 @@ const schema = {
   "@type": "CollectionPage",
   name: "Projects | Emmanuel K. Davidson",
   description:
-    "Selected projects by Emmanuel K. Davidson across platform infrastructure, biodiversity intelligence, agent systems, model gateways, and applied analytics.",
+    "Selected projects by Emmanuel K. Davidson across four domains of expertise: Platform Engineering, Data Platform Engineering, Agent Systems, and Applied Analytics.",
   url: "https://faenx.github.io/projects/",
   hasPart: crawlProjects.map((project) => ({
     "@type": "SoftwareApplication",
@@ -24,9 +24,20 @@ export default function ProjectsPage() {
     <div className={styles.page}>
       <PageMeta
         title="Projects | Emmanuel K. Davidson"
-        description="Projects by Emmanuel K. Davidson showing architecture, engineering, DevOps, DevSecOps, FinOps, AIOps, platform infrastructure, and biodiversity intelligence."
+        description="Projects by Emmanuel K. Davidson across Platform Engineering, Data Platform Engineering, Agent Systems, and Applied Analytics, showing architecture, engineering, and fullstack application delivery in production."
         path="/projects/"
-        keywords={["projects", "architecture", "engineering", "devops", "devsecops", "finops", "aiops", "platform infrastructure", "biodiversity intelligence", "agent systems", "model gateways", "applied analytics"]}
+        keywords={[
+          "projects",
+          "Platform Engineering",
+          "Data Platform Engineering",
+          "Agent Systems",
+          "Applied Analytics",
+          "fullstack application engineering",
+          "platform infrastructure",
+          "biodiversity intelligence",
+          "agent systems",
+          "applied analytics",
+        ]}
       />
       <JsonLd data={schema} />
       <SiteNav />
@@ -37,8 +48,9 @@ export default function ProjectsPage() {
           <h1 className={styles.title}>Work that shows how the systems actually operate</h1>
           <p className={styles.intro}>
             These projects show how complex systems are designed, built, deployed, observed, and
-            scaled in practice across platform infrastructure, biodiversity intelligence,
-            multi-agent operations, and analytical product delivery.
+            scaled in practice across Platform Engineering, Data Platform Engineering, Agent
+            Systems, and Applied Analytics, with fullstack application engineering as the delivery
+            vehicle for the UIs, dashboards, and APIs in each domain.
           </p>
         </section>
 

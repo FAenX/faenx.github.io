@@ -1,4 +1,4 @@
-import { info, experiences, education, skills, professionalSummary, certifications, projects, publications } from "../data";
+import { info, experiences, education, professionalSummary, certifications, projects, publications, domains } from "../data";
 
 /**
  * SeoShell - a visually-hidden semantic HTML layer that mirrors the
@@ -89,14 +89,29 @@ export default function SeoShell() {
         ))}
       </section>
 
-      {/* Skills */}
+      {/* Skills — grouped by canonical domain, with each tool's role */}
       <section id="seo-skills">
-        <h2>Technical Skills</h2>
-        <ul>
-          {skills.map((s) => (
-            <li key={s.name}>{s.name}</li>
-          ))}
-        </ul>
+        <h2>Domains of Expertise &amp; Tools</h2>
+        <p>
+          My work breaks down into four domains of expertise. Each domain has a curated set of
+          tools, and each tool has a specific role inside that domain. Fullstack application
+          engineering shows up inside every domain as the delivery vehicle for the UIs, dashboards,
+          and APIs that domain depends on.
+        </p>
+        {domains.map((domain) => (
+          <article key={domain.id} id={`seo-domain-${domain.id}`}>
+            <h3>{domain.label}</h3>
+            <p>{domain.summary}</p>
+            <ul>
+              {domain.tools.map((tool) => (
+                <li key={tool.name}>
+                  <strong>{tool.name}</strong>: {tool.role}
+                  {tool.fullstack ? " (fullstack delivery)" : ""}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </section>
 
       {/* Certifications */}
@@ -107,6 +122,20 @@ export default function SeoShell() {
             <li key={c.title}>
               <strong>{c.title}</strong> — {c.issuer} (<time>{c.date}</time>).
               {c.description}
+              {c.certificateId ? ` Certificate ID: ${c.certificateId}.` : null}
+              {c.expires ? ` Expires: ${c.expires}.` : null}
+              {c.credlyBadgeId ? (
+                <>
+                  {" "}
+                  <a
+                    href={`https://www.credly.com/badges/${c.credlyBadgeId}`}
+                    rel="noopener"
+                  >
+                    Verify on Credly
+                  </a>
+                  .
+                </>
+              ) : null}
             </li>
           ))}
         </ul>

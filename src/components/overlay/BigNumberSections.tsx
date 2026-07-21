@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
-import { experiences, info, projects } from "../../data/data";
+import { experiences, info, projects, domains } from "../../data/data";
 import styles from "./BigNumberSections.module.css";
 
 type Section = {
@@ -14,79 +14,106 @@ type Section = {
   sectionBg: string;
 };
 
-const SECTIONS: Section[] = [
-  {
-    id: "intro",
-    eyebrow: "Who I am",
-    headline: info.name,
-    subhead: "Architecture, delivery, observability, reliability, scaling, and operational AI in production",
-    body:
-      "I design and ship production systems that connect platform infrastructure, data, and operational AI. The work covers how software is built, deployed, observed, kept reliable, and scaled without losing control of cost or change.",
-    accent: "#64ffda",
-    accentGlow: "rgba(100, 255, 218, 0.25)",
-    sectionBg: "#0a192f",
-  },
-  {
-    id: "rusha",
+/**
+ * Accent palette per canonical domain id. Kept here (not in data.ts) so the
+ * hero visual identity stays in the presentation layer. Domain labels and
+ * subheads are pulled from `domains[]` so every surface agrees.
+ */
+const domainVisual: Record<
+  string,
+  { eyebrow: string; subhead: string; accent: string; accentGlow: string; sectionBg: string }
+> = {
+  "platform-engineering": {
     eyebrow: "Rusha",
-    headline: "Platform Systems",
     subhead: "System design, release workflows, environment boundaries, and operational guardrails",
-    body:
-      "Rusha turns platform architecture into a repeatable delivery system, with GitOps workflows, starter templates, base images, event-driven boundaries, VCS integration, and shared controls that make changes easier to ship and safer to operate.",
     accent: "#64ffda",
     accentGlow: "rgba(100, 255, 218, 0.24)",
     sectionBg: "#0d1f33",
   },
-  {
-    id: "tierraviva",
+  "data-platform-engineering": {
     eyebrow: "TierraViva AI",
-    headline: "Big Data Platforms",
     subhead: "Ingest, transform, serve, observe, and scale on AWS and Kubernetes",
-    body:
-      "TierraViva AI treats data infrastructure as a production operating layer, connecting ingestion, orchestration, compute, metadata, analytics engines, and serving paths so research and reporting systems stay visible, reliable, and cost-aware as workloads grow.",
     accent: "#c084fc",
     accentGlow: "rgba(192, 132, 252, 0.25)",
     sectionBg: "#11102a",
   },
-  {
-    id: "agents",
-    eyebrow: "AI operations",
-    headline: "Agent Systems",
+  "agent-systems": {
+    eyebrow: "Agent Systems",
     subhead: "Orchestration, gateways, approvals, monitoring, and safe execution",
-    body:
-      "I build agent systems as operating software, with agentic frameworks, gateways, approval paths, tool integrations, and monitoring around live workflows. The goal is safe execution, clear visibility, and deployment patterns that travel well across production environments.",
     accent: "#54a0ff",
     accentGlow: "rgba(84, 160, 255, 0.25)",
     sectionBg: "#0a1a2e",
   },
-  {
-    id: "analytics",
+  "applied-analytics": {
     eyebrow: "Decision surfaces",
-    headline: "Applied Analytics",
     subhead: "Dashboards, assistants, APIs, and reporting surfaces tied to live systems",
-    body:
-      "This is where the underlying platform becomes usable: dashboards for operators, APIs for products, assistants for exploration, and reporting surfaces that turn reliable data and AI systems into decisions people can act on.",
     accent: "#ffcb6b",
     accentGlow: "rgba(255, 203, 107, 0.25)",
     sectionBg: "#161018",
   },
-  {
-    id: "outcomes",
-    eyebrow: "In production",
-    headline: "What holds up",
-    subhead: `${info.period} building systems that ship safely, stay visible, and scale`,
-    body: [
-      "60–80% networking cost reduction on OWA infrastructure",
-      "Elastic Dremio executor scaling without giving up query performance",
-      "Production agent systems running behind approval and observability layers",
-      `${projects.length} portfolio systems spanning platform, analytics, and AI`,
-      ...experiences.map((e) => `${e.label}: ${e.title}`),
-    ].join(" · "),
-    accent: "#8fd3f4",
-    accentGlow: "rgba(143, 211, 244, 0.25)",
-    sectionBg: "#0a192f",
-  },
-];
+};
+
+/**
+ * Domain hero body text. Kept here as presentation copy so the hero can stay
+ * prose-only (no tool chips) while `domains[].summary` feeds the expertise
+ * and Person pages where the full tool inventories live.
+ */
+const domainBody: Record<string, string> = {
+  "platform-engineering":
+    "Rusha turns platform architecture into a repeatable delivery system, with GitOps workflows, starter templates, base images, event-driven boundaries, VCS integration, and shared controls that make changes easier to ship and safer to operate.",
+  "data-platform-engineering":
+    "TierraViva AI treats data infrastructure as a production operating layer, connecting ingestion, orchestration, compute, metadata, analytics engines, and serving paths so research and reporting systems stay visible, reliable, and cost-aware as workloads grow.",
+  "agent-systems":
+    "I build agent systems as operating software, with agentic frameworks, gateways, approval paths, tool integrations, and monitoring around live workflows. The goal is safe execution, clear visibility, and deployment patterns that travel well across production environments.",
+  "applied-analytics":
+    "This is where the underlying platform becomes usable: dashboards for operators, APIs for products, assistants for exploration, and reporting surfaces that turn reliable data and AI systems into decisions people can act on.",
+};
+
+const domainSections: Section[] = domains.map((domain) => {
+  const visual = domainVisual[domain.id];
+  return {
+    id: domain.slug,
+    eyebrow: visual.eyebrow,
+    headline: domain.label,
+    subhead: visual.subhead,
+    body: domainBody[domain.id] ?? domain.summary,
+    accent: visual.accent,
+    accentGlow: visual.accentGlow,
+    sectionBg: visual.sectionBg,
+  };
+});
+
+const introSection: Section = {
+  id: "intro",
+  eyebrow: "Who I am",
+  headline: info.name,
+  subhead:
+    "Architecture, delivery, observability, reliability, scaling, and operational AI in production",
+  body:
+    "I design and ship production systems that connect platform infrastructure, data, and operational AI. The work covers how software is built, deployed, observed, kept reliable, and scaled without losing control of cost or change.",
+  accent: "#64ffda",
+  accentGlow: "rgba(100, 255, 218, 0.25)",
+  sectionBg: "#0a192f",
+};
+
+const outcomesSection: Section = {
+  id: "outcomes",
+  eyebrow: "In production",
+  headline: "What holds up",
+  subhead: `${info.period} building systems that ship safely, stay visible, and scale`,
+  body: [
+    "60–80% networking cost reduction on OWA infrastructure",
+    "Elastic Dremio executor scaling without giving up query performance",
+    "Production agent systems running behind approval and observability layers",
+    `${projects.length} portfolio systems spanning platform, analytics, and AI`,
+    ...experiences.map((e) => `${e.label}: ${e.title}`),
+  ].join(" · "),
+  accent: "#8fd3f4",
+  accentGlow: "rgba(143, 211, 244, 0.25)",
+  sectionBg: "#0a192f",
+};
+
+const SECTIONS: Section[] = [introSection, ...domainSections, outcomesSection];
 
 export default function BigNumberSections() {
   const [activeSection, setActiveSection] = useState(SECTIONS[0].id);
