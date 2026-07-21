@@ -7,6 +7,20 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Desktop (default): single inline row of links, no hamburger. */
+.bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle {
+  display: none;
+}
+
 .inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -27,4 +41,60 @@
 
 .link:hover {
   color: var(--text);
+}
+
+/* Active-route indicator (all breakpoints). */
+.active {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .bar {
+    padding: 0 16px;
+    min-height: var(--nav-height);
+  }
+
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    color: var(--text-muted);
+    cursor: pointer;
+  }
+
+  .toggle:hover {
+    color: var(--text);
+    border-color: var(--accent);
+  }
+
+  .inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease, padding 0.25s ease;
+  }
+
+  .inner.open {
+    max-height: 440px;
+    padding: 8px 16px 16px;
+  }
+
+  .link {
+    display: block;
+    padding: 12px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: var(--text-sm);
+  }
+
+  .link:last-child {
+    border-bottom: none;
+  }
 }

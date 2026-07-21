@@ -91,3 +91,10 @@
   --border-subtle: rgba(33, 150, 243, 0.15);
   --border-muted: rgba(97, 97, 97, 0.2);
 }
+
+/* Mobile breakpoint: collapse the sticky nav to one compact row. */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 56px;
+  }
+}

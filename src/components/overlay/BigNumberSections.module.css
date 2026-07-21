@@ -20,7 +20,9 @@
 .bigNumber {
   position: relative;
   height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,10 +124,14 @@
 
 @media (max-width: 768px) {
   .bigNumber {
-    padding: var(--space-12) var(--space-5) var(--space-16);
+    padding: var(--space-12) var(--space-4) var(--space-20);
   }
 
   .body {
     font-size: var(--text-sm);
+  }
+
+  .label {
+    font-size: clamp(var(--text-md), 4vw, var(--text-xl));
   }
 }
