@@ -37,7 +37,7 @@ import k8s from "../assets/images/brands/k8s1.webp";
 export const info = {
   name: "Emmanuel K. Davidson",
   about:
-    "Platform Engineering Leader and Cloud Architect specializing in production systems across platform infrastructure, big data, and agent-driven automation. I design and operate cloud-native systems that connect delivery workflows, analytics engines, observability, and AI-assisted operations, with an emphasis on reliability, cost control, and business outcomes.",
+    "Platform Engineering Leader and Cloud Architect focused on production systems across platform infrastructure, data platforms, and agent operations. I build cloud-native systems that connect delivery, analytics, observability, and operational AI, with a focus on reliability, cost control, and business outcomes.",
   title: "Platform Engineering Leader · Cloud Architect",
   location: "Global",
   image: "https://avatars.githubusercontent.com/u/1015040?v=4",
@@ -78,9 +78,9 @@ export const experiences: ExperienceEntry[] = [
     description: [
       "Rusha Platform Architecture — Lead architect for Rusha, a production-grade deployment platform: designed NestJS API, React UI, and three microservices (API, build-service, deploy-service) with GitOps-driven deployments via ArgoCD and real-time gRPC/WebSocket log streaming.",
       "Multi-Tenant Kubernetes Infrastructure — Implemented multi-tenant namespace isolation with project-level shared stateful services, Sealed Secrets for secret management, Cognito auth with automatic token refresh, and HMAC-verified webhook pipelines for GitHub App integration.",
-      "TierraViva AI Platform — Built a biodiversity intelligence platform that ingests and mines policy, biodiversity, patent, and research data, processes it through cloud-native analytics infrastructure on Amazon EKS, and serves the results through reporting interfaces and agent-ready workflows.",
+      "TierraViva AI Platform — Built a biodiversity intelligence platform that ingests and mines policy, biodiversity, patent, and research data, processes it on cloud-native analytics infrastructure, and serves the results through reporting interfaces and agent-ready workflows.",
       "Dremio Elastic Auto-Scaling — Designed and implemented two-tier executor auto-scaling (small/large) using KEDA, Kubernetes StatefulSets, and a custom metrics exporter with graceful scale-down, reducing infrastructure costs while maintaining query performance.",
-      "LLM Automation Platform (Hermes) — Built production AI agents on the Hermes agent runtime (by Nous Research), integrating LLM reasoning with real-time data pipelines, Kubernetes-native scheduling, Slack approval workflows, and RBAC-gated operations for real-time infrastructure management.",
+      "LLM Automation Platform (Hermes) — Built production agent systems on the Hermes runtime, combining LLM reasoning with live data pipelines, Kubernetes-native scheduling, Slack approval flows, and RBAC-gated operations.",
       "MLOps Enablement — Partnered with data scientists to productionize ML models, supporting training, deployment, monitoring, and lifecycle management on Databricks and custom AI platforms.",
       "Full DevOps Ownership — Implemented CI/CD pipelines (GitHub Actions), infrastructure automation (Terraform, Ansible), container registry management (GHCR), production observability (Grafana, Prometheus, Jaeger, OpenTelemetry), and zero-downtime GitOps deployments.",
       "Business Intelligence & Stakeholder Reporting — Delivered executive dashboards and data visualizations supporting strategic decision-making across engineering and business leadership.",

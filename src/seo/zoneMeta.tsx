@@ -58,8 +58,8 @@ const zoneMetas: Record<ZoneId, ZoneMetaConfig> = {
   contact: {
     title: `Contact — ${NAME}`,
     description:
-      "Contact Emmanuel K. Davidson for platform systems, cloud architecture, big data, analytics, and agent-system engagements. Email kipronofb@gmail.com. LinkedIn, GitHub, and Medium profiles.",
-    path: "/#contact",
+      "Connect with Emmanuel K. Davidson on LinkedIn for platform infrastructure, biodiversity intelligence, analytics, and agent-system engagements.",
+    path: "/contact/",
   },
 };
 

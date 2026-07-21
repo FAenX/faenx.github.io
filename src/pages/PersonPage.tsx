@@ -37,7 +37,7 @@ export default function PersonPage() {
 
       <main>
         <section className={styles.hero}>
-          <p className={styles.eyebrow}>Profile</p>
+          <p className={styles.eyebrow}>Emmanuel Davidson</p>
           <h1 className={styles.title}>{personPage.headline}</h1>
           <p className={styles.intro}>{personPage.intro}</p>
           <div className={styles.cta}>
@@ -72,7 +72,7 @@ export default function PersonPage() {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Selected projects</h2>
+          <h2 className={styles.sectionTitle}>Project evidence</h2>
         </section>
 
         <section className={styles.projectsGrid}>

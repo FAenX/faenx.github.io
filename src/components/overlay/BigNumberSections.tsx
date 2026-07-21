@@ -17,11 +17,11 @@ type Section = {
 const SECTIONS: Section[] = [
   {
     id: "intro",
-    eyebrow: "Identity",
+    eyebrow: "Who I am",
     headline: info.name,
     subhead: "Platform Systems · Data Platforms · Agent Systems",
     body:
-      "I design and operate production systems that move from platform infrastructure to analytics and AI, using GitOps, observability, automation, and delivery patterns that hold up in production.",
+      "I build production systems that connect platform infrastructure, analytics, and operational AI. The work spans architecture, engineering, DevOps, DevSecOps, FinOps, and AIOps, with delivery patterns designed to hold up in production.",
     accent: "#64ffda",
     accentGlow: "rgba(100, 255, 218, 0.25)",
     sectionBg: "#0a192f",
@@ -32,47 +32,47 @@ const SECTIONS: Section[] = [
     headline: "Platform Systems",
     subhead: "GitOps delivery, contracts, integrations, and deployment templates",
     body:
-      "Rusha is not a narrow app surface. It is a platform system for building, validating, deploying, and operating software through GitOps workflows, starter templates, base images, event-driven architecture, VCS integration, and shared operational guardrails.",
+      "Rusha is a platform for building, validating, deploying, and operating software through GitOps workflows, starter templates, base images, event-driven architecture, VCS integration, and shared operational guardrails.",
     accent: "#64ffda",
     accentGlow: "rgba(100, 255, 218, 0.24)",
     sectionBg: "#0d1f33",
   },
   {
     id: "tierraviva",
-    eyebrow: "OWA + TierraViva",
+    eyebrow: "TierraViva AI",
     headline: "Big Data Platforms",
     subhead: "AWS, EKS, orchestration, metadata, and analytics engines working as one system",
     body:
-      "The work goes far beyond a single orchestration tool. It is a GitOps-managed data engineering platform on AWS, spanning CloudFormation, Argo CD, EKS, k3s, Spark, Dremio, Hive metadata, and the delivery paths that turn raw data into usable analytics and reporting systems.",
+      "This work turns raw data into usable intelligence through a GitOps-managed platform on AWS, spanning CloudFormation, Argo CD, EKS, Spark, Dremio, metadata, and the delivery paths behind reporting and research workflows.",
     accent: "#c084fc",
     accentGlow: "rgba(192, 132, 252, 0.25)",
     sectionBg: "#11102a",
   },
   {
     id: "agents",
-    eyebrow: "AI systems",
+    eyebrow: "AI operations",
     headline: "Agent Systems",
     subhead: "Hermes-powered workflows, multi-agent runtime patterns, and operational control surfaces",
     body:
-      "I build production agent systems on top of runtimes like Hermes, turning LLM capability into operational workflows, assistants, and multi-agent services across K3s, APIs, Slack, and analytics tools. The focus is not model hype, it is reliable execution, approval paths, and measurable outcomes.",
+      "I build production agent systems on top of runtimes like Hermes, turning model capability into workflows, assistants, and multi-agent services across K3s, APIs, Slack, and analytics tools. The focus is reliable execution, approval paths, and measurable outcomes.",
     accent: "#54a0ff",
     accentGlow: "rgba(84, 160, 255, 0.25)",
     sectionBg: "#0a1a2e",
   },
   {
     id: "analytics",
-    eyebrow: "AMBAND + product delivery",
+    eyebrow: "Decision surfaces",
     headline: "Applied Analytics",
     subhead: "Dashboards, assistants, APIs, and data products built for real use",
     body:
-      "The delivery layer turns platform capability into decisions people can use: analytics dashboards, biodiversity data products, text-to-SQL assistants, charting systems, and reporting interfaces that connect live data with operational and executive workflows.",
+      "This is the layer where platform capability becomes usable decisions: analytics dashboards, biodiversity data products, text-to-SQL assistants, charting systems, and reporting interfaces tied to operational and executive workflows.",
     accent: "#ffcb6b",
     accentGlow: "rgba(255, 203, 107, 0.25)",
     sectionBg: "#161018",
   },
   {
     id: "outcomes",
-    eyebrow: "Impact",
+    eyebrow: "What changed",
     headline: "Outcomes",
     subhead: `${info.period} shaping production systems across platform, data, and AI`,
     body: [

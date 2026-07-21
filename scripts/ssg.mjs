@@ -1,9 +1,11 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { createServer } from "vite";
 
-const workspaceRoot = "/workspaces/faenx.github.io";
-const buildDir = path.join(workspaceRoot, "build");
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(scriptDir, "..");
+const buildDir = path.join(repoRoot, "build");
 const templatePath = path.join(buildDir, "index.html");
 
 function injectHtml(template, appHtml, headTags) {
@@ -39,7 +41,8 @@ function xmlEscape(value) {
 
 async function main() {
   const vite = await createServer({
-    root: workspaceRoot,
+    root: repoRoot,
+    cacheDir: path.join(repoRoot, "node_modules", ".vite-ssg"),
     logLevel: "error",
     server: { middlewareMode: true },
     appType: "custom",

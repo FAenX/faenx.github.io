@@ -24,9 +24,9 @@ export default function ProjectsPage() {
     <div className={styles.page}>
       <PageMeta
         title="Projects | Emmanuel K. Davidson"
-        description="Selected platform infrastructure, biodiversity intelligence, agent systems, model-gateway, and applied analytics projects by Emmanuel K. Davidson."
+        description="Projects by Emmanuel K. Davidson showing architecture, engineering, DevOps, DevSecOps, FinOps, AIOps, platform infrastructure, and biodiversity intelligence."
         path="/projects/"
-        keywords={["projects", "platform infrastructure", "biodiversity intelligence", "agent systems", "model gateways", "applied analytics"]}
+        keywords={["projects", "architecture", "engineering", "devops", "devsecops", "finops", "aiops", "platform infrastructure", "biodiversity intelligence", "agent systems", "model gateways", "applied analytics"]}
       />
       <JsonLd data={schema} />
       <SiteNav />
@@ -34,11 +34,11 @@ export default function ProjectsPage() {
       <main>
         <section className={styles.hero}>
           <p className={styles.eyebrow}>Projects</p>
-          <h1 className={styles.title}>Selected systems and products</h1>
+          <h1 className={styles.title}>Work that shows how the systems actually operate</h1>
           <p className={styles.intro}>
-            These projects show the mix of platform infrastructure, biodiversity intelligence,
-            multi-agent systems, model-gateway operations, and analytical product work behind the
-            portfolio.
+            These projects show how architecture, engineering, DevOps, DevSecOps, FinOps, and
+            AIOps show up in real systems across platform infrastructure, biodiversity
+            intelligence, multi-agent operations, and analytical product delivery.
           </p>
         </section>
 

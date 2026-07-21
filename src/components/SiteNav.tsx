@@ -7,6 +7,7 @@ const navLinks = [
   { to: `/${personPage.slug}/`, label: personPage.navLabel },
   ...expertisePages.map((page) => ({ to: `/${page.slug}/`, label: page.navLabel })),
   { to: "/projects/", label: "Projects" },
+  { to: "/contact/", label: "Contact" },
 ];
 
 export default function SiteNav() {
