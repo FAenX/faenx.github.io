@@ -60,6 +60,41 @@
   --border-subtle: rgba(100, 255, 218, 0.1);
   --border-muted: rgba(136, 146, 176, 0.25);
 
+  /* Composite surface / hairline / nav / page tokens.
+     Modules use these instead of hardcoding dark hexes or white-alpha. */
+  --card-bg: rgba(17, 34, 64, 0.78);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --hairline: rgba(255, 255, 255, 0.12);
+  --hairline-soft: rgba(255, 255, 255, 0.06);
+  --nav-bg: rgba(5, 10, 18, 0.78);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --page-bg: linear-gradient(180deg, #07101c 0%, #050a12 100%);
+  --page-glow: radial-gradient(circle at top, rgba(100, 255, 218, 0.08), transparent 30%);
+  --grid-line: rgba(255, 255, 255, 0.03);
+  --on-accent: #031018;
+  --section-mix: #000;
+
+  /* Per-domain hero accent tokens. The homepage maps these onto --accent /
+     --accent-glow / --section-bg per section via [data-domain] selectors. */
+  --dom-platform-accent: #64ffda;
+  --dom-platform-glow: rgba(100, 255, 218, 0.24);
+  --dom-platform-bg: #0d1f33;
+  --dom-data-accent: #c084fc;
+  --dom-data-glow: rgba(192, 132, 252, 0.25);
+  --dom-data-bg: #11102a;
+  --dom-agents-accent: #54a0ff;
+  --dom-agents-glow: rgba(84, 160, 255, 0.25);
+  --dom-agents-bg: #0a1a2e;
+  --dom-analytics-accent: #ffcb6b;
+  --dom-analytics-glow: rgba(255, 203, 107, 0.25);
+  --dom-analytics-bg: #161018;
+  --dom-intro-accent: #64ffda;
+  --dom-intro-glow: rgba(100, 255, 218, 0.25);
+  --dom-intro-bg: #0a192f;
+  --dom-outcomes-accent: #8fd3f4;
+  --dom-outcomes-glow: rgba(143, 211, 244, 0.25);
+  --dom-outcomes-bg: #0a192f;
+
   /* Z-index layers */
   --z-canvas: 0;
   --z-ui: 1;
@@ -90,6 +125,37 @@
   --accent-glow: rgba(33, 150, 243, 0.2);
   --border-subtle: rgba(33, 150, 243, 0.15);
   --border-muted: rgba(97, 97, 97, 0.2);
+
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-border: rgba(0, 0, 0, 0.1);
+  --hairline: rgba(0, 0, 0, 0.12);
+  --hairline-soft: rgba(0, 0, 0, 0.06);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-border: rgba(0, 0, 0, 0.08);
+  --page-bg: linear-gradient(180deg, #eef2f7 0%, #e2e8f0 100%);
+  --page-glow: radial-gradient(circle at top, rgba(33, 150, 243, 0.08), transparent 30%);
+  --grid-line: rgba(0, 0, 0, 0.04);
+  --on-accent: #ffffff;
+  --section-mix: #ffffff;
+
+  --dom-platform-accent: #00897b;
+  --dom-platform-glow: rgba(0, 137, 123, 0.18);
+  --dom-platform-bg: #e6f4f1;
+  --dom-data-accent: #7c3aed;
+  --dom-data-glow: rgba(124, 58, 237, 0.18);
+  --dom-data-bg: #ede9fe;
+  --dom-agents-accent: #2563eb;
+  --dom-agents-glow: rgba(37, 99, 235, 0.18);
+  --dom-agents-bg: #e3ecfd;
+  --dom-analytics-accent: #e65100;
+  --dom-analytics-glow: rgba(230, 81, 0, 0.18);
+  --dom-analytics-bg: #fdeee0;
+  --dom-intro-accent: #00897b;
+  --dom-intro-glow: rgba(0, 137, 123, 0.2);
+  --dom-intro-bg: #eef4f8;
+  --dom-outcomes-accent: #0277bd;
+  --dom-outcomes-glow: rgba(2, 119, 189, 0.18);
+  --dom-outcomes-bg: #e3f2fd;
 }
 
 /* Mobile breakpoint: collapse the sticky nav to one compact row. */

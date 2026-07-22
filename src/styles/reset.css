@@ -104,15 +104,3 @@ ul, ol {
     transition-duration: 0.01ms !important;
   }
 }
-
-[data-theme='light'] ::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-
-[data-theme='light'] ::-webkit-scrollbar-thumb {
-  background: var(--text-dim);
-}
-
-[data-theme='light'] ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
-}

@@ -3,8 +3,8 @@
   top: 0;
   z-index: var(--z-nav);
   backdrop-filter: blur(18px);
-  background: rgba(5, 10, 18, 0.78);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
 }
 
 /* Desktop (default): single inline row of links, no hamburger. */
@@ -61,7 +61,7 @@
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--hairline);
     border-radius: var(--radius-md);
     color: var(--text-muted);
     cursor: pointer;
@@ -90,7 +90,7 @@
   .link {
     display: block;
     padding: 12px 4px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid var(--hairline-soft);
     font-size: var(--text-sm);
   }
 

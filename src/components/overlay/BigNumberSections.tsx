@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import type { CSSProperties } from "react";
 import { experiences, info, projects, domains } from "../../data/data";
 import styles from "./BigNumberSections.module.css";
 
@@ -9,47 +8,30 @@ type Section = {
   headline: string;
   subhead: string;
   body: string;
-  accent: string;
-  accentGlow: string;
-  sectionBg: string;
 };
 
 /**
- * Accent palette per canonical domain id. Kept here (not in data.ts) so the
- * hero visual identity stays in the presentation layer. Domain labels and
- * subheads are pulled from `domains[]` so every surface agrees.
+ * Per-domain presentation copy. Accent/glow/section-bg now live as CSS tokens
+ * (see variables.css --dom-*) and are applied via [data-domain] selectors, so
+ * the hero visual identity adapts to light/dark automatically. Only the
+ * eyebrow and subhead text remain here as presentation copy.
  */
-const domainVisual: Record<
-  string,
-  { eyebrow: string; subhead: string; accent: string; accentGlow: string; sectionBg: string }
-> = {
+const domainVisual: Record<string, { eyebrow: string; subhead: string }> = {
   "platform-engineering": {
     eyebrow: "Rusha",
     subhead: "System design, release workflows, environment boundaries, and operational guardrails",
-    accent: "#64ffda",
-    accentGlow: "rgba(100, 255, 218, 0.24)",
-    sectionBg: "#0d1f33",
   },
   "data-platform-engineering": {
     eyebrow: "TierraViva AI",
     subhead: "Ingest, transform, serve, observe, and scale on AWS and Kubernetes",
-    accent: "#c084fc",
-    accentGlow: "rgba(192, 132, 252, 0.25)",
-    sectionBg: "#11102a",
   },
   "agent-systems": {
     eyebrow: "Agent Systems",
     subhead: "Orchestration, gateways, approvals, monitoring, and safe execution",
-    accent: "#54a0ff",
-    accentGlow: "rgba(84, 160, 255, 0.25)",
-    sectionBg: "#0a1a2e",
   },
   "applied-analytics": {
     eyebrow: "Decision surfaces",
     subhead: "Dashboards, assistants, APIs, and reporting surfaces tied to live systems",
-    accent: "#ffcb6b",
-    accentGlow: "rgba(255, 203, 107, 0.25)",
-    sectionBg: "#161018",
   },
 };
 
@@ -77,9 +59,6 @@ const domainSections: Section[] = domains.map((domain) => {
     headline: domain.label,
     subhead: visual.subhead,
     body: domainBody[domain.id] ?? domain.summary,
-    accent: visual.accent,
-    accentGlow: visual.accentGlow,
-    sectionBg: visual.sectionBg,
   };
 });
 
@@ -91,9 +70,6 @@ const introSection: Section = {
     "Architecture, delivery, observability, reliability, scaling, and operational AI in production",
   body:
     "I design and ship production systems that connect platform infrastructure, data, and operational AI. The work covers how software is built, deployed, observed, kept reliable, and scaled without losing control of cost or change.",
-  accent: "#64ffda",
-  accentGlow: "rgba(100, 255, 218, 0.25)",
-  sectionBg: "#0a192f",
 };
 
 const outcomesSection: Section = {
@@ -108,9 +84,6 @@ const outcomesSection: Section = {
     `${projects.length} portfolio systems spanning platform, analytics, and AI`,
     ...experiences.map((e) => `${e.label}: ${e.title}`),
   ].join(" · "),
-  accent: "#8fd3f4",
-  accentGlow: "rgba(143, 211, 244, 0.25)",
-  sectionBg: "#0a192f",
 };
 
 const SECTIONS: Section[] = [introSection, ...domainSections, outcomesSection];
@@ -148,16 +121,10 @@ export default function BigNumberSections() {
           key={s.id}
           id={s.id}
           data-big-number="true"
+          data-domain={s.id}
           className={`${styles.bigNumber} ${
             activeSection === s.id ? styles.active : styles.inactive
           }`}
-          style={
-            {
-              "--accent": s.accent,
-              "--accent-glow": s.accentGlow,
-              "--section-bg": s.sectionBg,
-            } as CSSProperties
-          }
         >
           <p className={styles.eyebrow}>{s.eyebrow}</p>
           <h2 className={styles.number}>{s.headline}</h2>
