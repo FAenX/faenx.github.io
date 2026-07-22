@@ -1,21 +1,11 @@
 import './App.css';
-import React from 'react';
 import SeoShell from './components/SeoShell';
 import BigNumberSections from './components/overlay/BigNumberSections';
 import SiteNav from './components/SiteNav';
 import PageMeta from './seo/PageMeta';
 import JsonLd from './seo/JsonLd';
 
-export type ThemeMode = 'light' | 'dark';
-
 function App() {
-  React.useEffect(() => {
-    const localMode = localStorage.getItem('mode');
-    const preferredMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initialMode = (localMode as ThemeMode) || preferredMode;
-    document.documentElement.setAttribute('data-theme', initialMode);
-  }, []);
-
   return (
     <>
       <PageMeta
